@@ -1,0 +1,28 @@
+<section class="showcase">
+  <div class="showcase-content">
+    <h1>Get Winning Odds for a Game of Choice</h1>
+  </div>
+</section>
+
+<section class="tabs">
+  <div class="wrapper">
+    <div id="tab-2">
+      <p>Games</p>
+    </div>
+  </div>
+</section>
+
+<div class="events">
+  <div *ngFor="let game of games">
+    <div class="event" (click)="getOdds(game.sport_key, game.id)">
+      <div class="event-description">
+        <p class="event-name">{{ game.away_team }}</p>
+        <p class="event-info">vs</p>
+        <p class="event-name">{{ game.home_team }}</p>
+        <p class="event-info">
+          Date & Time: {{ game.commence_time | date : "medium" }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<section class="showcase">
+  <div class="showcase-content">
+    <h1>Maximize Your Betting Potential with Comprehensive Odds Comparison</h1>
+  </div>
+</section>
+
+<div *ngFor="let odd of odds" class="header">
+  <h3>
+    {{ odd.home_team }} vs {{ odd.away_team }} ({{
+      odd.commence_time | date : "medium"
+    }})
+  </h3>
+</div>
+
+<div class="table-wrapper">
+  <table
+    class="table table-bordered table-dark table-sm"
+    *ngFor="let odd of odds"
+  >
+    <tbody>
+      <tr>
+        <td *ngFor="let book of odd.bookmakers; let i = index">
+          {{ book.title }}
+
+          <div class="event" *ngFor="let market of book.markets; let i = index">
+            <h6>
+              {{ market.key }}
+              :
+            </h6>
+            <div *ngFor="let outcome of market.outcomes; let i = index">
+              {{ outcome.name }} {{ outcome.price }}
+              <div *ngIf="outcome.point">({{ outcome.point }})</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

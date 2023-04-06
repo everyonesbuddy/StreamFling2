@@ -1,0 +1,23 @@
+<section class="showcase">
+  <div class="showcase-content">
+    <h1>Find the Best Betting Odds for Your Favorite Sport</h1>
+  </div>
+</section>
+
+<section class="tabs">
+  <div class="wrapper">
+    <div id="tab-2">
+      <p>Sports</p>
+    </div>
+  </div>
+</section>
+
+<div class="events">
+  <div *ngFor="let d of data">
+    <div class="event" (click)="getGames(d.key)">
+      <div class="event-description">
+        <p class="event-name">{{ d.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>
