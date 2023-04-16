@@ -1,0 +1,37 @@
+<section class="showcase">
+  <div class="showcase-content">
+    <h1>Find the best betting value by comparing data between sport books</h1>
+  </div>
+</section>
+
+<div *ngFor="let prop of props" class="header">
+  <h3>{{ prop.home_team }} vs {{ prop.away_team }} Player Props</h3>
+</div>
+
+<div class="table-wrapper">
+  <table
+    class="table table-bordered table-dark table-sm"
+    *ngFor="let prop of props"
+  >
+    <tbody>
+      <tr>
+        <td *ngFor="let book of prop.bookmakers; let i = index">
+          <h6>{{ book.title }}</h6>
+
+          <div *ngFor="let market of book.markets; let i = index">
+            <p>
+              {{ market.key }}
+            </p>
+            <div
+              class="event"
+              *ngFor="let outcome of market.outcomes; let i = index"
+            >
+              {{ outcome.description }} {{ outcome.name }} {{ outcome.price }}
+              <div *ngIf="outcome.point">({{ outcome.point }})</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

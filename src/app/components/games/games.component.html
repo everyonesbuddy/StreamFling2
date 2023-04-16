@@ -14,13 +14,28 @@
 
 <div class="events">
   <div *ngFor="let game of games">
-    <div class="event" (click)="getOdds(game.sport_key, game.id)">
+    <div class="event">
       <div class="event-description">
         <p class="event-name">{{ game.away_team }}</p>
         <p class="event-info">vs</p>
         <p class="event-name">{{ game.home_team }}</p>
         <p class="event-info">
           Date & Time: {{ game.commence_time | date : "medium" }}
+        </p>
+      </div>
+      <div class="market-wrapper">
+        <p>
+          <a class="market-detail" (click)="getOdds(game.sport_key, game.id)"
+            >Game Odds</a
+          >
+        </p>
+
+        <p>
+          <a
+            class="market-detail"
+            (click)="getPlayerPros(game.sport_key, game.id)"
+            >Player Props</a
+          >
         </p>
       </div>
     </div>

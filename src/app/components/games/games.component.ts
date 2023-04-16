@@ -32,4 +32,9 @@ export class GamesComponent implements OnInit {
     this.router.navigate([`/oddsScreen/${key}/${id}`]);
     console.log('sport_key', key);
   }
+
+  getPlayerPros(key: any, id: any) {
+    this.router.navigate([`/playerPropsPage/${key}/${id}`]);
+    console.log('sport_key', key);
+  }
 }

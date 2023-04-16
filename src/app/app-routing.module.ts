@@ -4,6 +4,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GamesComponent } from './components/games/games.component';
 import { HomeComponent } from './components/home/home.component';
 import { OddsScreenComponent } from './components/odds-screen/odds-screen.component';
+import { PlayerPropsPageComponent } from './components/player-props-page/player-props-page.component';
+import { PlayerPropsScreenComponent } from './components/player-props-screen/player-props-screen.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path: 'games/:key',
     component: GamesComponent,
+  },
+  {
+    path: 'playerPropsScreen/:sportKey/:market_key/:eventId',
+    component: PlayerPropsScreenComponent,
+  },
+  {
+    path: 'playerPropsPage/:key/:id',
+    component: PlayerPropsPageComponent,
   },
 ];
 

@@ -3,8 +3,8 @@
   height: 70vh;
   font-family: sans-serif;
   position: relative;
-  background: url(../../../assets/anders-krogh-jorgensen-sYY1FlMHOV4-unsplash.jpg)
-    no-repeat center center/cover;
+  background: url(../../../assets/tim-trad-3PdOKrfzrYM-unsplash.jpg) no-repeat
+    center center/cover;
 }
 
 .showcase-content {
@@ -179,31 +179,6 @@ button {
   //top: -150px;
 }
 
-.market-wrapper {
-  color: #fff;
-  text-decoration: underline;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: auto;
-  margin: auto;
-  position: relative;
-}
-
-.market-detail {
-  color: #fff;
-  text-decoration: underline;
-  margin: 5px;
-  transition-duration: 0.3s;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 4px 3px 11px 6px rgb(200 152 44 / 46%);
-    transform: translateY(-3px);
-    border-radius: 5px;
-  }
-}
-
 .event-name {
   font-size: 2rem;
   font-family: "Fredoka One", cursive;
@@ -217,7 +192,7 @@ button {
 .event {
   width: 280px;
   margin: 10px;
-  // height: 330px;
+  height: 40px;
   overflow: hidden;
   border-radius: 5px;
   background-color: #000000;
@@ -252,7 +227,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 157px;
   }
 
   &-name {
@@ -262,7 +236,6 @@ button {
     margin-bottom: 20px;
     white-space: wrap;
     text-overflow: ellipsis;
-    overflow: hidden;
   }
 
   &-info {
@@ -277,42 +250,5 @@ button {
   &-date {
     display: flex;
     color: #fff;
-  }
-}
-
-.no-event {
-  color: #fff;
-  font-size: 20px;
-}
-
-@media only screen and (max-width: 960px) {
-  .list {
-    &-banner {
-      height: 65vh;
-      overflow: hidden;
-
-      &-img {
-        width: 100%;
-        filter: blur(2px);
-      }
-    }
-
-    &-content {
-      text-align: center;
-      position: relative;
-      top: -400px;
-    }
-
-    &-header {
-      &-title {
-        font-size: 2rem;
-        line-height: 1;
-      }
-
-      &-subtitle {
-        font-size: 0.6rem;
-        line-height: 1;
-      }
-    }
   }
 }
