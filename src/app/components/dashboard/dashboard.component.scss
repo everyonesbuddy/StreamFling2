@@ -189,6 +189,21 @@ button {
   font-family: "Fredoka One", cursive;
 }
 
+.promotions {
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  font-size: 1.1rem;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .event {
   width: 280px;
   margin: 10px;
