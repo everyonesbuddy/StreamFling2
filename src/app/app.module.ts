@@ -11,9 +11,10 @@ import { GamesComponent } from './components/games/games.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlayerPropsScreenComponent } from './components/player-props-screen/player-props-screen.component';
 import { PlayerPropsPageComponent } from './components/player-props-page/player-props-page.component';
+import { PromotionsComponent } from './components/promotions/promotions.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, OddsScreenComponent, NavbarComponent, GamesComponent, HomeComponent, PlayerPropsScreenComponent, PlayerPropsPageComponent],
+  declarations: [AppComponent, DashboardComponent, OddsScreenComponent, NavbarComponent, GamesComponent, HomeComponent, PlayerPropsScreenComponent, PlayerPropsPageComponent, PromotionsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,269 @@
+.showcase {
+  width: 100%;
+  height: 70vh;
+  font-family: sans-serif;
+  position: relative;
+  background: url(../../../assets/humberto-santos-KDZW-_fMsuM-unsplash.jpg)
+    no-repeat center center/cover;
+}
+
+.showcase-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 9rem;
+}
+
+.showcase-content h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  font-family: "Fredoka One", cursive;
+}
+
+.showcase-content p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.tabs {
+  padding-top: 1rem;
+}
+
+.tabs .wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.tabs p {
+  font-size: 2rem;
+  padding-top: 0.5rem;
+  font-family: "Fredoka One", cursive;
+}
+
+.tabs .wrapper > div {
+  padding: 1.5rem;
+}
+
+.tabs .wrapper > div:hover {
+  cursor: pointer;
+}
+
+.tab-border {
+  border-bottom: var(--primary-color) 4px solid;
+}
+
+.tab-content {
+  padding: 3rem 0;
+}
+
+#tab-1-content .tab-1-content-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#tab-2-content .tab-2-content-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#tab-2-content .tab-2-content-bottom {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+//old styling
+
+.list {
+  width: 100%;
+
+  &-banner {
+    height: 75vh;
+    overflow: hidden;
+
+    &-img {
+      width: 100%;
+      filter: blur(2px);
+    }
+  }
+
+  &-content {
+    text-align: center;
+    position: relative;
+    top: -400px;
+  }
+
+  &-header {
+    &-title {
+      font-size: 3.2rem;
+      color: #fff;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    &-subtitle {
+      color: #fff;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 45px;
+      line-height: 1.25;
+      padding-bottom: 2px;
+    }
+  }
+}
+
+.list-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  position: relative;
+}
+
+button {
+  background-color: #bee6fa;
+}
+
+// New style
+.events-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 70px auto;
+  position: relative;
+  top: -150px;
+}
+.event-header-title {
+  text-align: center;
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  //top: -150px;
+}
+
+.event-name {
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
+}
+
+.event-info {
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
+}
+
+.promotions {
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  font-size: 1.1rem;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.event {
+  width: 280px;
+  margin: 10px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #000000;
+  box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 11px 6px rgb(200 152 44 / 46%);
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: #000;
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+  }
+
+  &-description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &-name {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 20px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+  }
+
+  &-info {
+    color: #fff;
+    font-weight: 200;
+    font-size: 10px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-date {
+    display: flex;
+    color: #fff;
+  }
+}
