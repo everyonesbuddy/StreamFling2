@@ -12,9 +12,10 @@ import { HomeComponent } from './components/home/home.component';
 import { PlayerPropsScreenComponent } from './components/player-props-screen/player-props-screen.component';
 import { PlayerPropsPageComponent } from './components/player-props-page/player-props-page.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
+import { DiscordBotComponent } from './components/discord-bot/discord-bot.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, OddsScreenComponent, NavbarComponent, GamesComponent, HomeComponent, PlayerPropsScreenComponent, PlayerPropsPageComponent, PromotionsComponent],
+  declarations: [AppComponent, DashboardComponent, OddsScreenComponent, NavbarComponent, GamesComponent, HomeComponent, PlayerPropsScreenComponent, PlayerPropsPageComponent, PromotionsComponent, DiscordBotComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

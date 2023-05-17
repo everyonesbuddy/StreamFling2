@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DiscordBotComponent } from './components/discord-bot/discord-bot.component';
 import { GamesComponent } from './components/games/games.component';
 import { HomeComponent } from './components/home/home.component';
 import { OddsScreenComponent } from './components/odds-screen/odds-screen.component';
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'promotions',
     component: PromotionsComponent,
+  },
+  {
+    path: 'bot',
+    component: DiscordBotComponent,
   },
   {
     path: 'oddsScreen/:key/:id',
