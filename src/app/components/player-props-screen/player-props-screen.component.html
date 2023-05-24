@@ -1,7 +1,39 @@
 <section class="showcase">
-  <div class="showcase-content">
+  <!-- <div class="showcase-content">
     <h1>Find the best betting value by comparing data between sport books</h1>
-  </div>
+  </div> -->
+
+  <!-- Chat bot solution -->
+  <section class="chat-box">
+    <h1>
+      Streamfling AI: Unlock Your Winning Edge with Our AI-Powered Odds Analyzer
+      and Comparison Tool!
+    </h1>
+    <div *ngIf="isLoading">
+      <h4>Loading...</h4>
+    </div>
+    <p *ngIf="!isLoading" id="output" class="bot-response">
+      {{ botResponse }}
+    </p>
+    <div class="bottom-section">
+      <div class="input-container">
+        <form
+          class="input-form"
+          (submit)="onInput(inputForm)"
+          #inputForm="ngForm"
+        >
+          <input
+            type="text"
+            ngModel
+            name="prompt"
+            #prompt="ngModel"
+            class="text-box"
+          />
+          <input type="submit" class="btn btn-sm button" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </section>
 </section>
 
 <div *ngFor="let prop of props" class="header">

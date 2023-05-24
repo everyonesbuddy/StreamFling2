@@ -10,6 +10,7 @@ import { BettingOddsService } from 'src/app/services/betting-odds.service';
 })
 export class PlayerPropsPageComponent implements OnInit {
   propsToDisplay: any;
+  propsAvailable: boolean = false;
   eventId: any;
   sportKey: any;
   game: any = [];
@@ -101,14 +102,19 @@ export class PlayerPropsPageComponent implements OnInit {
       this.sportKey = key;
       console.log('id', id);
       if (key === 'basketball_nba') {
+        this.propsAvailable = true;
         this.propsToDisplay = this.nbaAndNcaabProps;
       } else if (key === 'americanfootball_nfl') {
+        this.propsAvailable = true;
         this.propsToDisplay = this.nflProps;
       } else if (key === 'baseball_mlb') {
+        this.propsAvailable = true;
         this.propsToDisplay = this.mlbProps;
       } else if (key === 'icehockey_nhl') {
+        this.propsAvailable = true;
         this.propsToDisplay = this.nhlProps;
       } else {
+        this.propsAvailable = false;
         this.propsToDisplay = [];
       }
       console.log('propstodisplay', this.propsToDisplay);

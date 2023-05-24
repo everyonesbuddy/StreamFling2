@@ -12,7 +12,15 @@
   </div>
 </section>
 
-<div class="events">
+<section *ngIf="!propsAvailable" class="tabs">
+  <div class="wrapper">
+    <div id="tab-2">
+      <p>No Player Props Available</p>
+    </div>
+  </div>
+</section>
+
+<div *ngIf="propsAvailable" class="events">
   <div *ngFor="let props of propsToDisplay">
     <div
       class="event"

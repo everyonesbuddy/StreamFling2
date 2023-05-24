@@ -13,10 +13,22 @@ import { PlayerPropsScreenComponent } from './components/player-props-screen/pla
 import { PlayerPropsPageComponent } from './components/player-props-page/player-props-page.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
 import { DiscordBotComponent } from './components/discord-bot/discord-bot.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, OddsScreenComponent, NavbarComponent, GamesComponent, HomeComponent, PlayerPropsScreenComponent, PlayerPropsPageComponent, PromotionsComponent, DiscordBotComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    OddsScreenComponent,
+    NavbarComponent,
+    GamesComponent,
+    HomeComponent,
+    PlayerPropsScreenComponent,
+    PlayerPropsPageComponent,
+    PromotionsComponent,
+    DiscordBotComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

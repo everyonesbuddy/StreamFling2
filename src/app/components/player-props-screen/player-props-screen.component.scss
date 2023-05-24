@@ -3,8 +3,75 @@
   height: 70vh;
   font-family: sans-serif;
   position: relative;
-  background: url(../../../assets/kenny-eliason-UegcSdRtmlg-unsplash.jpg)
+  background: url(../../../assets/marius-christensen-_Ghzg0xvHW0-unsplash.jpg)
     no-repeat center center/cover;
+}
+
+.chat-box {
+  background-color: #343541;
+  color: #fff;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  height: 70vh;
+  width: 100%;
+}
+
+.chat-box h1 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 50px 0;
+}
+
+.text-box {
+  border: none;
+  //background-color: rgba(225, 225, 225, 0.5);
+  //color: #fff;
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+.input-container {
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+}
+
+.input-container #submit {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  cursor: pointer;
+  padding-right: 20px;
+  background-color: rgba(225, 225, 225, 0.5);
+  border: none;
+}
+
+.bottom-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot-response {
+  max-width: 700px; /* Adjust the maximum width as needed */
+  max-height: 600px; /* Adjust the maximum height as needed */
+  overflow: auto;
 }
 
 .showcase-content {
@@ -43,10 +110,24 @@
   overflow-y: hidden;
   padding-top: 30px;
 }
+
 .header {
   display: block;
   text-align: center;
   padding-top: 30px;
+}
+
+.button {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  margin-top: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .event {

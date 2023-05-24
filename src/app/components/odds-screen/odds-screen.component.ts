@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AiService } from 'src/app/services/ai.service';
+import { NgForm } from '@angular/forms';
 import { BettingOddsService } from 'src/app/services/betting-odds.service';
 
 @Component({
@@ -10,11 +12,14 @@ import { BettingOddsService } from 'src/app/services/betting-odds.service';
 })
 export class OddsScreenComponent implements OnInit {
   odds: any = [];
+  botResponse: any;
+  isLoading: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
-    private bettingOdds: BettingOddsService
+    private bettingOdds: BettingOddsService,
+    private aiService: AiService
   ) {}
 
   ngOnInit(): void {
@@ -27,6 +32,26 @@ export class OddsScreenComponent implements OnInit {
         this.odds = res;
         console.log('res', res);
       });
+    });
+  }
+
+  onInput(form: NgForm) {
+    this.isLoading = true;
+    //console.log(form.value.prompt);
+    const promptValue = form.value.prompt;
+    console.log('promptValue', promptValue.trim());
+
+    if (promptValue.trim() === '') {
+      this.isLoading = false;
+      this.botResponse = 'Ask a sport betting question';
+      return;
+    }
+
+    this.aiService.callAi(promptValue).subscribe((response: any) => {
+      this.isLoading = false;
+      console.log(response);
+      this.botResponse = response.bot;
+      console.log(this.botResponse);
     });
   }
 }
