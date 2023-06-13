@@ -10,8 +10,8 @@ export class AiService {
   constructor(private http: HttpClient, private router: Router) {}
 
   callAi(promptValue: string) {
-    const url = 'https://streamfling-be.herokuapp.com/';
-    // const url = 'https://streamfling-be.herokuapp.com/api/prompt-ai';
+    // const url = 'https://streamfling-be.herokuapp.com/';
+    const url = 'https://streamfling-be.herokuapp.com/api/prompt-ai';
     const promptData = { prompt: promptValue };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
