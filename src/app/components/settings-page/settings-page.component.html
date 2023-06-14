@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div routerLink="/dashboard" class="btn btn-light">
+        <i class="fa fa-arrow-circle-o-left"></i> Back to Dashboard
+      </div>
+    </div>
+    <div class="col-md-6"></div>
+  </div>
+
+  <div class="card" *ngFor="let sub of subscriptionData">
+    <div class="card-header">Subscription Status</div>
+    <div class="card-body">
+      <h4 class="fw-bold">{{ sub.plan.nickname }}</h4>
+      <h5>
+        ${{ sub.plan.amount / 100 }}
+        <small class="text-muted fw-light">every month</small>
+      </h5>
+      <p>Status: {{ sub.status }}</p>
+      <p>Card last 4 digit: {{ sub.default_payment_method.card.last4 }}</p>
+      <p>Current period end: {{ sub.current_period_end * 1000 | date }}</p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn settings" (click)="onManageSub()">
+        Manage Subscription
+      </button>
+    </div>
+  </div>
+</div>

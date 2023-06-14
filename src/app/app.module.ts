@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,7 +13,19 @@ import { PlayerPropsScreenComponent } from './components/player-props-screen/pla
 import { PlayerPropsPageComponent } from './components/player-props-page/player-props-page.component';
 import { PromotionsComponent } from './components/promotions/promotions.component';
 import { DiscordBotComponent } from './components/discord-bot/discord-bot.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { StripeCancelComponent } from './components/stripe-cancel/stripe-cancel.component';
+import { StripeSuccessComponent } from './components/stripe-success/stripe-success.component';
+import { SubscriptionCardComponent } from './components/subscription-card/subscription-card.component';
+import { SubscriptionPageComponent } from './components/subscription-page/subscription-page.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MarkdownModule } from 'ngx-markdown';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { SettingsPageComponent } from './components/settings-page/settings-page.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +39,32 @@ import { FormsModule } from '@angular/forms';
     PlayerPropsPageComponent,
     PromotionsComponent,
     DiscordBotComponent,
+    LoginComponent,
+    SignUpComponent,
+    StripeCancelComponent,
+    StripeSuccessComponent,
+    SubscriptionCardComponent,
+    SubscriptionPageComponent,
+    SettingsPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
+    MarkdownModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 1000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
