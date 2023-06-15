@@ -1,6 +1,10 @@
 {
-  "/": {
-    "target": "http://localhost:8000/",
-    "secure": false
+  "/odds": {
+    "target": "https://api.the-odds-api.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/odds": ""
+    }
   }
 }
