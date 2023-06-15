@@ -23,7 +23,6 @@ import { SubscriptionPageComponent } from './components/subscription-page/subscr
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MarkdownModule } from 'ngx-markdown';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
 
@@ -55,7 +54,6 @@ import { SettingsPageComponent } from './components/settings-page/settings-page.
     FormsModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
-    MarkdownModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 1000,
       positionClass: 'toast-bottom-right',
