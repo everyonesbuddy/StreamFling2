@@ -45,9 +45,6 @@ THE SOFTWARE.
 font-awesome
 (OFL-1.1 AND MIT)
 
-ngx-spinner
-MIT
-
 ngx-toastr
 MIT
 The MIT License (MIT)

@@ -20,7 +20,6 @@ import { StripeCancelComponent } from './components/stripe-cancel/stripe-cancel.
 import { StripeSuccessComponent } from './components/stripe-success/stripe-success.component';
 import { SubscriptionCardComponent } from './components/subscription-card/subscription-card.component';
 import { SubscriptionPageComponent } from './components/subscription-page/subscription-page.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
@@ -53,7 +52,6 @@ import { SettingsPageComponent } from './components/settings-page/settings-page.
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    NgxSpinnerModule,
     ToastrModule.forRoot({
       timeOut: 1000,
       positionClass: 'toast-bottom-right',
