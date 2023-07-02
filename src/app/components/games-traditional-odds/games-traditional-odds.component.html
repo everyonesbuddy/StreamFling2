@@ -1,0 +1,54 @@
+<!-- <section class="showcase">
+  <div class="showcase-content">
+    <h1>Get Winning Odds for a Game of Choice</h1>
+  </div>
+</section> -->
+
+<section class="tabs">
+  <div class="wrapper">
+    <div id="tab-2">
+      <p>Games</p>
+    </div>
+  </div>
+</section>
+
+<div class="events">
+  <div *ngFor="let game of games">
+    <div class="event">
+      <div class="event-description">
+        <p class="event-name">{{ game.away_team }}</p>
+        <p class="event-info">vs</p>
+        <p class="event-name">{{ game.home_team }}</p>
+        <p class="event-info">
+          Date & Time: {{ game.commence_time | date : "medium" }}
+        </p>
+      </div>
+      <div class="market-wrapper">
+        <p>
+          <a class="market-detail" (click)="getOdds(game.sport_key, game.id)"
+            >Game Odds</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Promotions -->
+<!-- <div class="container">
+  <div class="card">
+    <div class="card-header"><h2>Prize Picks</h2></div>
+    <div class="card-body">
+      <h4 class="fw-bold">100% deposit match up to $100</h4>
+      <p>Must be 21+. Gambling Problem? Call 1-800-GAMBLER</p>
+    </div>
+    <div class="card-footer">
+      <a
+        href="https://app.prizepicks.com/sign-up?invite_code=PR-SUWVT13"
+        target="_blank"
+      >
+        <button type="button" class="btn promotions">Claim $100</button>
+      </a>
+    </div>
+  </div>
+</div> -->

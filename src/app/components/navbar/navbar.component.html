@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark">
+<nav class="navbar navbar-expand-md navbar-light">
   <div class="container">
     <a class="navbar-brand" routerLink="/"> StreamFling </a>
     <button
@@ -11,18 +11,22 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav ml-auto">
-        <li *ngIf="!userIsAuthenticated" class="nav-item">
-          <a class="nav-link" routerLink="/signup">Sign Up</a>
+        <li class="nav-item">
+          <a href="#" class="nav-link" routerLink="/bot">Discord Bot</a>
         </li>
         <li *ngIf="!userIsAuthenticated" class="nav-item">
           <a class="nav-link" routerLink="/login">Login</a>
         </li>
+        <li *ngIf="!userIsAuthenticated" class="nav-item pro">
+          <a class="nav-link" routerLink="/signup">Try Streamfling Pro</a>
+        </li>
+
         <li *ngIf="userIsAuthenticated" class="nav-item">
-          <a href="#" class="nav-link" routerLink="/dashboard">Dashboard</a>
+          <a href="#" class="nav-link" routerLink="/playerProps"
+            >Player Props</a
+          >
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link" routerLink="/bot">Discord Bot</a>
-        </li>
+
         <li *ngIf="userIsAuthenticated" class="nav-item">
           <a href="#" class="nav-link" routerLink="/settings">Settings</a>
         </li>

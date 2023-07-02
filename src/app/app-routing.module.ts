@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PlayerPropsComponent } from './components/player-props/player-props.component';
 import { DiscordBotComponent } from './components/discord-bot/discord-bot.component';
-import { GamesComponent } from './components/games/games.component';
+import { GamesTraditionalOddsComponent } from './components/games-traditional-odds/games-traditional-odds.component';
+import { GamesPlayerPropsOddsComponent } from './components/games-player-props-odds/games-player-props-odds.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { OddsScreenComponent } from './components/odds-screen/odds-screen.component';
@@ -44,8 +45,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent,
+    path: 'playerProps',
+    component: PlayerPropsComponent,
     canActivate: [AuthGuard],
   },
   {
@@ -59,13 +60,17 @@ const routes: Routes = [
   {
     path: 'oddsScreen/:key/:id',
     component: OddsScreenComponent,
+  },
+  {
+    path: 'gamesPlayerPropsOdds/:key',
+    component: GamesPlayerPropsOddsComponent,
     canActivate: [AuthGuard],
   },
   {
-    path: 'games/:key',
-    component: GamesComponent,
-    canActivate: [AuthGuard],
+    path: 'gamesTraditionalOdds/:key',
+    component: GamesTraditionalOddsComponent,
   },
+
   {
     path: 'playerPropsScreen/:sportKey/:market_key/:eventId',
     component: PlayerPropsScreenComponent,

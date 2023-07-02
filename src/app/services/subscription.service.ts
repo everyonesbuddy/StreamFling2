@@ -85,7 +85,7 @@ export class SubscriptionService {
         if (accessGranted) {
           // Grant access
           console.log('Access granted');
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/playerProps']);
         } else {
           // Deny access
           console.log('Access denied');

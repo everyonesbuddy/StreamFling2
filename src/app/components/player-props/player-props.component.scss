@@ -37,10 +37,6 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-.tabs {
-  padding-top: 1rem;
-}
-
 .tabs .wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -58,7 +54,8 @@
 }
 
 .tabs p {
-  font-size: 2rem;
+  font-size: 1rem;
+  font-weight: 50;
   padding-top: 0.5rem;
   font-family: "Fredoka One", cursive;
 }
@@ -148,10 +145,6 @@
   max-width: 900px;
   margin: 20px auto;
   position: relative;
-}
-
-button {
-  background-color: #bee6fa;
 }
 
 // New style

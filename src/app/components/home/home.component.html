@@ -1,12 +1,13 @@
 <section class="showcase">
   <div class="showcase-content">
-    <h1>
+    <h1>Find the Best Betting Values</h1>
+    <p>
       Maximize Your Winnings with the Ultimate Sports Betting Tool: Unleash the
       Power of Odds Comparison and AI Analysis
-    </h1>
+    </p>
     <!-- <div class="button-wrapper"> -->
-    <button class="btn btn-lg button header-buttons" routerLink="/dashboard">
-      Browse Odds
+    <button class="btn btn-lg button header-buttons" routerLink="/signup">
+      Try Streamfling Pro
     </button>
     <!-- <button class="btn btn-lg button header-buttons" routerLink="/promotions">
         Promotions
@@ -16,6 +17,23 @@
 </section>
 
 <section class="tabs">
+  <div class="wrapper">
+    <div id="tab-2">
+      <p>Sports and Leagues</p>
+    </div>
+  </div>
+</section>
+
+<div class="events">
+  <div *ngFor="let d of data">
+    <div class="event" (click)="getGames(d.key)">
+      <div class="event-description">
+        <p class="event-name">{{ d.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <section class="tabs">
   <div class="wrapper">
     <div id="tab-2" class="tab-item tab-border">
       <p>What is StreamFling?</p>
@@ -69,4 +87,4 @@
       </button>
     </div>
   </div>
-</section>
+</section> -->

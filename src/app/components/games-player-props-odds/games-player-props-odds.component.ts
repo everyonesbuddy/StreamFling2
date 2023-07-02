@@ -4,11 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BettingOddsService } from 'src/app/services/betting-odds.service';
 
 @Component({
-  selector: 'app-games',
-  templateUrl: './games.component.html',
-  styleUrls: ['./games.component.scss'],
+  selector: 'app-games-player-props-odds',
+  templateUrl: './games-player-props-odds.component.html',
+  styleUrls: ['./games-player-props-odds.component.scss'],
 })
-export class GamesComponent implements OnInit {
+export class GamesPlayerPropsOddsComponent implements OnInit {
   games: any = [];
 
   constructor(

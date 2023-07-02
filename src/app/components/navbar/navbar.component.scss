@@ -1,18 +1,28 @@
 .navbar-brand {
   width: 100px;
   text-decoration: none;
-  color: #fff;
+  color: #000000;
 }
 
 .navbar {
-  background-color: #000000;
-  color: #fff;
+  background-color: #fff;
+  color: #000000;
 }
 
 a {
-  color: #fff;
+  color: #000000;
 }
 
 .nav-link {
   font-family: "Ubuntu", sans-serif;
+}
+
+.pro {
+  background-color: var(--secondary-color);
+  border-radius: 30px;
+  border: none;
+}
+
+.pro a {
+  color: #fff;
 }

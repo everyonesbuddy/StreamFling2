@@ -5,11 +5,11 @@ import { BettingOddsService } from 'src/app/services/betting-odds.service';
 import { SubscriptionService } from 'src/app/services/subscription.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: 'app-player-props',
+  templateUrl: './player-props.component.html',
+  styleUrls: ['./player-props.component.scss'],
 })
-export class DashboardComponent implements OnInit {
+export class PlayerPropsComponent implements OnInit {
   data: any = [];
 
   constructor(
@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getGames(key: any) {
-    this.router.navigate(['/games/' + key]);
+    this.router.navigate(['/gamesPlayerPropsOdds/' + key]);
     console.log('sport_key', key);
   }
 }
