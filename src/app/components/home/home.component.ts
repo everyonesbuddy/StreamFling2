@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BettingOddsService } from 'src/app/services/betting-odds.service';
-import { SubscriptionService } from 'src/app/services/subscription.service';
 
 @Component({
   selector: 'app-home',
@@ -15,14 +14,10 @@ export class HomeComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private bettingOdds: BettingOddsService,
-    private subscriptionService: SubscriptionService
+    private bettingOdds: BettingOddsService
   ) {}
 
   ngOnInit(): void {
-    //check subscription status
-    this.subscriptionService.getSubscriptionStatus();
-
     //get sports info
     this.getSportsInfo();
   }

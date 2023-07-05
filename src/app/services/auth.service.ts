@@ -93,6 +93,7 @@ export class AuthService {
           const expiresInDuration = response.expiresIn;
           this.setAuthTimer(expiresInDuration);
           this.isAuthenticated = true;
+          console.log('auth', this.isAuthenticated);
           this.authStatusListener.next(true);
           const now = new Date();
           const expirationDate = new Date(
