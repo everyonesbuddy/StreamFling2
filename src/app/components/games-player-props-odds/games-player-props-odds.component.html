@@ -6,7 +6,15 @@
   </div>
 </section>
 
-<div class="events">
+<section *ngIf="!gamesAvailable" class="tabs">
+  <div class="wrapper">
+    <div id="tab-2">
+      <p>No games available</p>
+    </div>
+  </div>
+</section>
+
+<div *ngIf="gamesAvailable" class="events">
   <div *ngFor="let game of games">
     <div class="event">
       <div class="event-description">

@@ -12,6 +12,13 @@ import { SubscriptionService } from 'src/app/services/subscription.service';
 export class PlayerPropsComponent implements OnInit {
   data: any = [];
 
+  availablePlayerPropsSports: any = [
+    { title: 'NBA', key: 'basketball_nba' },
+    { title: 'NHL', key: 'icehockey_nhl' },
+    { title: 'MLB', key: 'baseball_mlb' },
+    { title: 'AFL', key: 'aussierules_afl' },
+  ];
+
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -24,15 +31,21 @@ export class PlayerPropsComponent implements OnInit {
     this.subscriptionService.getSubscriptionStatus();
 
     //get sports info
-    this.getSportsInfo();
+    // this.getSportsInfo();
+    this.getPlayerPropsSportsInfo();
   }
 
-  getSportsInfo() {
-    this.bettingOdds.getData().subscribe((response) => {
-      console.log('response', response);
-      this.data = response;
-      console.log('data', this.data);
-    });
+  // getSportsInfo() {
+  //   this.bettingOdds.getData().subscribe((response) => {
+  //     console.log('response', response);
+  //     this.data = response;
+  //     console.log('data', this.data);
+  //   });
+  // }
+
+  getPlayerPropsSportsInfo() {
+    this.data = this.availablePlayerPropsSports;
+    console.log('data', this.data);
   }
 
   getGames(key: any) {

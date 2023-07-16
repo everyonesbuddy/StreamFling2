@@ -10,6 +10,7 @@ import { BettingOddsService } from 'src/app/services/betting-odds.service';
 })
 export class GamesPlayerPropsOddsComponent implements OnInit {
   games: any = [];
+  gamesAvailable: boolean = true;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,6 +24,9 @@ export class GamesPlayerPropsOddsComponent implements OnInit {
       let key = params['key'];
       this.bettingOdds.getGames(key).subscribe((res) => {
         this.games = res;
+        if (res.length === 0) {
+          this.gamesAvailable = false;
+        }
         console.log('res', res);
       });
     });

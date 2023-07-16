@@ -86,6 +86,14 @@ export class PlayerPropsPageComponent implements OnInit {
     { name: 'Shots on goal', market_key: 'player_shots_on_goal' },
   ];
 
+  aflProps: any = [
+    { name: 'Disposals', market_key: 'player_disposals' },
+    { name: 'First Goal Scorer', market_key: 'player_goal_scorer_first' },
+    { name: 'Last Goal Scorer', market_key: 'player_goal_scorer_last' },
+    { name: 'Anytime Goal Scorer', market_key: 'player_goal_scorer_anytime' },
+    { name: 'Goals scored', market_key: 'player_goals_scored_over' },
+  ];
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
@@ -113,6 +121,9 @@ export class PlayerPropsPageComponent implements OnInit {
       } else if (key === 'icehockey_nhl') {
         this.propsAvailable = true;
         this.propsToDisplay = this.nhlProps;
+      } else if (key === 'aussierules_afl') {
+        this.propsAvailable = true;
+        this.propsToDisplay = this.aflProps;
       } else {
         this.propsAvailable = false;
         this.propsToDisplay = [];
