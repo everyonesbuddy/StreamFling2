@@ -29,6 +29,13 @@
             >Game Odds</a
           >
         </p>
+        <p *ngIf="playerPropAvailable">
+          <a
+            class="market-detail"
+            (click)="getPlayerProps(game.sport_key, game.id)"
+            >Player Props</a
+          >
+        </p>
       </div>
     </div>
   </div>

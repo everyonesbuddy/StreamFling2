@@ -47,7 +47,6 @@ const routes: Routes = [
   {
     path: 'playerProps',
     component: PlayerPropsComponent,
-    canActivate: [AuthGuard],
   },
   {
     path: 'promotions',
@@ -64,7 +63,6 @@ const routes: Routes = [
   {
     path: 'gamesPlayerPropsOdds/:key',
     component: GamesPlayerPropsOddsComponent,
-    canActivate: [AuthGuard],
   },
   {
     path: 'gamesTraditionalOdds/:key',
@@ -74,12 +72,10 @@ const routes: Routes = [
   {
     path: 'playerPropsScreen/:sportKey/:market_key/:eventId',
     component: PlayerPropsScreenComponent,
-    canActivate: [AuthGuard],
   },
   {
     path: 'playerPropsPage/:key/:id',
     component: PlayerPropsPageComponent,
-    canActivate: [AuthGuard],
   },
 ];
 

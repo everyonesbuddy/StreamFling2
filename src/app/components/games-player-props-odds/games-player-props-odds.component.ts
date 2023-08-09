@@ -37,7 +37,7 @@ export class GamesPlayerPropsOddsComponent implements OnInit {
     console.log('sport_key', key);
   }
 
-  getPlayerPros(key: any, id: any) {
+  getPlayerProps(key: any, id: any) {
     this.router.navigate([`/playerPropsPage/${key}/${id}`]);
     console.log('sport_key', key);
   }

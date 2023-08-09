@@ -10,6 +10,7 @@ import { BettingOddsService } from 'src/app/services/betting-odds.service';
 })
 export class GamesTraditionalOddsComponent implements OnInit {
   games: any = [];
+  playerPropAvailable: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,6 +24,17 @@ export class GamesTraditionalOddsComponent implements OnInit {
       let key = params['key'];
       this.bettingOdds.getGames(key).subscribe((res) => {
         this.games = res;
+        if (key === 'baseball_mlb') {
+          this.playerPropAvailable = true;
+        } else if (key === 'basketball_nba') {
+          this.playerPropAvailable = true;
+        } else if (key === 'icehockey_nhl') {
+          this.playerPropAvailable = true;
+        } else if (key === 'aussierules_afl') {
+          this.playerPropAvailable = true;
+        } else if (key === 'americanfootball_nfl') {
+          this.playerPropAvailable = true;
+        }
         console.log('res', res);
       });
     });
@@ -30,6 +42,11 @@ export class GamesTraditionalOddsComponent implements OnInit {
 
   getOdds(key: any, id: any) {
     this.router.navigate([`/oddsScreen/${key}/${id}`]);
+    console.log('sport_key', key);
+  }
+
+  getPlayerProps(key: any, id: any) {
+    this.router.navigate([`/playerPropsPage/${key}/${id}`]);
     console.log('sport_key', key);
   }
 }

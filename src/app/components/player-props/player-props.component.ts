@@ -28,7 +28,7 @@ export class PlayerPropsComponent implements OnInit {
 
   ngOnInit(): void {
     //check subscription status
-    this.subscriptionService.getSubscriptionStatus();
+    // this.subscriptionService.getSubscriptionStatus();
 
     //get sports info
     // this.getSportsInfo();

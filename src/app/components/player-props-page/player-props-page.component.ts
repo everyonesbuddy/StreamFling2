@@ -15,7 +15,7 @@ export class PlayerPropsPageComponent implements OnInit {
   sportKey: any;
   game: any = [];
 
-  nbaAndNcaabProps: any = [
+  nbaAndNcaabAndWnbaProps: any = [
     { name: 'Points', market_key: 'player_points' },
     { name: 'Rebounds', market_key: 'player_rebounds' },
     { name: 'Assists', market_key: 'player_assists' },
@@ -111,7 +111,7 @@ export class PlayerPropsPageComponent implements OnInit {
       console.log('id', id);
       if (key === 'basketball_nba') {
         this.propsAvailable = true;
-        this.propsToDisplay = this.nbaAndNcaabProps;
+        this.propsToDisplay = this.nbaAndNcaabAndWnbaProps;
       } else if (key === 'americanfootball_nfl') {
         this.propsAvailable = true;
         this.propsToDisplay = this.nflProps;

@@ -11,26 +11,31 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav ml-auto">
-        <li *ngIf="userIsAuthenticated" class="nav-item">
+        <li class="nav-item">
           <a href="#" class="nav-link" routerLink="/playerProps"
-            >Player Props</a
+            >Odds Comparison</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" routerLink="/playerProps"
+            >Props Analysis</a
           >
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link" routerLink="/bot">Discord Bot</a>
         </li>
-        <li *ngIf="!userIsAuthenticated" class="nav-item">
+        <!-- <li *ngIf="!userIsAuthenticated" class="nav-item">
           <a class="nav-link" routerLink="/login">Login</a>
-        </li>
-        <li *ngIf="!userIsAuthenticated" class="nav-item pro">
+        </li> -->
+        <!-- <li *ngIf="!userIsAuthenticated" class="nav-item pro">
           <a class="nav-link" routerLink="/signup">Try Streamfling Pro</a>
-        </li>
-        <li *ngIf="userIsAuthenticated" class="nav-item">
+        </li> -->
+        <!-- <li *ngIf="userIsAuthenticated" class="nav-item">
           <a href="#" class="nav-link" routerLink="/settings">Settings</a>
-        </li>
-        <li *ngIf="userIsAuthenticated" class="nav-item">
+        </li> -->
+        <!-- <li *ngIf="userIsAuthenticated" class="nav-item">
           <a href="#" class="nav-link" (click)="onLogout()">Logout</a>
-        </li>
+        </li> -->
         <!-- <li class="nav-item">
           <a href="#" class="nav-link" routerLink="/promotions">Promotions</a>
         </li> -->
