@@ -112,6 +112,9 @@ export class PlayerPropsPageComponent implements OnInit {
       if (key === 'basketball_nba') {
         this.propsAvailable = true;
         this.propsToDisplay = this.nbaAndNcaabAndWnbaProps;
+      } else if (key === 'basketball_wnba') {
+        this.propsAvailable = true;
+        this.propsToDisplay = this.nbaAndNcaabAndWnbaProps;
       } else if (key === 'americanfootball_nfl') {
         this.propsAvailable = true;
         this.propsToDisplay = this.nflProps;

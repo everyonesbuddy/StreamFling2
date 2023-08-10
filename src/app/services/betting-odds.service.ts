@@ -36,4 +36,11 @@ export class BettingOddsService {
       `https://api.the-odds-api.com/v4/sports/${sportKey}/events/${eventId}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=${market_key}&oddsFormat=american`
     );
   }
+
+  // getHistoricalOddsOneHourAgo(key: any, id: any, time: any): Observable<any> {
+  //   // console.log(key)
+  //   return this.http.get(
+  //     `https://api.the-odds-api.com/v4/sports/${key}/odds-history/?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=h2h&date=${time}&eventId=${id}&oddsFormat=american&bookmakers=fanduel`
+  //   );
+  // }
 }
