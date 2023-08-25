@@ -1,0 +1,20 @@
+<div class="chart-wrapper">
+  <div *ngFor="let d of playerData">
+    <h5 class="player-name">{{ d.player }} - {{ d.team }}</h5>
+    <div class="detail-wrapper">
+      <div class="detail">
+        <div class="detail-description">
+          <p class="detail-name">Season Avg (Pts)</p>
+          <p class="detail-name">{{ d.pointsPerGame }}</p>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="detail-description">
+          <p class="detail-name">Last 5 Avg (Pts)</p>
+          <p class="detail-name">{{ d.avergeLastFive }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <canvas id="canvas">{{ chart }}</canvas>
+</div>

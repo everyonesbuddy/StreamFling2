@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { AiService } from 'src/app/services/ai.service';
 import { NgForm } from '@angular/forms';
 import { BettingOddsService } from 'src/app/services/betting-odds.service';
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 
 @Component({
   selector: 'app-odds-screen',
@@ -14,8 +16,8 @@ export class OddsScreenComponent implements OnInit {
   odds: any = [];
   botResponse: any;
   isLoading: boolean = false;
-  // currentTime: any;
-  // historicalOddsOneHourAgo: any = [];
+  currentTime: any;
+  chart: any = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -25,11 +27,17 @@ export class OddsScreenComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // current time solution
+    // // current time solution
     // const currentDate = new Date();
     // this.currentTime = currentDate;
+    // console.log('currentTime', this.currentTime);
+    // const iso8601CurrentTime = this.currentTime.toISOString();
+    // console.log('iso8601CurrentTime', iso8601CurrentTime);
+    // const currentWithoutMilliseconds = iso8601CurrentTime.slice(0, -5);
+    // const currentTimeFormated = currentWithoutMilliseconds + 'Z';
+    // console.log('currentTimeFormated', currentTimeFormated);
 
-    //1 hours ago time solution
+    // //1 hours ago time solution
     // const oneHourAgo = new Date(currentDate);
     // oneHourAgo.setHours(currentDate.getHours() - 1);
     // console.log('oneHourAgo', oneHourAgo);
@@ -39,7 +47,7 @@ export class OddsScreenComponent implements OnInit {
     // const oneHourAgoFormated = oneHourAgoWithoutMilliseconds + 'Z';
     // console.log('oneHourAgoFormated', oneHourAgoFormated);
 
-    //2 hours ago time solution
+    // //2 hours ago time solution
     // const twoHourAgo = new Date(currentDate);
     // twoHourAgo.setHours(currentDate.getHours() - 2);
     // console.log('twoHourAgo', twoHourAgo);
@@ -49,7 +57,7 @@ export class OddsScreenComponent implements OnInit {
     // const twoHourAgoFormated = twoHourAgoWithoutMilliseconds + 'Z';
     // console.log('twoHourAgoFormated', twoHourAgoFormated);
 
-    //3 hours ago time solution
+    // //3 hours ago time solution
     // const threeHourAgo = new Date(currentDate);
     // threeHourAgo.setHours(currentDate.getHours() - 3);
     // console.log('threeHourAgo', threeHourAgo);
@@ -58,6 +66,16 @@ export class OddsScreenComponent implements OnInit {
     // const threeHourAgoWithoutMilliseconds = iso8601ThreeHourAgo.slice(0, -5);
     // const threeHourAgoFormated = threeHourAgoWithoutMilliseconds + 'Z';
     // console.log('threeHourAgoFormated', threeHourAgoFormated);
+
+    // //4 hours ago time solution
+    // const fourHourAgo = new Date(currentDate);
+    // fourHourAgo.setHours(currentDate.getHours() - 4);
+    // console.log('fourHourAgo', fourHourAgo);
+    // const iso8601FourHourAgo = fourHourAgo.toISOString();
+    // console.log('iso8601FourHourAgo', iso8601FourHourAgo);
+    // const fourHourAgoWithoutMilliseconds = iso8601FourHourAgo.slice(0, -5);
+    // const fourHourAgoFormated = fourHourAgoWithoutMilliseconds + 'Z';
+    // console.log('fourHourAgoFormated', fourHourAgoFormated);
 
     this.activatedRoute.params.subscribe((params) => {
       let key = params['key'];
@@ -69,13 +87,7 @@ export class OddsScreenComponent implements OnInit {
         console.log('res', res);
       });
 
-      //historical odds 1 hour ago
-      // this.bettingOdds
-      //   .getHistoricalOddsOneHourAgo(key, id, oneHourAgoFormated)
-      //   .subscribe((res) => {
-      //     this.historicalOddsOneHourAgo = res;
-      //     console.log('historicalOddsOneHourAgo', res);
-      //   });
+      // this.renderChart();
     });
   }
 
@@ -98,4 +110,39 @@ export class OddsScreenComponent implements OnInit {
       console.log(this.botResponse);
     });
   }
+
+  // chart code
+  // renderChart() {
+  //   this.chart = new Chart('canvas', {
+  //     type: 'line',
+  //     data: {
+  //       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  //       datasets: [
+  //         {
+  //           label: 'Team One Line movement',
+  //           data: [-118, -150, -130, -105, -120, -130],
+  //           borderWidth: 1,
+  //           fill: false,
+  //           borderColor: 'rgb(75, 192, 192)',
+  //           tension: 0.3,
+  //         },
+  //         {
+  //           label: 'Away Team Line movement',
+  //           data: [-102, 100, 130, 150, 120, 130],
+  //           borderWidth: 1,
+  //           fill: false,
+  //           borderColor: 'rgba(34, 40, 49)',
+  //           tension: 0.3,
+  //         },
+  //       ],
+  //     },
+  //     options: {
+  //       scales: {
+  //         y: {
+  //           beginAtZero: true,
+  //         },
+  //       },
+  //     },
+  //   });
+  // }
 }

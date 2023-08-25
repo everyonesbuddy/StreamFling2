@@ -30,6 +30,7 @@
   font-size: 3rem;
   line-height: 1.1;
   margin: 0 0 2rem;
+  font-family: "Fredoka One", cursive;
 }
 
 .showcase-content p {
@@ -70,6 +71,7 @@
   border-radius: 5px;
   background-color: var(--first-color);
   color: var(--fourth-color);
+  box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
   transition-duration: 0.3s;
   cursor: pointer;
   max-width: auto;
@@ -77,32 +79,20 @@
   overflow-y: scroll;
 }
 
-.dash-headers {
-  font-size: 10px;
-  padding: 5px;
-  color: var(--fourth-color);
-}
-
-.dash-description {
-  font-size: 12px;
-  padding: 5px 5px 10px 5px;
-  color: var(--fourth-color);
-}
-
 ::-webkit-scrollbar {
-  width: 0.7em;
-  height: 0.7em;
+  width: 1em;
+  height: 1em;
 }
 
-// ::-webkit-scrollbar-track {
-//   background: #{"hsl(0, 0%, 24%, 1)"};
-//   border-radius: 100vw;
-//   margin-block: 0.2em;
-// }
+::-webkit-scrollbar-track {
+  background: #{"hsl(0, 0%, 24%, 1)"};
+  border-radius: 100vw;
+  margin-block: 0.2em;
+}
 
 ::-webkit-scrollbar-thumb {
   background: #{"hsl(0, 0%, 0%, 1)"};
-  // border: 0.25em solid #{"hsl(0, 0%, 24%, 1)"};
+  border: 0.25em solid #{"hsl(0, 0%, 24%, 1)"};
   border-radius: 100vw;
 }
 
@@ -156,6 +146,7 @@
   font-size: 1rem;
   font-weight: 50;
   padding-top: 0.5rem;
+  font-family: "Fredoka One", cursive;
 }
 
 .tabs .wrapper > div {
@@ -178,13 +169,13 @@
 }
 
 .header-buttons {
-  margin: auto;
-  display: block;
+  margin: 5px;
 }
 
 .text-lg {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .text-center {
@@ -227,161 +218,13 @@ button {
 }
 
 .event-name {
-  font-size: 12px;
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
 }
 
 .event-info {
-  font-size: 12px;
-}
-
-.event {
-  width: 280px;
-  margin: 10px;
-  height: 40px;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: var(--third-color);
-  box-shadow: 4px 3px 8px 0px rgb(255, 87, 34);
-  transition-duration: 0.3s;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);
-    transform: translateY(-3px);
-  }
-
-  &-thumb-container {
-    background-color: #000;
-    position: relative;
-    height: 172px;
-    color: #fff;
-    text-align: center;
-  }
-
-  &-thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 172px;
-  }
-
-  &-description {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  &-name {
-    color: #fff;
-    font-weight: 300;
-    font-size: 12px;
-    margin-bottom: 20px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-  }
-
-  &-info {
-    color: #fff;
-    font-weight: 200;
-    font-size: 10px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  &-date {
-    display: flex;
-    color: #fff;
-  }
-}
-
-//duplication
-.props {
-  display: grid;
-  // width: 70px;
-  grid-template-columns: 1fr;
-  align-items: center;
-  // flex-wrap: wrap;
-  justify-content: center;
-  // max-width: 1200px;
-  margin: auto;
-  position: relative;
-  //top: -150px;
-}
-
-.prop-name {
-  font-size: 12px;
-}
-
-.prop-info {
-  font-size: 12px;
-}
-
-.prop {
-  width: 170px;
-  margin: 10px;
-  height: 40px;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: var(--third-color);
-  box-shadow: 4px 3px 8px 0px rgb(255, 87, 34);
-  transition-duration: 0.3s;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);
-    transform: translateY(-3px);
-  }
-
-  &-thumb-container {
-    background-color: #000;
-    position: relative;
-    height: 172px;
-    color: #fff;
-    text-align: center;
-  }
-
-  &-thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 172px;
-  }
-
-  &-description {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  &-name {
-    color: #fff;
-    font-weight: 300;
-    font-size: 12px;
-    margin-bottom: 20px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-  }
-
-  &-info {
-    color: #fff;
-    font-weight: 200;
-    font-size: 10px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  &-date {
-    display: flex;
-    color: #fff;
-  }
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
 }
 
 .promotions {
@@ -397,6 +240,70 @@ button {
 .card-footer a {
   text-decoration: none;
   color: #fff;
+}
+
+.event {
+  width: 280px;
+  margin: 10px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #000000;
+  box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 11px 6px rgb(200 152 44 / 46%);
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: #000;
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+  }
+
+  &-description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &-name {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 20px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+  }
+
+  &-info {
+    color: #fff;
+    font-weight: 200;
+    font-size: 10px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-date {
+    display: flex;
+    color: #fff;
+  }
 }
 
 @media (max-width: 960px) {

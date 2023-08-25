@@ -4,11 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BettingOddsService } from 'src/app/services/betting-odds.service';
 
 @Component({
-  selector: 'app-games-traditional-odds',
-  templateUrl: './games-traditional-odds.component.html',
-  styleUrls: ['./games-traditional-odds.component.scss'],
+  selector: 'app-compare-odds',
+  templateUrl: './compare-odds.component.html',
+  styleUrls: ['./compare-odds.component.scss'],
 })
-export class GamesTraditionalOddsComponent implements OnInit {
+export class CompareOddsComponent implements OnInit {
   games: any = [];
   playerPropAvailable: boolean = false;
 

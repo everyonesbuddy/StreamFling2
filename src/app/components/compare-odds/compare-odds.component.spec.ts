@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlayerPropsComponent } from './player-props.component';
+import { CompareOddsComponent } from './compare-odds.component';
 
-describe('PlayerPropsComponent', () => {
-  let component: PlayerPropsComponent;
-  let fixture: ComponentFixture<PlayerPropsComponent>;
+describe('CompareOddsComponent', () => {
+  let component: CompareOddsComponent;
+  let fixture: ComponentFixture<CompareOddsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PlayerPropsComponent],
+      declarations: [CompareOddsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PlayerPropsComponent);
+    fixture = TestBed.createComponent(CompareOddsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

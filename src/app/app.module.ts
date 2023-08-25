@@ -4,10 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PlayerPropsComponent } from './components/player-props/player-props.component';
 import { OddsScreenComponent } from './components/odds-screen/odds-screen.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { GamesPlayerPropsOddsComponent } from './components/games-player-props-odds/games-player-props-odds.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlayerPropsScreenComponent } from './components/player-props-screen/player-props-screen.component';
 import { PlayerPropsPageComponent } from './components/player-props-page/player-props-page.component';
@@ -24,15 +22,16 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
-import { GamesTraditionalOddsComponent } from './components/games-traditional-odds/games-traditional-odds.component';
+import { CompareOddsComponent } from './components/compare-odds/compare-odds.component';
+import { AboutComponent } from './components/about/about.component';
+import { NbaPointsPropDetailsPageComponent } from './components/nba-points-prop-details-page/nba-points-prop-details-page.component';
+import { MlbStrikeoutsPropDetailsComponent } from './components/mlb-strikeouts-prop-details/mlb-strikeouts-prop-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlayerPropsComponent,
     OddsScreenComponent,
     NavbarComponent,
-    GamesPlayerPropsOddsComponent,
     HomeComponent,
     PlayerPropsScreenComponent,
     PlayerPropsPageComponent,
@@ -45,7 +44,10 @@ import { GamesTraditionalOddsComponent } from './components/games-traditional-od
     SubscriptionCardComponent,
     SubscriptionPageComponent,
     SettingsPageComponent,
-    GamesTraditionalOddsComponent,
+    CompareOddsComponent,
+    AboutComponent,
+    NbaPointsPropDetailsPageComponent,
+    MlbStrikeoutsPropDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,8 +3,8 @@
   height: 70vh;
   font-family: sans-serif;
   position: relative;
-  background: url(../../../assets/tim-gouw-VvQSzMJ_h0U-unsplash.jpg) no-repeat
-    center center/cover;
+  background: url(../../../assets/anders-krogh-jorgensen-sYY1FlMHOV4-unsplash.jpg)
+    no-repeat center center/cover;
 }
 
 .showcase-content {
@@ -147,6 +147,10 @@
   position: relative;
 }
 
+button {
+  background-color: #bee6fa;
+}
+
 // New style
 .events-container {
   display: flex;
@@ -172,6 +176,31 @@
   //top: -150px;
 }
 
+.market-wrapper {
+  color: #fff;
+  text-decoration: underline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: auto;
+  margin: auto;
+  position: relative;
+}
+
+.market-detail {
+  color: #fff;
+  text-decoration: underline;
+  margin: 5px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 2px 2px 2px rgb(255, 87, 34);
+    transform: translateY(-3px);
+    border-radius: 5px;
+  }
+}
+
 .event-name {
   font-size: 2rem;
   font-family: "Fredoka One", cursive;
@@ -181,7 +210,6 @@
   font-size: 2rem;
   font-family: "Fredoka One", cursive;
 }
-
 .promotions {
   background-color: var(--primary-color);
   border-radius: 30px;
@@ -200,16 +228,16 @@
 .event {
   width: 280px;
   margin: 10px;
-  height: 40px;
+  // height: 330px;
   overflow: hidden;
   border-radius: 5px;
-  background-color: #000000;
-  box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
+  background-color: var(--third-color);
+  box-shadow: 4px 3px 8px 0px rgb(255, 87, 34);
   transition-duration: 0.3s;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 4px 3px 11px 6px rgb(200 152 44 / 46%);
+    box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);
     transform: translateY(-3px);
   }
 
@@ -235,6 +263,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 157px;
   }
 
   &-name {
@@ -244,6 +273,7 @@
     margin-bottom: 20px;
     white-space: wrap;
     text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   &-info {
@@ -258,5 +288,42 @@
   &-date {
     display: flex;
     color: #fff;
+  }
+}
+
+.no-event {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 960px) {
+  .list {
+    &-banner {
+      height: 65vh;
+      overflow: hidden;
+
+      &-img {
+        width: 100%;
+        filter: blur(2px);
+      }
+    }
+
+    &-content {
+      text-align: center;
+      position: relative;
+      top: -400px;
+    }
+
+    &-header {
+      &-title {
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      &-subtitle {
+        font-size: 0.6rem;
+        line-height: 1;
+      }
+    }
   }
 }

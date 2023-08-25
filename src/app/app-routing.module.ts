@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PlayerPropsComponent } from './components/player-props/player-props.component';
 import { DiscordBotComponent } from './components/discord-bot/discord-bot.component';
-import { GamesTraditionalOddsComponent } from './components/games-traditional-odds/games-traditional-odds.component';
-import { GamesPlayerPropsOddsComponent } from './components/games-player-props-odds/games-player-props-odds.component';
+import { CompareOddsComponent } from './components/compare-odds/compare-odds.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { OddsScreenComponent } from './components/odds-screen/odds-screen.component';
@@ -15,6 +13,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { StripeSuccessComponent } from './components/stripe-success/stripe-success.component';
 import { SubscriptionPageComponent } from './components/subscription-page/subscription-page.component';
 import { AuthGuard } from './guard/auth.guard';
+import { AboutComponent } from './components/about/about.component';
+import { NbaPointsPropDetailsPageComponent } from './components/nba-points-prop-details-page/nba-points-prop-details-page.component';
+import { MlbStrikeoutsPropDetailsComponent } from './components/mlb-strikeouts-prop-details/mlb-strikeouts-prop-details.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignUpComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
   },
   {
     path: 'subscriptions',
@@ -45,10 +50,6 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'playerProps',
-    component: PlayerPropsComponent,
-  },
-  {
     path: 'promotions',
     component: PromotionsComponent,
   },
@@ -61,12 +62,8 @@ const routes: Routes = [
     component: OddsScreenComponent,
   },
   {
-    path: 'gamesPlayerPropsOdds/:key',
-    component: GamesPlayerPropsOddsComponent,
-  },
-  {
-    path: 'gamesTraditionalOdds/:key',
-    component: GamesTraditionalOddsComponent,
+    path: 'compareOdds/:key',
+    component: CompareOddsComponent,
   },
 
   {
@@ -76,6 +73,14 @@ const routes: Routes = [
   {
     path: 'playerPropsPage/:key/:id',
     component: PlayerPropsPageComponent,
+  },
+  {
+    path: 'nbaPointsPropDetailsPage/:player',
+    component: NbaPointsPropDetailsPageComponent,
+  },
+  {
+    path: 'mlbStrikeoutsPropDetailsPage/:player',
+    component: MlbStrikeoutsPropDetailsComponent,
   },
 ];
 
