@@ -154,18 +154,13 @@ button {
   }
 }
 
-//duplication
 .props {
   display: grid;
-  // width: 70px;
   grid-template-columns: 1fr;
   align-items: center;
-  // flex-wrap: wrap;
   justify-content: center;
-  // max-width: 1200px;
   margin: auto;
   position: relative;
-  //top: -150px;
 }
 
 .prop-name {
@@ -177,9 +172,90 @@ button {
 }
 
 .prop {
-  width: 170px;
+  width: 190px;
   margin: 10px;
   height: 40px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--third-color);
+  box-shadow: 4px 3px 8px 0px rgb(255, 87, 34);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: #000;
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+  }
+
+  &-description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &-name {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 20px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+  }
+
+  &-info {
+    color: #fff;
+    font-weight: 200;
+    font-size: 10px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-date {
+    display: flex;
+    color: #fff;
+  }
+}
+
+.cards-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.card-3-name {
+  font-size: 12px;
+}
+
+.card-3-info {
+  font-size: 12px;
+}
+
+.card-3 {
+  width: 190px;
+  margin: 10px;
+  height: 120px;
   overflow: hidden;
   border-radius: 5px;
   background-color: var(--third-color);

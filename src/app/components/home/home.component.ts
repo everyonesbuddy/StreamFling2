@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { BettingOddsService } from 'src/app/services/betting-odds.service';
 import { NbaPropsAnalysisService } from 'src/app/services/nba-props-analysis.service';
 import { MlbPropsAnalysisService } from 'src/app/services/mlb-props-analysis.service';
+import { NflPropsAnalysisService } from 'src/app/services/nfl-props-analysis.service';
 
 @Component({
   selector: 'app-home',
@@ -14,13 +15,15 @@ export class HomeComponent implements OnInit {
   data: any = [];
   nbaPlayerPointsProps: any = [];
   mlbPlayerStrikeoutsProps: any = [];
+  nflPlayerPassingYardsProps: any = [];
 
   constructor(
     private http: HttpClient,
     private router: Router,
     private bettingOdds: BettingOddsService,
     private nbaPropsAnalysis: NbaPropsAnalysisService,
-    private mlbPropsAnalysis: MlbPropsAnalysisService
+    private mlbPropsAnalysis: MlbPropsAnalysisService,
+    private nflPropsAnalysis: NflPropsAnalysisService
   ) {}
 
   ngOnInit(): void {
@@ -30,6 +33,8 @@ export class HomeComponent implements OnInit {
     this.getNbaPlayerPointsProps();
     //get MLB PLayer Strikeouts Props
     this.getMlbPlayerStrikeoutsProps();
+    //get NFL PLayer Passing Yards Props
+    this.getNflPlayerPassingYardsProps();
   }
 
   getSportsInfo() {
@@ -70,6 +75,21 @@ export class HomeComponent implements OnInit {
 
   getMlbPlayerStrikeoutPropDetails(player: any) {
     this.router.navigate(['/mlbStrikeoutsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  getNflPlayerPassingYardsProps() {
+    this.nflPropsAnalysis
+      .getNflPlayerPassingYardsProps()
+      .subscribe((response) => {
+        console.log('response', response);
+        this.nflPlayerPassingYardsProps = response;
+        console.log('props', this.nflPlayerPassingYardsProps);
+      });
+  }
+
+  getNflPlayerPassingYardsPropDetails(player: any) {
+    this.router.navigate(['nflPassingYardsPropDetailsPage/' + player]);
     console.log('player', player);
   }
 }

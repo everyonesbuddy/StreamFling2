@@ -59,10 +59,71 @@
       </div>
     </div>
   </div>
+  <!-- NFL Player Props Passing Yards -->
   <div class="dash-items">
     <p class="dash-headers">NFL Passing Yards (Props Analysis)</p>
+    <div class="events">
+      <div *ngFor="let p of nflPlayerPassingYardsProps">
+        <div
+          class="event"
+          (click)="getNflPlayerPassingYardsPropDetails(p.player)"
+        >
+          <div class="event-description">
+            <p class="event-name">{{ p.player }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="dash-items">
-    <p class="dash-headers">NFL Recieving Yards (Props Analysis)</p>
+    <p class="dash-headers">Promotions</p>
+    <div class="cards-3">
+      <div>
+        <!-- Prize Picks -->
+        <div class="card-3">
+          <div class="card-3-description">
+            <p class="card-3-name">Prize Picks</p>
+            <p class="card-3-name">100% deposit match up to $100</p>
+            <a
+              href="https://app.prizepicks.com/sign-up?invite_code=PR-SUWVT13"
+              target="_blank"
+              class="card-3-name"
+            >
+              Claim $100
+            </a>
+          </div>
+        </div>
+
+        <!-- Underdog Fantasy -->
+        <div class="card-3">
+          <div class="card-3-description">
+            <p class="card-3-name">Underdog Fantasy</p>
+            <p class="card-3-name">100% deposit match up to $100</p>
+            <a
+              href="https://play.underdogfantasy.com/magnusdomitor"
+              target="_blank"
+              class="card-3-name"
+            >
+              Claim $100
+            </a>
+          </div>
+        </div>
+
+        <!-- Parlay Play -->
+        <div class="card-3">
+          <div class="card-3-description">
+            <p class="card-3-name">Parlay Play</p>
+            <p class="card-3-name">100% deposit match up to $100</p>
+            <a
+              href="https://parlayplay.io/account/signup?coupon=joeddomitor"
+              target="_blank"
+              class="card-3-name"
+            >
+              Claim $100
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

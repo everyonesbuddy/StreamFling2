@@ -16,6 +16,7 @@ import { AuthGuard } from './guard/auth.guard';
 import { AboutComponent } from './components/about/about.component';
 import { NbaPointsPropDetailsPageComponent } from './components/nba-points-prop-details-page/nba-points-prop-details-page.component';
 import { MlbStrikeoutsPropDetailsComponent } from './components/mlb-strikeouts-prop-details/mlb-strikeouts-prop-details.component';
+import { NflPassingYardsPropsDetailsComponent } from './components/nfl-passing-yards-props-details/nfl-passing-yards-props-details.component';
 
 const routes: Routes = [
   {
@@ -81,6 +82,10 @@ const routes: Routes = [
   {
     path: 'mlbStrikeoutsPropDetailsPage/:player',
     component: MlbStrikeoutsPropDetailsComponent,
+  },
+  {
+    path: 'nflPassingYardsPropDetailsPage/:player',
+    component: NflPassingYardsPropsDetailsComponent,
   },
 ];
 

@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MlbPropsAnalysisService } from 'src/app/services/mlb-props-analysis.service';
 import { Chart, registerables } from 'chart.js';
+import { NflPropsAnalysisService } from 'src/app/services/nfl-props-analysis.service';
 Chart.register(...registerables);
 
 @Component({
-  selector: 'app-mlb-strikeouts-prop-details',
-  templateUrl: './mlb-strikeouts-prop-details.component.html',
-  styleUrls: ['./mlb-strikeouts-prop-details.component.scss'],
+  selector: 'app-nfl-passing-yards-props-details',
+  templateUrl: './nfl-passing-yards-props-details.component.html',
+  styleUrls: ['./nfl-passing-yards-props-details.component.scss'],
 })
-export class MlbStrikeoutsPropDetailsComponent implements OnInit {
+export class NflPassingYardsPropsDetailsComponent implements OnInit {
   playerData: any = [];
   chart: any = [];
-  playersStrikeoutsLastFive: any = [];
+  playersPassingYardsLastFive: any = [];
   seasonAverage: any = '';
   lastFiveAverage: any = '';
 
@@ -21,25 +21,25 @@ export class MlbStrikeoutsPropDetailsComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
     private router: Router,
-    private mlbPropsAnalysis: MlbPropsAnalysisService
+    private nflPropsAnalysis: NflPropsAnalysisService
   ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       let player = params['player'];
-      this.mlbPropsAnalysis
-        .getSpecificMlbPlayerStrikeoutsProps(player)
+      this.nflPropsAnalysis
+        .getSpecificNflPlayerPassingYardsProps(player)
         .subscribe((res) => {
           this.playerData = res;
           console.log('res', res);
-          this.playersStrikeoutsLastFive.push(
-            res[0].strikeoutsFiveGamesAgo,
-            res[0].strikeoutsFourGamesAgo,
-            res[0].strikeoutsThreeGamesAgo,
-            res[0].strikeoutsTwoGamesAgo,
-            res[0].strikeoutsLastGame
+          this.playersPassingYardsLastFive.push(
+            res[0].passingYardsFiveGamesAgo,
+            res[0].passingYardsFourGamesAgo,
+            res[0].passingYardsThreeGamesAgo,
+            res[0].passingYardsTwoGamesAgo,
+            res[0].passingYardsLastGame
           );
-          console.log('hdfhhh', this.playersStrikeoutsLastFive);
+          console.log('hdfhhh', this.playersPassingYardsLastFive);
           this.renderChart();
         });
     });
@@ -50,16 +50,16 @@ export class MlbStrikeoutsPropDetailsComponent implements OnInit {
       type: 'bar',
       data: {
         labels: [
-          'Strikeouts Five Games Ago',
-          'Strikeouts Four Games Ago',
-          'Strikeouts Three Games Ago',
-          'Strikeouts Two Games Ago',
-          'Strikeouts Last Game',
+          'Passing Yards Five Games Ago',
+          'Passing Yards Four Games Ago',
+          'Passing Yards Three Games Ago',
+          'Passing Yards Two Games Ago',
+          'Passing Yards Last Game',
         ],
         datasets: [
           {
-            label: 'Player Strikeouts last 5 Games (MLB)',
-            data: this.playersStrikeoutsLastFive,
+            label: 'Player Passing Yards last 5 Games (NFL)',
+            data: this.playersPassingYardsLastFive,
             borderWidth: 1,
             backgroundColor: [
               'rgba(34, 40, 49)',
