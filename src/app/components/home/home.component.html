@@ -3,11 +3,11 @@
   <!-- NBA Player Props Points -->
   <div class="dash-items">
     <p class="dash-headers">NBA Player Points (Props Analysis)</p>
-    <div class="props">
+    <div class="cards-2">
       <div *ngFor="let p of nbaPlayerPointsProps">
-        <div class="prop" (click)="getNbaPlayerPointPropDetails(p.player)">
-          <div class="prop-description">
-            <p class="prop-name">{{ p.player }}</p>
+        <div class="card-2" (click)="getNbaPlayerPointPropDetails(p.player)">
+          <div class="card-2-description">
+            <p class="card-2-name">{{ p.player }}</p>
           </div>
         </div>
       </div>
@@ -17,29 +17,27 @@
   <!-- Odds Comparison -->
   <div class="dash-items">
     <p class="dash-headers">Compare Odds - Choose your sport</p>
-    <div class="events">
+    <div class="cards-1">
       <div *ngFor="let d of data">
-        <div class="event" (click)="getGames(d.key)">
-          <div class="event-description">
-            <p class="event-name">{{ d.title }}</p>
+        <div class="card-1" (click)="getGames(d.key)">
+          <div class="card-1-description">
+            <p class="card-1-name">{{ d.title }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!--Intro Copy-->
   <div class="dash-items">
     <p class="dash-headers">Welcome to Streamfling</p>
-    <div class="dash-description">
+
+    <div class="intro-copy">
       <p>
         Maximize Your Winnings with the Ultimate Sports Betting Tool: Unleash
-        the Power of Odds Comparison and AI Analysis.
-      </p>
-    </div>
-    <div class="dash-description">
-      <p>
-        StreamFling is your ultimate tool for sport bettors. Our platform
-        provides real-time odds data from diffrent sport books, along with an AI
-        analyzer, helping you make informed betting decisions with ease.
+        the Power of Odds Comparison and AI Analysis. StreamFling is your
+        ultimate tool for sport bettors. Our platform provides real-time odds
+        data from diffrent sport books, along with an AI analyzer, helping you
+        make informed betting decisions with ease.
       </p>
     </div>
     <button class="btn btn-lg button header-buttons" routerLink="/signup">
@@ -49,11 +47,14 @@
   <!-- MLB Player Props Strikeouts -->
   <div class="dash-items">
     <p class="dash-headers">MLB Strikeouts (Props Analysis)</p>
-    <div class="props">
+    <div class="cards-2">
       <div *ngFor="let p of mlbPlayerStrikeoutsProps">
-        <div class="prop" (click)="getMlbPlayerStrikeoutPropDetails(p.player)">
-          <div class="prop-description">
-            <p class="prop-name">{{ p.player }}</p>
+        <div
+          class="card-2"
+          (click)="getMlbPlayerStrikeoutPropDetails(p.player)"
+        >
+          <div class="card-2-description">
+            <p class="card-2-name">{{ p.player }}</p>
           </div>
         </div>
       </div>
@@ -62,19 +63,20 @@
   <!-- NFL Player Props Passing Yards -->
   <div class="dash-items">
     <p class="dash-headers">NFL Passing Yards (Props Analysis)</p>
-    <div class="events">
+    <div class="cards-1">
       <div *ngFor="let p of nflPlayerPassingYardsProps">
         <div
-          class="event"
+          class="card-1"
           (click)="getNflPlayerPassingYardsPropDetails(p.player)"
         >
-          <div class="event-description">
-            <p class="event-name">{{ p.player }}</p>
+          <div class="card-1-description">
+            <p class="card-1-name">{{ p.player }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- promotions -->
   <div class="dash-items">
     <p class="dash-headers">Promotions</p>
     <div class="cards-3">
@@ -82,7 +84,7 @@
         <!-- Prize Picks -->
         <div class="card-3">
           <div class="card-3-description">
-            <p class="card-3-name">Prize Picks</p>
+            <p class="card-3-header">Prize Picks</p>
             <p class="card-3-name">100% deposit match up to $100</p>
             <a
               href="https://app.prizepicks.com/sign-up?invite_code=PR-SUWVT13"
@@ -93,11 +95,13 @@
             </a>
           </div>
         </div>
+      </div>
 
-        <!-- Underdog Fantasy -->
+      <!-- Underdog Fantasy -->
+      <div>
         <div class="card-3">
           <div class="card-3-description">
-            <p class="card-3-name">Underdog Fantasy</p>
+            <p class="card-3-header">Underdog Fantasy</p>
             <p class="card-3-name">100% deposit match up to $100</p>
             <a
               href="https://play.underdogfantasy.com/magnusdomitor"
@@ -108,11 +112,13 @@
             </a>
           </div>
         </div>
+      </div>
 
-        <!-- Parlay Play -->
+      <!-- Parlay Play -->
+      <div>
         <div class="card-3">
           <div class="card-3-description">
-            <p class="card-3-name">Parlay Play</p>
+            <p class="card-3-header">Parlay Play</p>
             <p class="card-3-name">100% deposit match up to $100</p>
             <a
               href="https://parlayplay.io/account/signup?coupon=joeddomitor"

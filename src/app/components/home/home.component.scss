@@ -29,9 +29,9 @@
   color: var(--fourth-color);
 }
 
-.dash-description {
+.intro-copy {
   font-size: 12px;
-  padding: 5px 5px 10px 5px;
+  padding: 20px;
   color: var(--fourth-color);
 }
 
@@ -72,25 +72,24 @@ button {
   font-family: "Ubuntu", sans-serif;
 }
 
-.events {
-  display: flex;
-  flex-wrap: wrap;
+.cards-1 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  align-items: center;
   justify-content: center;
-  max-width: 1200px;
   margin: auto;
   position: relative;
-  //top: -150px;
 }
 
-.event-name {
+.card-1-name {
   font-size: 12px;
 }
 
-.event-info {
+.card-1-info {
   font-size: 12px;
 }
 
-.event {
+.card-1 {
   width: 280px;
   margin: 10px;
   height: 40px;
@@ -128,6 +127,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: center;
   }
 
   &-name {
@@ -154,7 +154,7 @@ button {
   }
 }
 
-.props {
+.cards-2 {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -163,15 +163,15 @@ button {
   position: relative;
 }
 
-.prop-name {
+.card-2-name {
   font-size: 12px;
 }
 
-.prop-info {
+.card-2-info {
   font-size: 12px;
 }
 
-.prop {
+.card-2 {
   width: 190px;
   margin: 10px;
   height: 40px;
@@ -209,6 +209,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: center;
   }
 
   &-name {
@@ -246,6 +247,10 @@ button {
 
 .card-3-name {
   font-size: 12px;
+}
+
+.card-3-header {
+  font-size: 15px;
 }
 
 .card-3-info {
@@ -290,6 +295,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: center;
   }
 
   &-name {
@@ -299,6 +305,10 @@ button {
     margin-bottom: 20px;
     white-space: wrap;
     text-overflow: ellipsis;
+  }
+
+  &-header {
+    color: #fff;
   }
 
   &-info {
@@ -322,7 +332,66 @@ button {
     padding: 0.4rem 1rem;
     font-family: "Ubuntu", sans-serif;
   }
+
+  .dashboards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-1 {
+    width: 260px;
+  }
+
+  .cards-2 {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .card-2 {
+    width: 260px;
+  }
+
+  .cards-3 {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .card-3 {
+    width: 260px;
+  }
+
+  .intro-copy {
+    font-size: 20px;
+    padding: 30px;
+    color: var(--fourth-color);
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
+  .cards-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .card-1 {
+    width: 400px;
+  }
+
+  .cards-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .card-2 {
+    width: 400px;
+  }
+
+  .cards-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .card-3 {
+    width: 400px;
+  }
+
+  .intro-copy {
+    font-size: 18px;
+    padding: 15px;
+    color: var(--fourth-color);
+  }
 }
