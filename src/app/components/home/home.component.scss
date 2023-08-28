@@ -81,14 +81,6 @@ button {
   position: relative;
 }
 
-.card-1-name {
-  font-size: 12px;
-}
-
-.card-1-info {
-  font-size: 12px;
-}
-
 .card-1 {
   width: 280px;
   margin: 10px;
@@ -138,20 +130,6 @@ button {
     white-space: wrap;
     text-overflow: ellipsis;
   }
-
-  &-info {
-    color: #fff;
-    font-weight: 200;
-    font-size: 10px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  &-date {
-    display: flex;
-    color: #fff;
-  }
 }
 
 .cards-2 {
@@ -161,14 +139,6 @@ button {
   justify-content: center;
   margin: auto;
   position: relative;
-}
-
-.card-2-name {
-  font-size: 12px;
-}
-
-.card-2-info {
-  font-size: 12px;
 }
 
 .card-2 {
@@ -220,20 +190,6 @@ button {
     white-space: wrap;
     text-overflow: ellipsis;
   }
-
-  &-info {
-    color: #fff;
-    font-weight: 200;
-    font-size: 10px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  &-date {
-    display: flex;
-    color: #fff;
-  }
 }
 
 .cards-3 {
@@ -243,18 +199,6 @@ button {
   justify-content: center;
   margin: auto;
   position: relative;
-}
-
-.card-3-name {
-  font-size: 12px;
-}
-
-.card-3-header {
-  font-size: 15px;
-}
-
-.card-3-info {
-  font-size: 12px;
 }
 
 .card-3 {
@@ -308,20 +252,7 @@ button {
   }
 
   &-header {
-    color: #fff;
-  }
-
-  &-info {
-    color: #fff;
-    font-weight: 200;
-    font-size: 10px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  &-date {
-    display: flex;
+    font-size: 15px;
     color: #fff;
   }
 }
