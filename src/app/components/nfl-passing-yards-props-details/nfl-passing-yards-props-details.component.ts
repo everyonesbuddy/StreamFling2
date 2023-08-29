@@ -50,11 +50,11 @@ export class NflPassingYardsPropsDetailsComponent implements OnInit {
       type: 'bar',
       data: {
         labels: [
-          'Passing Yards Five Games Ago',
-          'Passing Yards Four Games Ago',
-          'Passing Yards Three Games Ago',
-          'Passing Yards Two Games Ago',
-          'Passing Yards Last Game',
+          '5 Games Ago',
+          '4 Games Ago',
+          '3 Games Ago',
+          '2 Games Ago',
+          'Last Game',
         ],
         datasets: [
           {

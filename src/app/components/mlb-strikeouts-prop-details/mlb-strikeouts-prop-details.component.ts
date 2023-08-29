@@ -50,11 +50,11 @@ export class MlbStrikeoutsPropDetailsComponent implements OnInit {
       type: 'bar',
       data: {
         labels: [
-          'Strikeouts Five Games Ago',
-          'Strikeouts Four Games Ago',
-          'Strikeouts Three Games Ago',
-          'Strikeouts Two Games Ago',
-          'Strikeouts Last Game',
+          '5 Games Ago',
+          '4 Games Ago',
+          '3 Games Ago',
+          '2 Games Ago',
+          'Last Game',
         ],
         datasets: [
           {

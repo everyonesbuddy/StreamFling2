@@ -50,11 +50,11 @@ export class NbaPointsPropDetailsPageComponent implements OnInit {
       type: 'bar',
       data: {
         labels: [
-          'points Five Games Ago',
-          'points Four Games Ago',
-          'points Three Games Ago',
-          'points Two Games Ago',
-          'points Last Game',
+          '5 Games Ago',
+          '4 Games Ago',
+          '3 Games Ago',
+          '2 Games Ago',
+          'Last Game',
         ],
         datasets: [
           {
