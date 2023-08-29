@@ -297,6 +297,7 @@ button {
 @media (max-width: 500px) {
   .cards-1 {
     grid-template-columns: 1fr;
+    justify-items: start;
   }
 
   .card-1 {
@@ -305,6 +306,7 @@ button {
 
   .cards-2 {
     grid-template-columns: 1fr;
+    justify-items: start;
   }
 
   .card-2 {
@@ -313,6 +315,7 @@ button {
 
   .cards-3 {
     grid-template-columns: 1fr;
+    justify-items: start;
   }
 
   .card-3 {
