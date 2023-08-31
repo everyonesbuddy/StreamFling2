@@ -1,11 +1,64 @@
 <!-- dashboards -->
 <div class="dashboards">
+  <!--Intro Copy-->
+  <div class="dash-items">
+    <p class="dash-headers">Welcome to SureOdds</p>
+
+    <div class="intro-copy">
+      <p>
+        Elevate Your Winning Potential with the Ultimate Sports Betting
+        Companion: Harness the power of Player Prop Analysis and Odds
+        Comparison. Welcome to SureOdds, your indispensable toolkit for sports
+        bettors. Our platform offers live odds data from various sportsbooks,
+        coupled with comprehensive player prop analysis and invaluable insights,
+        empowering you to effortlessly craft well-informed betting choices.
+      </p>
+    </div>
+    <button class="btn btn-lg button header-buttons" routerLink="/about">
+      Learn More
+    </button>
+  </div>
+
+  <!-- NFL Player Props Passing Yards -->
+  <div class="dash-items">
+    <p class="dash-headers">NFL Passing Yards (Props Analysis)</p>
+    <div class="cards-1">
+      <div *ngFor="let p of nflPlayerPassingYardsProps">
+        <div
+          class="card-1"
+          (click)="getNflPlayerPassingYardsPropDetails(p.player)"
+        >
+          <div class="card-1-description">
+            <p class="card-1-name">{{ p.player }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- NBA Player Props Points -->
   <div class="dash-items">
     <p class="dash-headers">NBA Player Points (Props Analysis)</p>
     <div class="cards-2">
       <div *ngFor="let p of nbaPlayerPointsProps">
         <div class="card-2" (click)="getNbaPlayerPointPropDetails(p.player)">
+          <div class="card-2-description">
+            <p class="card-2-name">{{ p.player }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MLB Player Props Strikeouts -->
+  <div class="dash-items">
+    <p class="dash-headers">MLB Strikeouts (Props Analysis)</p>
+    <div class="cards-2">
+      <div *ngFor="let p of mlbPlayerStrikeoutsProps">
+        <div
+          class="card-2"
+          (click)="getMlbPlayerStrikeoutPropDetails(p.player)"
+        >
           <div class="card-2-description">
             <p class="card-2-name">{{ p.player }}</p>
           </div>
@@ -27,55 +80,7 @@
       </div>
     </div>
   </div>
-  <!--Intro Copy-->
-  <div class="dash-items">
-    <p class="dash-headers">Welcome to Streamfling</p>
 
-    <div class="intro-copy">
-      <p>
-        Maximize Your Winnings with the Ultimate Sports Betting Tool: Unleash
-        the Power of Odds Comparison and AI Analysis. StreamFling is your
-        ultimate tool for sport bettors. Our platform provides real-time odds
-        data from diffrent sport books, along with an AI analyzer, helping you
-        make informed betting decisions with ease.
-      </p>
-    </div>
-    <button class="btn btn-lg button header-buttons" routerLink="/about">
-      Learn More
-    </button>
-  </div>
-  <!-- MLB Player Props Strikeouts -->
-  <div class="dash-items">
-    <p class="dash-headers">MLB Strikeouts (Props Analysis)</p>
-    <div class="cards-2">
-      <div *ngFor="let p of mlbPlayerStrikeoutsProps">
-        <div
-          class="card-2"
-          (click)="getMlbPlayerStrikeoutPropDetails(p.player)"
-        >
-          <div class="card-2-description">
-            <p class="card-2-name">{{ p.player }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- NFL Player Props Passing Yards -->
-  <div class="dash-items">
-    <p class="dash-headers">NFL Passing Yards (Props Analysis)</p>
-    <div class="cards-1">
-      <div *ngFor="let p of nflPlayerPassingYardsProps">
-        <div
-          class="card-1"
-          (click)="getNflPlayerPassingYardsPropDetails(p.player)"
-        >
-          <div class="card-1-description">
-            <p class="card-1-name">{{ p.player }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- promotions -->
   <div class="dash-items">
     <p class="dash-headers">Promotions</p>

@@ -36,7 +36,7 @@
 .showcase-content p {
   color: var(--fourth-color);
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.1;
   margin: 0 0 2rem;
 }
@@ -65,6 +65,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.tab-content {
+  padding-bottom: 15px;
 }
 
 .wrapper {
@@ -97,13 +101,14 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-family: "Ubuntu", sans-serif;
+  text-align: center;
 }
 
 .text-center {
   text-align: center;
 }
 
-.tab-2-content-bottom {
+.features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
@@ -141,6 +146,15 @@ button {
     font-weight: 50;
     font-size: 0.8rem;
     line-height: 1;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   button {
