@@ -9,7 +9,7 @@
   width: 100%;
   font-family: sans-serif;
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
   align-items: center;
   justify-items: center;
@@ -97,5 +97,9 @@
   .chart-wrapper {
     height: 700px;
     width: 400px;
+  }
+
+  .detail-wrapper {
+    grid-template-columns: 1fr;
   }
 }
