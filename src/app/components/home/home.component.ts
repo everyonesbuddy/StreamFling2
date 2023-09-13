@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   data: any = [];
   nbaPlayerPointsProps: any = [];
   mlbPlayerStrikeoutsProps: any = [];
+  mlbPlayerWalksProps: any = [];
+  mlbPlayerHitsAllowedProps: any = [];
   nflPlayerPassingYardsProps: any = [];
 
   constructor(
@@ -31,8 +33,12 @@ export class HomeComponent implements OnInit {
     this.getSportsInfo();
     //get NBA PLayer Points Props
     this.getNbaPlayerPointsProps();
-    //get MLB PLayer Strikeouts Props
+    //get MLB Player Strikeouts Props
     this.getMlbPlayerStrikeoutsProps();
+    //get MLB Player Walks Props
+    this.getMlbPlayerWalksProps();
+    //get MLB Player Hits Allowed Props
+    this.getMlbPlayerHitsAllowedProps();
     //get NFL PLayer Passing Yards Props
     this.getNflPlayerPassingYardsProps();
   }
@@ -75,6 +81,34 @@ export class HomeComponent implements OnInit {
 
   getMlbPlayerStrikeoutPropDetails(player: any) {
     this.router.navigate(['/mlbStrikeoutsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  getMlbPlayerWalksProps() {
+    this.mlbPropsAnalysis.getMlbPlayerWalksProps().subscribe((response) => {
+      console.log('response', response);
+      this.mlbPlayerWalksProps = response;
+      console.log('props', this.mlbPlayerWalksProps);
+    });
+  }
+
+  getMlbPlayerWalksPropDetails(player: any) {
+    this.router.navigate(['/mlbWalksPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  getMlbPlayerHitsAllowedProps() {
+    this.mlbPropsAnalysis
+      .getMlbPlayerHitsAllowedProps()
+      .subscribe((response) => {
+        console.log('response', response);
+        this.mlbPlayerHitsAllowedProps = response;
+        console.log('props', this.mlbPlayerHitsAllowedProps);
+      });
+  }
+
+  getMlbPlayerHitsAllowedPropDetails(player: any) {
+    this.router.navigate(['/mlbHitsAllowedPropDetailsPage/' + player]);
     console.log('player', player);
   }
 

@@ -27,6 +27,8 @@ import { AboutComponent } from './components/about/about.component';
 import { NbaPointsPropDetailsPageComponent } from './components/nba-points-prop-details-page/nba-points-prop-details-page.component';
 import { MlbStrikeoutsPropDetailsComponent } from './components/mlb-strikeouts-prop-details/mlb-strikeouts-prop-details.component';
 import { NflPassingYardsPropsDetailsComponent } from './components/nfl-passing-yards-props-details/nfl-passing-yards-props-details.component';
+import { MlbWalksPropDetailsComponent } from './components/mlb-walks-prop-details/mlb-walks-prop-details.component';
+import { MlbHitsAllowedPropDetailsComponent } from './components/mlb-hits-allowed-prop-details/mlb-hits-allowed-prop-details.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { NflPassingYardsPropsDetailsComponent } from './components/nfl-passing-y
     NbaPointsPropDetailsPageComponent,
     MlbStrikeoutsPropDetailsComponent,
     NflPassingYardsPropsDetailsComponent,
+    MlbWalksPropDetailsComponent,
+    MlbHitsAllowedPropDetailsComponent,
   ],
   imports: [
     BrowserModule,
