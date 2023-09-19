@@ -19,6 +19,8 @@ import { MlbStrikeoutsPropDetailsComponent } from './components/mlb-strikeouts-p
 import { NflPassingYardsPropsDetailsComponent } from './components/nfl-passing-yards-props-details/nfl-passing-yards-props-details.component';
 import { MlbWalksPropDetailsComponent } from './components/mlb-walks-prop-details/mlb-walks-prop-details.component';
 import { MlbHitsAllowedPropDetailsComponent } from './components/mlb-hits-allowed-prop-details/mlb-hits-allowed-prop-details.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogPostComponent } from './components/blog-post/blog-post.component';
 
 const routes: Routes = [
   {
@@ -96,6 +98,14 @@ const routes: Routes = [
   {
     path: 'nflPassingYardsPropDetailsPage/:player',
     component: NflPassingYardsPropsDetailsComponent,
+  },
+  {
+    path: 'blog',
+    component: BlogComponent,
+  },
+  {
+    path: 'blog-post/:slug/:id',
+    component: BlogPostComponent,
   },
 ];
 

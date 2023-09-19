@@ -29,6 +29,9 @@ import { MlbStrikeoutsPropDetailsComponent } from './components/mlb-strikeouts-p
 import { NflPassingYardsPropsDetailsComponent } from './components/nfl-passing-yards-props-details/nfl-passing-yards-props-details.component';
 import { MlbWalksPropDetailsComponent } from './components/mlb-walks-prop-details/mlb-walks-prop-details.component';
 import { MlbHitsAllowedPropDetailsComponent } from './components/mlb-hits-allowed-prop-details/mlb-hits-allowed-prop-details.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogPostComponent } from './components/blog-post/blog-post.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,8 @@ import { MlbHitsAllowedPropDetailsComponent } from './components/mlb-hits-allowe
     NflPassingYardsPropsDetailsComponent,
     MlbWalksPropDetailsComponent,
     MlbHitsAllowedPropDetailsComponent,
+    BlogComponent,
+    BlogPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +67,7 @@ import { MlbHitsAllowedPropDetailsComponent } from './components/mlb-hits-allowe
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
+    MarkdownModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 1000,
       positionClass: 'toast-bottom-right',

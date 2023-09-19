@@ -1,0 +1,54 @@
+.wrapper {
+  width: 100%;
+}
+
+.qr-access {
+  background: #fff200;
+  padding: 5px;
+  text-align: center;
+}
+
+.profile-rate-div {
+  background: #0a2847;
+  color: white;
+}
+
+.hidden-xs {
+  margin-top: 54px;
+}
+
+.custom-btn {
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.mailsent {
+  color: red;
+  padding: 5px;
+  background: #ddd;
+}
+
+.profile-detail-div {
+  margin-top: 20px;
+}
+
+.profile-detail-ul h4 {
+  margin: 10px 0;
+}
+
+.purchaseBtn {
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  font-size: 1.1rem;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+}
