@@ -9,7 +9,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlayerPropsScreenComponent } from './components/player-props-screen/player-props-screen.component';
 import { PlayerPropsPageComponent } from './components/player-props-page/player-props-page.component';
-import { PromotionsComponent } from './components/promotions/promotions.component';
 import { DiscordBotComponent } from './components/discord-bot/discord-bot.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
@@ -41,7 +40,6 @@ import { MarkdownModule } from 'ngx-markdown';
     HomeComponent,
     PlayerPropsScreenComponent,
     PlayerPropsPageComponent,
-    PromotionsComponent,
     DiscordBotComponent,
     LoginComponent,
     SignUpComponent,

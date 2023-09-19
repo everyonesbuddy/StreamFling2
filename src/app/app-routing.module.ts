@@ -7,7 +7,6 @@ import { LoginComponent } from './components/login/login.component';
 import { OddsScreenComponent } from './components/odds-screen/odds-screen.component';
 import { PlayerPropsPageComponent } from './components/player-props-page/player-props-page.component';
 import { PlayerPropsScreenComponent } from './components/player-props-screen/player-props-screen.component';
-import { PromotionsComponent } from './components/promotions/promotions.component';
 import { SettingsPageComponent } from './components/settings-page/settings-page.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { StripeSuccessComponent } from './components/stripe-success/stripe-success.component';
@@ -53,10 +52,6 @@ const routes: Routes = [
     path: 'settings',
     component: SettingsPageComponent,
     canActivate: [AuthGuard],
-  },
-  {
-    path: 'promotions',
-    component: PromotionsComponent,
   },
   {
     path: 'bot',
