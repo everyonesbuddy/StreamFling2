@@ -33,14 +33,14 @@
     </div>
   </div>
 
-  <!-- MLB Player Props Hits Allowed -->
+  <!-- NFL Player Props Passing Yards -->
   <div class="dash-items">
-    <p class="dash-headers">MLB Hits Allowed (Props Analysis)</p>
+    <p class="dash-headers">NFL Passing Yards (Props Analysis)</p>
     <div class="cards-2">
-      <div *ngFor="let p of mlbPlayerHitsAllowedProps">
+      <div *ngFor="let p of nflPlayerPassingYardsProps">
         <div
           class="card-2"
-          (click)="getMlbPlayerHitsAllowedPropDetails(p.player)"
+          (click)="getNflPlayerPassingYardsPropDetails(p.player)"
         >
           <div class="card-2-description">
             <p class="card-2-name">{{ p.player }}</p>
@@ -75,6 +75,23 @@
         <div class="card-1" (click)="getGames(d.key)">
           <div class="card-1-description">
             <p class="card-1-name">{{ d.title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MLB Player Props Hits Allowed -->
+  <div class="dash-items">
+    <p class="dash-headers">MLB Hits Allowed (Props Analysis)</p>
+    <div class="cards-2">
+      <div *ngFor="let p of mlbPlayerHitsAllowedProps">
+        <div
+          class="card-2"
+          (click)="getMlbPlayerHitsAllowedPropDetails(p.player)"
+        >
+          <div class="card-2-description">
+            <p class="card-2-name">{{ p.player }}</p>
           </div>
         </div>
       </div>

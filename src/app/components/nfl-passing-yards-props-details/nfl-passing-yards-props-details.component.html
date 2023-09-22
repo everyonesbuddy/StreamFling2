@@ -4,14 +4,20 @@
     <div class="detail-wrapper">
       <div class="detail">
         <div class="detail-description">
-          <p class="detail-name">Season Avg (Pass Yards)</p>
-          <p class="detail-name">{{ d.passingYardsPerGame }}</p>
+          <p class="detail-name">Last Season Avg (Pass Yards)</p>
+          <p class="detail-name">{{ d.passingYardsPerGameLastSeason }}</p>
         </div>
       </div>
       <div class="detail">
         <div class="detail-description">
-          <p class="detail-name">Last 5 Avg (Pass Yards)</p>
-          <p class="detail-name">{{ d.avergeLastFive }}</p>
+          <p class="detail-name">Current Season Avg (Pass Yards)</p>
+          <p class="detail-name">{{ d.passingYardsPerGameCurrentSeason }}</p>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="detail-description">
+          <p class="detail-name">Last 2 Avg (Pass Yards)</p>
+          <p class="detail-name">{{ d.avergeLastTwo }}</p>
         </div>
       </div>
       <div class="detail">

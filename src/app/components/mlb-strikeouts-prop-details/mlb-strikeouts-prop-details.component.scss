@@ -9,7 +9,7 @@
   width: 100%;
   font-family: sans-serif;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
   grid-gap: 2rem;
   align-items: center;
   justify-items: center;
@@ -65,7 +65,7 @@
   &-name {
     color: #fff;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 20px;
     white-space: wrap;
     text-overflow: ellipsis;
