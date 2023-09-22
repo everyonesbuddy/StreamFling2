@@ -25,8 +25,11 @@
     <div class="cards-1">
       <div *ngFor="let p of mlbPlayerWalksProps">
         <div class="card-1" (click)="getMlbPlayerWalksPropDetails(p.player)">
-          <div class="card-1-description">
-            <p class="card-1-name">{{ p.player }}</p>
+          <div class="info-wrapper-big-dashbord">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-1-description">
+              <p class="card-1-name">{{ p.player }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -42,8 +45,11 @@
           class="card-2"
           (click)="getNflPlayerPassingYardsPropDetails(p.player)"
         >
-          <div class="card-2-description">
-            <p class="card-2-name">{{ p.player }}</p>
+          <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-name">{{ p.player }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -59,8 +65,11 @@
           class="card-2"
           (click)="getMlbPlayerStrikeoutPropDetails(p.player)"
         >
-          <div class="card-2-description">
-            <p class="card-2-name">{{ p.player }}</p>
+          <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-name">{{ p.player }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -90,8 +99,11 @@
           class="card-2"
           (click)="getMlbPlayerHitsAllowedPropDetails(p.player)"
         >
-          <div class="card-2-description">
-            <p class="card-2-name">{{ p.player }}</p>
+          <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-name">{{ p.player }}</p>
+            </div>
           </div>
         </div>
       </div>
