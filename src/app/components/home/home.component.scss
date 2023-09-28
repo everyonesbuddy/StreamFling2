@@ -129,6 +129,15 @@ button {
     white-space: wrap;
     text-overflow: ellipsis;
   }
+
+  &-name-odd-comparison {
+    color: #fff;
+    font-weight: 300;
+    font-size: 10px;
+    margin-bottom: 20px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+  }
 }
 
 .cards-2 {

@@ -26,7 +26,9 @@
       <div *ngFor="let d of data">
         <div class="card-1" (click)="getGames(d.key)">
           <div class="card-1-description">
-            <p class="card-1-name">{{ d.title }}-{{ d.description }}</p>
+            <p class="card-1-name-odd-comparison">
+              {{ d.title }} - {{ d.description }}
+            </p>
           </div>
         </div>
       </div>
