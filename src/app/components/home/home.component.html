@@ -19,17 +19,14 @@
     </button>
   </div>
 
-  <!-- MLB Player Props Walks -->
+  <!-- Odds Comparison -->
   <div class="dash-items">
-    <p class="dash-headers">MLB Walks (Props Analysis)</p>
+    <p class="dash-headers">Compare Odds - Choose your sport</p>
     <div class="cards-1">
-      <div *ngFor="let p of mlbPlayerWalksProps">
-        <div class="card-1" (click)="getMlbPlayerWalksPropDetails(p.player)">
-          <div class="info-wrapper-big-dashbord">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-1-description">
-              <p class="card-1-name">{{ p.player }}</p>
-            </div>
+      <div *ngFor="let d of data">
+        <div class="card-1" (click)="getGames(d.key)">
+          <div class="card-1-description">
+            <p class="card-1-name">{{ d.title }}</p>
           </div>
         </div>
       </div>
@@ -76,14 +73,17 @@
     </div>
   </div>
 
-  <!-- Odds Comparison -->
+  <!-- MLB Player Props Walks -->
   <div class="dash-items">
-    <p class="dash-headers">Compare Odds - Choose your sport</p>
+    <p class="dash-headers">MLB Walks (Props Analysis)</p>
     <div class="cards-1">
-      <div *ngFor="let d of data">
-        <div class="card-1" (click)="getGames(d.key)">
-          <div class="card-1-description">
-            <p class="card-1-name">{{ d.title }}</p>
+      <div *ngFor="let p of mlbPlayerWalksProps">
+        <div class="card-1" (click)="getMlbPlayerWalksPropDetails(p.player)">
+          <div class="info-wrapper-big-dashbord">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-1-description">
+              <p class="card-1-name">{{ p.player }}</p>
+            </div>
           </div>
         </div>
       </div>
