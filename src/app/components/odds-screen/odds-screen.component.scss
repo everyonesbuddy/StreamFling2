@@ -117,6 +117,10 @@
   padding-top: 30px;
 }
 
+// .table-boby {
+//   color: #fff;
+// }
+
 .header {
   display: block;
   text-align: center;
@@ -161,6 +165,7 @@ canvas {
   overflow: hidden;
   border-radius: 5px;
   background-color: var(--third-color);
+  color: #fff;
   // box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);
   transition-duration: 0.3s;
   cursor: pointer;
