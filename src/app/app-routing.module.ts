@@ -20,6 +20,7 @@ import { MlbWalksPropDetailsComponent } from './components/mlb-walks-prop-detail
 import { MlbHitsAllowedPropDetailsComponent } from './components/mlb-hits-allowed-prop-details/mlb-hits-allowed-prop-details.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
+import { SoccerGoalsPropDetailsComponent } from './components/soccer-goals-prop-details/soccer-goals-prop-details.component';
 
 const routes: Routes = [
   {
@@ -93,6 +94,10 @@ const routes: Routes = [
   {
     path: 'nflPassingYardsPropDetailsPage/:player',
     component: NflPassingYardsPropsDetailsComponent,
+  },
+  {
+    path: 'soccerGoalssPropDetailsPage/:player',
+    component: SoccerGoalsPropDetailsComponent,
   },
   {
     path: 'blog',

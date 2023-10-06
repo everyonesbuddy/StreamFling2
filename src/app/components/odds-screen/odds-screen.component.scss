@@ -163,12 +163,13 @@ canvas {
   margin: 10px;
   // height: 330px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: var(--third-color);
   color: #fff;
   // box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);
   transition-duration: 0.3s;
   cursor: pointer;
+  text-align: center;
 
   // &:hover {
   //   box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);

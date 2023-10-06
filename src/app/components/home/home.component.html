@@ -37,7 +37,7 @@
 
   <!-- NFL Player Props Passing Yards -->
   <div class="dash-items">
-    <p class="dash-headers">NFL Passing Yards (Props Analysis)</p>
+    <p class="dash-headers">NFL Passing Yards</p>
     <div class="cards-2">
       <div *ngFor="let p of nflPlayerPassingYardsProps">
         <div
@@ -47,7 +47,7 @@
           <div class="info-wrapper-small-dashboard">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
-              <p class="card-2-name">{{ p.player }}</p>
+              <p class="card-2-player-name">{{ p.player }}</p>
             </div>
           </div>
         </div>
@@ -55,19 +55,16 @@
     </div>
   </div>
 
-  <!-- MLB Player Props Strikeouts -->
+  <!--  Soccer Player Props Goals -->
   <div class="dash-items">
-    <p class="dash-headers">MLB Strikeouts (Props Analysis)</p>
+    <p class="dash-headers">Soccer Goals Scored (All Comps.)</p>
     <div class="cards-2">
-      <div *ngFor="let p of mlbPlayerStrikeoutsProps">
-        <div
-          class="card-2"
-          (click)="getMlbPlayerStrikeoutPropDetails(p.player)"
-        >
+      <div *ngFor="let p of soccerPlayerGoalsProps">
+        <div class="card-2" (click)="getSoccerPlayerGoalsPropDetails(p.player)">
           <div class="info-wrapper-small-dashboard">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
-              <p class="card-2-name">{{ p.player }}</p>
+              <p class="card-2-player-name">{{ p.player }}</p>
             </div>
           </div>
         </div>
@@ -77,14 +74,34 @@
 
   <!-- MLB Player Props Walks -->
   <div class="dash-items">
-    <p class="dash-headers">MLB Walks (Props Analysis)</p>
+    <p class="dash-headers">MLB Walks</p>
     <div class="cards-1">
       <div *ngFor="let p of mlbPlayerWalksProps">
         <div class="card-1" (click)="getMlbPlayerWalksPropDetails(p.player)">
           <div class="info-wrapper-big-dashbord">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-1-description">
-              <p class="card-1-name">{{ p.player }}</p>
+              <p class="card-1-player-name">{{ p.player }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MLB Player Props Strikeouts -->
+  <div class="dash-items">
+    <p class="dash-headers">MLB Strikeouts</p>
+    <div class="cards-2">
+      <div *ngFor="let p of mlbPlayerStrikeoutsProps">
+        <div
+          class="card-2"
+          (click)="getMlbPlayerStrikeoutPropDetails(p.player)"
+        >
+          <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-player-name">{{ p.player }}</p>
             </div>
           </div>
         </div>
@@ -94,7 +111,7 @@
 
   <!-- MLB Player Props Hits Allowed -->
   <div class="dash-items">
-    <p class="dash-headers">MLB Hits Allowed (Props Analysis)</p>
+    <p class="dash-headers">MLB Hits Allowed</p>
     <div class="cards-2">
       <div *ngFor="let p of mlbPlayerHitsAllowedProps">
         <div
@@ -104,7 +121,7 @@
           <div class="info-wrapper-small-dashboard">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
-              <p class="card-2-name">{{ p.player }}</p>
+              <p class="card-2-player-name">{{ p.player }}</p>
             </div>
           </div>
         </div>
@@ -113,12 +130,12 @@
   </div>
 
   <!-- promotions -->
-  <div class="dash-items">
+  <!-- <div class="dash-items">
     <p class="dash-headers">Promotions</p>
     <div class="cards-3">
-      <div>
-        <!-- Prize Picks -->
-        <div class="card-3">
+      <div> -->
+  <!-- Prize Picks -->
+  <!-- <div class="card-3">
           <div class="card-3-description">
             <p class="card-3-header">Prize Picks</p>
             <p class="card-3-name">100% deposit match up to $100</p>
@@ -131,10 +148,10 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- Underdog Fantasy -->
-      <div>
+  <!-- Underdog Fantasy -->
+  <!-- <div>
         <div class="card-3">
           <div class="card-3-description">
             <p class="card-3-header">Underdog Fantasy</p>
@@ -148,10 +165,10 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- Parlay Play -->
-      <div>
+  <!-- Parlay Play -->
+  <!-- <div>
         <div class="card-3">
           <div class="card-3-description">
             <p class="card-3-header">Parlay Play</p>
@@ -167,5 +184,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

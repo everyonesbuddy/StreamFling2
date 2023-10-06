@@ -5,6 +5,7 @@ import { BettingOddsService } from 'src/app/services/betting-odds.service';
 import { NbaPropsAnalysisService } from 'src/app/services/nba-props-analysis.service';
 import { MlbPropsAnalysisService } from 'src/app/services/mlb-props-analysis.service';
 import { NflPropsAnalysisService } from 'src/app/services/nfl-props-analysis.service';
+import { SoccerPropsAnalysisService } from 'src/app/services/soccer-props-analysis.service';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
   mlbPlayerWalksProps: any = [];
   mlbPlayerHitsAllowedProps: any = [];
   nflPlayerPassingYardsProps: any = [];
+  soccerPlayerGoalsProps: any = [];
 
   constructor(
     private http: HttpClient,
@@ -25,7 +27,8 @@ export class HomeComponent implements OnInit {
     private bettingOdds: BettingOddsService,
     private nbaPropsAnalysis: NbaPropsAnalysisService,
     private mlbPropsAnalysis: MlbPropsAnalysisService,
-    private nflPropsAnalysis: NflPropsAnalysisService
+    private nflPropsAnalysis: NflPropsAnalysisService,
+    private soccerPropsAnalysis: SoccerPropsAnalysisService
   ) {}
 
   ngOnInit(): void {
@@ -41,6 +44,8 @@ export class HomeComponent implements OnInit {
     this.getMlbPlayerHitsAllowedProps();
     //get NFL PLayer Passing Yards Props
     this.getNflPlayerPassingYardsProps();
+    // get Soccer Player Goals props
+    this.getSoccerPlayerGoalsProps();
   }
 
   getSportsInfo() {
@@ -124,6 +129,21 @@ export class HomeComponent implements OnInit {
 
   getNflPlayerPassingYardsPropDetails(player: any) {
     this.router.navigate(['nflPassingYardsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  getSoccerPlayerGoalsProps() {
+    this.soccerPropsAnalysis
+      .getSoccerPlayerGoalsProps()
+      .subscribe((response) => {
+        console.log('response', response);
+        this.soccerPlayerGoalsProps = response;
+        console.log('props', this.soccerPlayerGoalsProps);
+      });
+  }
+
+  getSoccerPlayerGoalsPropDetails(player: any) {
+    this.router.navigate(['soccerGoalssPropDetailsPage/' + player]);
     console.log('player', player);
   }
 }

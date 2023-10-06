@@ -31,6 +31,7 @@ import { MlbHitsAllowedPropDetailsComponent } from './components/mlb-hits-allowe
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { SoccerGoalsPropDetailsComponent } from './components/soccer-goals-prop-details/soccer-goals-prop-details.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { MarkdownModule } from 'ngx-markdown';
     MlbHitsAllowedPropDetailsComponent,
     BlogComponent,
     BlogPostComponent,
+    SoccerGoalsPropDetailsComponent,
   ],
   imports: [
     BrowserModule,
