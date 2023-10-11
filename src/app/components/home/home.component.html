@@ -19,16 +19,17 @@
     </button>
   </div>
 
-  <!-- Odds Comparison -->
+  <!--  Soccer Player Props Goals -->
   <div class="dash-items">
-    <p class="dash-headers">Compare Odds - Choose your sport</p>
-    <div class="cards-1">
-      <div *ngFor="let d of data">
-        <div class="card-1" (click)="getGames(d.key)">
-          <div class="card-1-description">
-            <p class="card-1-name-odd-comparison">
-              {{ d.title }} - {{ d.description }}
-            </p>
+    <p class="dash-headers">Soccer Goals Scored (All Comps.)</p>
+    <div class="cards-2">
+      <div *ngFor="let p of soccerPlayerGoalsProps">
+        <div class="card-2" (click)="getSoccerPlayerGoalsPropDetails(p.player)">
+          <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-player-name">{{ p.player }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -55,17 +56,16 @@
     </div>
   </div>
 
-  <!--  Soccer Player Props Goals -->
+  <!-- Odds Comparison -->
   <div class="dash-items">
-    <p class="dash-headers">Soccer Goals Scored (All Comps.)</p>
-    <div class="cards-2">
-      <div *ngFor="let p of soccerPlayerGoalsProps">
-        <div class="card-2" (click)="getSoccerPlayerGoalsPropDetails(p.player)">
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-            </div>
+    <p class="dash-headers">Compare Odds - Choose your sport</p>
+    <div class="cards-1">
+      <div *ngFor="let d of data">
+        <div class="card-1" (click)="getGames(d.key)">
+          <div class="card-1-description">
+            <p class="card-1-name-odd-comparison">
+              {{ d.title }} - {{ d.description }}
+            </p>
           </div>
         </div>
       </div>
