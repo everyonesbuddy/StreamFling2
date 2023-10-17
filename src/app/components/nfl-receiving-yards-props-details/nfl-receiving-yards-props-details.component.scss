@@ -1,0 +1,120 @@
+.chart-wrapper {
+  font-family: sans-serif;
+  margin: auto;
+  height: 700px;
+  width: 1000px;
+}
+
+.detail-and-image-wrapper {
+  width: 100%;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+
+.detail-wrapper {
+  width: 100%;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+
+.player-name {
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.detail {
+  width: 170px;
+  margin: 10px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--third-color);
+  box-shadow: 4px 3px 8px 0px rgb(255, 87, 34);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: #000;
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+  }
+
+  &-description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &-name {
+    color: #fff;
+    font-weight: 300;
+    font-size: 10px;
+    // margin-bottom: 20px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+  }
+
+  &-info {
+    color: #fff;
+    font-weight: 200;
+    font-size: 10px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-date {
+    display: flex;
+    color: #fff;
+  }
+}
+
+@media (max-width: 960px) {
+  .chart-wrapper {
+    height: 700px;
+    width: 600px;
+  }
+}
+
+@media (max-width: 500px) {
+  .chart-wrapper {
+    height: 700px;
+    width: 400px;
+  }
+
+  .detail-and-image-wrapper {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .detail-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

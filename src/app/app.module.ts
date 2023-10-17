@@ -32,6 +32,10 @@ import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { SoccerGoalsPropDetailsComponent } from './components/soccer-goals-prop-details/soccer-goals-prop-details.component';
+import { NflReceivingYardsPropsDetailsComponent } from './components/nfl-receiving-yards-props-details/nfl-receiving-yards-props-details.component';
+import { NflRushingYardsPropsDetailsComponent } from './components/nfl-rushing-yards-props-details/nfl-rushing-yards-props-details.component';
+import { SoccerShotsPropDetailsComponent } from './components/soccer-shots-prop-details/soccer-shots-prop-details.component';
+import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-prop-details/soccer-assists-prop-details.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,10 @@ import { SoccerGoalsPropDetailsComponent } from './components/soccer-goals-prop-
     BlogComponent,
     BlogPostComponent,
     SoccerGoalsPropDetailsComponent,
+    NflReceivingYardsPropsDetailsComponent,
+    NflRushingYardsPropsDetailsComponent,
+    SoccerShotsPropDetailsComponent,
+    SoccerAssistsPropDetailsComponent,
   ],
   imports: [
     BrowserModule,

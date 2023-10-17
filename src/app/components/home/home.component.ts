@@ -19,7 +19,11 @@ export class HomeComponent implements OnInit {
   mlbPlayerWalksProps: any = [];
   mlbPlayerHitsAllowedProps: any = [];
   nflPlayerPassingYardsProps: any = [];
+  nflPlayerReceivingYardsProps: any = [];
+  nflPlayerRushingYardsProps: any = [];
   soccerPlayerGoalsProps: any = [];
+  soccerPlayerShotsProps: any = [];
+  soccerPlayerAssistsProps: any = [];
 
   constructor(
     private http: HttpClient,
@@ -44,8 +48,16 @@ export class HomeComponent implements OnInit {
     this.getMlbPlayerHitsAllowedProps();
     //get NFL PLayer Passing Yards Props
     this.getNflPlayerPassingYardsProps();
+    //get NFL PLayer Receiving Yards Props
+    this.getNflPlayerReceivingYardsProps();
+    //get NFL PLayer Rushing Yards Props
+    this.getNflPlayerRushingYardsProps();
     // get Soccer Player Goals props
     this.getSoccerPlayerGoalsProps();
+    // get Soccer Player Shots props
+    this.getSoccerPlayerShotsProps();
+    // get Soccer Player Assists props
+    this.getSoccerPlayerAssistsProps();
   }
 
   getSportsInfo() {
@@ -74,6 +86,7 @@ export class HomeComponent implements OnInit {
     console.log('player', player);
   }
 
+  //get all players Strikeouts data
   getMlbPlayerStrikeoutsProps() {
     this.mlbPropsAnalysis
       .getMlbPlayerStrikeoutsProps()
@@ -84,11 +97,13 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  //get specific player Strikeouts details
   getMlbPlayerStrikeoutPropDetails(player: any) {
     this.router.navigate(['/mlbStrikeoutsPropDetailsPage/' + player]);
     console.log('player', player);
   }
 
+  //get all players Walks data
   getMlbPlayerWalksProps() {
     this.mlbPropsAnalysis.getMlbPlayerWalksProps().subscribe((response) => {
       console.log('response', response);
@@ -97,11 +112,13 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  //get specific player walks details
   getMlbPlayerWalksPropDetails(player: any) {
     this.router.navigate(['/mlbWalksPropDetailsPage/' + player]);
     console.log('player', player);
   }
 
+  //get all players Hits Allowed data
   getMlbPlayerHitsAllowedProps() {
     this.mlbPropsAnalysis
       .getMlbPlayerHitsAllowedProps()
@@ -112,11 +129,13 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  //get specific player Hits Allowed details
   getMlbPlayerHitsAllowedPropDetails(player: any) {
     this.router.navigate(['/mlbHitsAllowedPropDetailsPage/' + player]);
     console.log('player', player);
   }
 
+  //get all players passing yards data
   getNflPlayerPassingYardsProps() {
     this.nflPropsAnalysis
       .getNflPlayerPassingYardsProps()
@@ -127,11 +146,47 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  // get specific player passing yard details
   getNflPlayerPassingYardsPropDetails(player: any) {
     this.router.navigate(['nflPassingYardsPropDetailsPage/' + player]);
     console.log('player', player);
   }
 
+  //get all players receiving yards data
+  getNflPlayerReceivingYardsProps() {
+    this.nflPropsAnalysis
+      .getNflPlayerReceivingYardsProps()
+      .subscribe((response) => {
+        console.log('response', response);
+        this.nflPlayerReceivingYardsProps = response;
+        console.log('props', this.nflPlayerReceivingYardsProps);
+      });
+  }
+
+  //get specific players receiving yards data
+  getNflPlayerReceivingYardsPropDetails(player: any) {
+    this.router.navigate(['nflReceivingYardsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  //get all players rushing yards data
+  getNflPlayerRushingYardsProps() {
+    this.nflPropsAnalysis
+      .getNflPlayerRushingYardsProps()
+      .subscribe((response) => {
+        console.log('response', response);
+        this.nflPlayerRushingYardsProps = response;
+        console.log('props', this.nflPlayerRushingYardsProps);
+      });
+  }
+
+  //get specific players rushing yards details
+  getNflPlayerRushingYardsPropDetails(player: any) {
+    this.router.navigate(['nflRushingYardsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  //get all players goals data
   getSoccerPlayerGoalsProps() {
     this.soccerPropsAnalysis
       .getSoccerPlayerGoalsProps()
@@ -142,8 +197,43 @@ export class HomeComponent implements OnInit {
       });
   }
 
+  //get specific player goals details
   getSoccerPlayerGoalsPropDetails(player: any) {
-    this.router.navigate(['soccerGoalssPropDetailsPage/' + player]);
+    this.router.navigate(['soccerGoalsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  //get all players shots data
+  getSoccerPlayerShotsProps() {
+    this.soccerPropsAnalysis
+      .getSoccerPlayerShotsProps()
+      .subscribe((response) => {
+        console.log('response', response);
+        this.soccerPlayerShotsProps = response;
+        console.log('props', this.soccerPlayerShotsProps);
+      });
+  }
+
+  //get specific player shots details
+  getSoccerPlayerShotsPropDetails(player: any) {
+    this.router.navigate(['soccerShotsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  //get all players assists data
+  getSoccerPlayerAssistsProps() {
+    this.soccerPropsAnalysis
+      .getSoccerPlayerAssistsProps()
+      .subscribe((response) => {
+        console.log('response', response);
+        this.soccerPlayerAssistsProps = response;
+        console.log('props', this.soccerPlayerAssistsProps);
+      });
+  }
+
+  //get specific player assists details
+  getSoccerPlayerAssistsPropDetails(player: any) {
+    this.router.navigate(['soccerAssistsPropDetailsPage/' + player]);
     console.log('player', player);
   }
 }

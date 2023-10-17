@@ -21,6 +21,10 @@ import { MlbHitsAllowedPropDetailsComponent } from './components/mlb-hits-allowe
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { SoccerGoalsPropDetailsComponent } from './components/soccer-goals-prop-details/soccer-goals-prop-details.component';
+import { NflReceivingYardsPropsDetailsComponent } from './components/nfl-receiving-yards-props-details/nfl-receiving-yards-props-details.component';
+import { NflRushingYardsPropsDetailsComponent } from './components/nfl-rushing-yards-props-details/nfl-rushing-yards-props-details.component';
+import { SoccerShotsPropDetailsComponent } from './components/soccer-shots-prop-details/soccer-shots-prop-details.component';
+import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-prop-details/soccer-assists-prop-details.component';
 
 const routes: Routes = [
   {
@@ -96,8 +100,24 @@ const routes: Routes = [
     component: NflPassingYardsPropsDetailsComponent,
   },
   {
-    path: 'soccerGoalssPropDetailsPage/:player',
+    path: 'nflReceivingYardsPropDetailsPage/:player',
+    component: NflReceivingYardsPropsDetailsComponent,
+  },
+  {
+    path: 'nflRushingYardsPropDetailsPage/:player',
+    component: NflRushingYardsPropsDetailsComponent,
+  },
+  {
+    path: 'soccerGoalsPropDetailsPage/:player',
     component: SoccerGoalsPropDetailsComponent,
+  },
+  {
+    path: 'soccerShotsPropDetailsPage/:player',
+    component: SoccerShotsPropDetailsComponent,
+  },
+  {
+    path: 'soccerAssistsPropDetailsPage/:player',
+    component: SoccerAssistsPropDetailsComponent,
   },
   {
     path: 'blog',
