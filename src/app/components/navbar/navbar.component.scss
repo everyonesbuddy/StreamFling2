@@ -27,3 +27,15 @@ a {
 .pro a {
   color: #fff;
 }
+
+.pro-button {
+  background-color: var(--second-color);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  border: none;
+  color: var(--fourth-color);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+}

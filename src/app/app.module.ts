@@ -36,6 +36,7 @@ import { NflReceivingYardsPropsDetailsComponent } from './components/nfl-receivi
 import { NflRushingYardsPropsDetailsComponent } from './components/nfl-rushing-yards-props-details/nfl-rushing-yards-props-details.component';
 import { SoccerShotsPropDetailsComponent } from './components/soccer-shots-prop-details/soccer-shots-prop-details.component';
 import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-prop-details/soccer-assists-prop-details.component';
+import { ExclusiveNewsletterComponent } from './components/exclusive-newsletter/exclusive-newsletter.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-p
     NflRushingYardsPropsDetailsComponent,
     SoccerShotsPropDetailsComponent,
     SoccerAssistsPropDetailsComponent,
+    ExclusiveNewsletterComponent,
   ],
   imports: [
     BrowserModule,

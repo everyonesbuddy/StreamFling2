@@ -129,6 +129,9 @@ button {
   font-family: "Ubuntu", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
 @media (max-width: 960px) {
   .showcase {
     height: 50vh;
