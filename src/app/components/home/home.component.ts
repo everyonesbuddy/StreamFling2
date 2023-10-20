@@ -14,10 +14,10 @@ import { SoccerPropsAnalysisService } from 'src/app/services/soccer-props-analys
 })
 export class HomeComponent implements OnInit {
   data: any = [];
-  nbaPlayerPointsProps: any = [];
-  mlbPlayerStrikeoutsProps: any = [];
-  mlbPlayerWalksProps: any = [];
-  mlbPlayerHitsAllowedProps: any = [];
+  // nbaPlayerPointsProps: any = [];
+  // mlbPlayerStrikeoutsProps: any = [];
+  // mlbPlayerWalksProps: any = [];
+  // mlbPlayerHitsAllowedProps: any = [];
   nflPlayerPassingYardsProps: any = [];
   nflPlayerReceivingYardsProps: any = [];
   nflPlayerRushingYardsProps: any = [];
@@ -39,13 +39,13 @@ export class HomeComponent implements OnInit {
     //get sports info
     this.getSportsInfo();
     //get NBA PLayer Points Props
-    this.getNbaPlayerPointsProps();
+    // this.getNbaPlayerPointsProps();
     //get MLB Player Strikeouts Props
-    this.getMlbPlayerStrikeoutsProps();
+    // this.getMlbPlayerStrikeoutsProps();
     //get MLB Player Walks Props
-    this.getMlbPlayerWalksProps();
+    // this.getMlbPlayerWalksProps();
     //get MLB Player Hits Allowed Props
-    this.getMlbPlayerHitsAllowedProps();
+    // this.getMlbPlayerHitsAllowedProps();
     //get NFL PLayer Passing Yards Props
     this.getNflPlayerPassingYardsProps();
     //get NFL PLayer Receiving Yards Props
@@ -73,67 +73,67 @@ export class HomeComponent implements OnInit {
     console.log('sport_key', key);
   }
 
-  getNbaPlayerPointsProps() {
-    this.nbaPropsAnalysis.getNbaPlayerPointsProps().subscribe((response) => {
-      console.log('response', response);
-      this.nbaPlayerPointsProps = response;
-      console.log('props', this.nbaPlayerPointsProps);
-    });
-  }
+  // getNbaPlayerPointsProps() {
+  //   this.nbaPropsAnalysis.getNbaPlayerPointsProps().subscribe((response) => {
+  //     console.log('response', response);
+  //     this.nbaPlayerPointsProps = response;
+  //     console.log('props', this.nbaPlayerPointsProps);
+  //   });
+  // }
 
-  getNbaPlayerPointPropDetails(player: any) {
-    this.router.navigate(['/nbaPointsPropDetailsPage/' + player]);
-    console.log('player', player);
-  }
+  // getNbaPlayerPointPropDetails(player: any) {
+  //   this.router.navigate(['/nbaPointsPropDetailsPage/' + player]);
+  //   console.log('player', player);
+  // }
 
   //get all players Strikeouts data
-  getMlbPlayerStrikeoutsProps() {
-    this.mlbPropsAnalysis
-      .getMlbPlayerStrikeoutsProps()
-      .subscribe((response) => {
-        console.log('response', response);
-        this.mlbPlayerStrikeoutsProps = response;
-        console.log('props', this.mlbPlayerStrikeoutsProps);
-      });
-  }
+  // getMlbPlayerStrikeoutsProps() {
+  //   this.mlbPropsAnalysis
+  //     .getMlbPlayerStrikeoutsProps()
+  //     .subscribe((response) => {
+  //       console.log('response', response);
+  //       this.mlbPlayerStrikeoutsProps = response;
+  //       console.log('props', this.mlbPlayerStrikeoutsProps);
+  //     });
+  // }
 
   //get specific player Strikeouts details
-  getMlbPlayerStrikeoutPropDetails(player: any) {
-    this.router.navigate(['/mlbStrikeoutsPropDetailsPage/' + player]);
-    console.log('player', player);
-  }
+  // getMlbPlayerStrikeoutPropDetails(player: any) {
+  //   this.router.navigate(['/mlbStrikeoutsPropDetailsPage/' + player]);
+  //   console.log('player', player);
+  // }
 
   //get all players Walks data
-  getMlbPlayerWalksProps() {
-    this.mlbPropsAnalysis.getMlbPlayerWalksProps().subscribe((response) => {
-      console.log('response', response);
-      this.mlbPlayerWalksProps = response;
-      console.log('props', this.mlbPlayerWalksProps);
-    });
-  }
+  // getMlbPlayerWalksProps() {
+  //   this.mlbPropsAnalysis.getMlbPlayerWalksProps().subscribe((response) => {
+  //     console.log('response', response);
+  //     this.mlbPlayerWalksProps = response;
+  //     console.log('props', this.mlbPlayerWalksProps);
+  //   });
+  // }
 
   //get specific player walks details
-  getMlbPlayerWalksPropDetails(player: any) {
-    this.router.navigate(['/mlbWalksPropDetailsPage/' + player]);
-    console.log('player', player);
-  }
+  // getMlbPlayerWalksPropDetails(player: any) {
+  //   this.router.navigate(['/mlbWalksPropDetailsPage/' + player]);
+  //   console.log('player', player);
+  // }
 
   //get all players Hits Allowed data
-  getMlbPlayerHitsAllowedProps() {
-    this.mlbPropsAnalysis
-      .getMlbPlayerHitsAllowedProps()
-      .subscribe((response) => {
-        console.log('response', response);
-        this.mlbPlayerHitsAllowedProps = response;
-        console.log('props', this.mlbPlayerHitsAllowedProps);
-      });
-  }
+  // getMlbPlayerHitsAllowedProps() {
+  //   this.mlbPropsAnalysis
+  //     .getMlbPlayerHitsAllowedProps()
+  //     .subscribe((response) => {
+  //       console.log('response', response);
+  //       this.mlbPlayerHitsAllowedProps = response;
+  //       console.log('props', this.mlbPlayerHitsAllowedProps);
+  //     });
+  // }
 
   //get specific player Hits Allowed details
-  getMlbPlayerHitsAllowedPropDetails(player: any) {
-    this.router.navigate(['/mlbHitsAllowedPropDetailsPage/' + player]);
-    console.log('player', player);
-  }
+  // getMlbPlayerHitsAllowedPropDetails(player: any) {
+  //   this.router.navigate(['/mlbHitsAllowedPropDetailsPage/' + player]);
+  //   console.log('player', player);
+  // }
 
   //get all players passing yards data
   getNflPlayerPassingYardsProps() {
