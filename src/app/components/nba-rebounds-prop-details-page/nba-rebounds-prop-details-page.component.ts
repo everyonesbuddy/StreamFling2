@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NbaPropsAnalysisService } from 'src/app/services/nba-props-analysis.service';
 import { Chart, registerables } from 'chart.js';
-import { SoccerPropsAnalysisService } from 'src/app/services/soccer-props-analysis.service';
 Chart.register(...registerables);
 
 @Component({
-  selector: 'app-soccer-shots-prop-details',
-  templateUrl: './soccer-shots-prop-details.component.html',
-  styleUrls: ['./soccer-shots-prop-details.component.scss'],
+  selector: 'app-nba-rebounds-prop-details-page',
+  templateUrl: './nba-rebounds-prop-details-page.component.html',
+  styleUrls: ['./nba-rebounds-prop-details-page.component.scss'],
 })
-export class SoccerShotsPropDetailsComponent implements OnInit {
+export class NbaReboundsPropDetailsPageComponent implements OnInit {
   playerData: any = [];
   chart: any = [];
-  playersShotsLastFive: any = [];
+  playersReboundsLastFive: any = [];
   seasonAverage: any = '';
   lastFiveAverage: any = '';
 
@@ -21,25 +21,25 @@ export class SoccerShotsPropDetailsComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private http: HttpClient,
     private router: Router,
-    private soccerPropsAnalysis: SoccerPropsAnalysisService
+    private nbaPropsAnalysis: NbaPropsAnalysisService
   ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       let player = params['player'];
-      this.soccerPropsAnalysis
-        .getSpecificSoccerPlayerShotsProps(player)
+      this.nbaPropsAnalysis
+        .getSpecificNbaPlayerReboundsProps(player)
         .subscribe((res) => {
           this.playerData = res;
           console.log('res', res);
-          this.playersShotsLastFive.push(
-            res[0].shotsFiveGamesAgo,
-            res[0].shotsFourGamesAgo,
-            res[0].shotsThreeGamesAgo,
-            res[0].shotsTwoGamesAgo,
-            res[0].shotsLastGame
+          this.playersReboundsLastFive.push(
+            res[0].reboundsFiveGamesAgo,
+            res[0].reboundsFourGamesAgo,
+            res[0].reboundsThreeGamesAgo,
+            res[0].reboundsTwoGamesAgo,
+            res[0].reboundsLastGame
           );
-          console.log('hdfhhh', this.playersShotsLastFive);
+          console.log('hdfhhh', this.playersReboundsLastFive);
           this.renderChart();
         });
     });
@@ -58,8 +58,8 @@ export class SoccerShotsPropDetailsComponent implements OnInit {
         ],
         datasets: [
           {
-            label: 'Player Shots last 5 Games (All Soccer competitons)',
-            data: this.playersShotsLastFive,
+            label: 'Player Rebounds last 5 Games (NBA)',
+            data: this.playersReboundsLastFive,
             borderWidth: 1,
             backgroundColor: [
               'rgba(165, 233, 225)',

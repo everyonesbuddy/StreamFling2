@@ -62,7 +62,7 @@ export class NflPassingYardsPropsDetailsComponent implements OnInit {
             data: this.playersPassingYardsLastFive,
             borderWidth: 1,
             backgroundColor: [
-              'rgba(34, 40, 49)',
+              'rgba(89, 169, 133)',
               // 'rgba(	34, 40, 49)',
               // 'rgba(	34, 40, 49)',
               // 'rgba(	34, 40, 49)',

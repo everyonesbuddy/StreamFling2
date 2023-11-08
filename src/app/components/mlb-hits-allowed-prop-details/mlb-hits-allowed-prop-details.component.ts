@@ -62,7 +62,7 @@ export class MlbHitsAllowedPropDetailsComponent implements OnInit {
             data: this.playersHitsAllowedLastFive,
             borderWidth: 1,
             backgroundColor: [
-              'rgba(34, 40, 49)',
+              'rgba(165, 233, 225)',
               // 'rgba(	34, 40, 49)',
               // 'rgba(	34, 40, 49)',
               // 'rgba(	34, 40, 49)',

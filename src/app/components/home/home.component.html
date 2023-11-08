@@ -236,6 +236,57 @@
     </div>
   </div>
 
+  <!--  NBA Player Props Assists -->
+  <div class="dash-items">
+    <p class="dash-headers">NBA Player Assists</p>
+    <div class="cards-2">
+      <div *ngFor="let p of nbaPlayerAssistsProps">
+        <div class="card-2" (click)="getNbaPlayerAssistPropDetails(p.player)">
+          <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-player-name">{{ p.player }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NBA Player Props Points -->
+  <div class="dash-items">
+    <p class="dash-headers">NBA Player Points</p>
+    <div class="cards-1">
+      <div *ngFor="let p of nbaPlayerPointsProps">
+        <div class="card-1" (click)="getNbaPlayerPointPropDetails(p.player)">
+          <div class="info-wrapper-big-dashbord">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-1-description">
+              <p class="card-1-player-name">{{ p.player }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  NBA Player Props Rebounds -->
+  <div class="dash-items">
+    <p class="dash-headers">NBA Player Rebounds</p>
+    <div class="cards-2">
+      <div *ngFor="let p of nbaPlayerReboundsProps">
+        <div class="card-2" (click)="getNbaPlayerReboundPropDetails(p.player)">
+          <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-player-name">{{ p.player }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- promotions -->
   <!-- <div class="dash-items">
     <p class="dash-headers">Promotions</p>

@@ -14,7 +14,9 @@ import { SoccerPropsAnalysisService } from 'src/app/services/soccer-props-analys
 })
 export class HomeComponent implements OnInit {
   data: any = [];
-  // nbaPlayerPointsProps: any = [];
+  nbaPlayerPointsProps: any = [];
+  nbaPlayerAssistsProps: any = [];
+  nbaPlayerReboundsProps: any = [];
   // mlbPlayerStrikeoutsProps: any = [];
   // mlbPlayerWalksProps: any = [];
   // mlbPlayerHitsAllowedProps: any = [];
@@ -39,7 +41,11 @@ export class HomeComponent implements OnInit {
     //get sports info
     this.getSportsInfo();
     //get NBA PLayer Points Props
-    // this.getNbaPlayerPointsProps();
+    this.getNbaPlayerPointsProps();
+    //get NBA PLayer Assists Props
+    this.getNbaPlayerAssistsProps();
+    //get NBA PLayer Rebounds Props
+    this.getNbaPlayerReboundsProps();
     //get MLB Player Strikeouts Props
     // this.getMlbPlayerStrikeoutsProps();
     //get MLB Player Walks Props
@@ -73,18 +79,44 @@ export class HomeComponent implements OnInit {
     console.log('sport_key', key);
   }
 
-  // getNbaPlayerPointsProps() {
-  //   this.nbaPropsAnalysis.getNbaPlayerPointsProps().subscribe((response) => {
-  //     console.log('response', response);
-  //     this.nbaPlayerPointsProps = response;
-  //     console.log('props', this.nbaPlayerPointsProps);
-  //   });
-  // }
+  getNbaPlayerPointsProps() {
+    this.nbaPropsAnalysis.getNbaPlayerPointsProps().subscribe((response) => {
+      console.log('response', response);
+      this.nbaPlayerPointsProps = response;
+      console.log('props', this.nbaPlayerPointsProps);
+    });
+  }
 
-  // getNbaPlayerPointPropDetails(player: any) {
-  //   this.router.navigate(['/nbaPointsPropDetailsPage/' + player]);
-  //   console.log('player', player);
-  // }
+  getNbaPlayerPointPropDetails(player: any) {
+    this.router.navigate(['/nbaPointsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  getNbaPlayerAssistsProps() {
+    this.nbaPropsAnalysis.getNbaPlayerAssistsProps().subscribe((response) => {
+      console.log('response', response);
+      this.nbaPlayerAssistsProps = response;
+      console.log('props', this.nbaPlayerAssistsProps);
+    });
+  }
+
+  getNbaPlayerAssistPropDetails(player: any) {
+    this.router.navigate(['/nbaAssistsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
+
+  getNbaPlayerReboundsProps() {
+    this.nbaPropsAnalysis.getNbaPlayerReboundsProps().subscribe((response) => {
+      console.log('response', response);
+      this.nbaPlayerReboundsProps = response;
+      console.log('props', this.nbaPlayerReboundsProps);
+    });
+  }
+
+  getNbaPlayerReboundPropDetails(player: any) {
+    this.router.navigate(['/nbaReboundsPropDetailsPage/' + player]);
+    console.log('player', player);
+  }
 
   //get all players Strikeouts data
   // getMlbPlayerStrikeoutsProps() {
