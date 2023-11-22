@@ -36,7 +36,7 @@ import { NflReceivingYardsPropsDetailsComponent } from './components/nfl-receivi
 import { NflRushingYardsPropsDetailsComponent } from './components/nfl-rushing-yards-props-details/nfl-rushing-yards-props-details.component';
 import { SoccerShotsPropDetailsComponent } from './components/soccer-shots-prop-details/soccer-shots-prop-details.component';
 import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-prop-details/soccer-assists-prop-details.component';
-import { ExclusiveNewsletterComponent } from './components/exclusive-newsletter/exclusive-newsletter.component';
+import { MediaBroadcastingAndBettorsSolutionsComponent } from './components/media-broadcasting-and-bettors-solutions/media-broadcasting-and-bettors-solutions.component';
 import { NbaReboundsPropDetailsPageComponent } from './components/nba-rebounds-prop-details-page/nba-rebounds-prop-details-page.component';
 import { NbaAssistsPropDetailsPageComponent } from './components/nba-assists-prop-details-page/nba-assists-prop-details-page.component';
 
@@ -70,7 +70,7 @@ import { NbaAssistsPropDetailsPageComponent } from './components/nba-assists-pro
     NflRushingYardsPropsDetailsComponent,
     SoccerShotsPropDetailsComponent,
     SoccerAssistsPropDetailsComponent,
-    ExclusiveNewsletterComponent,
+    MediaBroadcastingAndBettorsSolutionsComponent,
     NbaReboundsPropDetailsPageComponent,
     NbaAssistsPropDetailsPageComponent,
   ],
