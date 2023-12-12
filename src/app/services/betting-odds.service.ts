@@ -14,6 +14,30 @@ export class BettingOddsService {
     );
   }
 
+  getEplGamesData(): Observable<any> {
+    return this.http.get(
+      'https://api.the-odds-api.com/v4/sports/soccer_epl/odds/?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=h2h,spreads,totals&oddsFormat=american'
+    );
+  }
+
+  getLaLigaGamesData(): Observable<any> {
+    return this.http.get(
+      'https://api.the-odds-api.com/v4/sports/soccer_spain_la_liga/odds/?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=h2h,spreads,totals&oddsFormat=american'
+    );
+  }
+
+  getBundesligaGamesData(): Observable<any> {
+    return this.http.get(
+      'https://api.the-odds-api.com/v4/sports/soccer_germany_bundesliga/odds/?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=h2h,spreads,totals&oddsFormat=american'
+    );
+  }
+
+  getSerieAGamesData(): Observable<any> {
+    return this.http.get(
+      'https://api.the-odds-api.com/v4/sports/soccer_italy_serie_a/odds/?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=h2h,spreads,totals&oddsFormat=american'
+    );
+  }
+
   getOdds(key: any, id: any): Observable<any> {
     // console.log(key)
     return this.http.get(

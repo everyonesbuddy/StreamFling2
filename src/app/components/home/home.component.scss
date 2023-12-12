@@ -29,7 +29,8 @@
 }
 
 .intro-copy {
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 900;
   padding: 10px;
   color: var(--fourth-color);
 }
@@ -220,7 +221,7 @@ button {
 
 .cards-3 {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
   margin: auto;
@@ -282,6 +283,210 @@ button {
     color: #fff;
   }
 }
+.events-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 70px auto;
+  position: relative;
+  top: -150px;
+}
+.event-header-title {
+  text-align: center;
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  //top: -150px;
+}
+
+.market-wrapper {
+  color: #fff;
+  text-decoration: underline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: auto;
+  margin: auto;
+  position: relative;
+}
+
+.market-detail {
+  color: #fff;
+  text-decoration: underline;
+  margin: 5px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 2px 2px 2px rgb(89, 169, 133);
+    transform: translateY(-3px);
+    border-radius: 5px;
+  }
+}
+
+.event-name {
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
+}
+
+.event-info {
+  font-size: 2rem;
+  font-family: "Fredoka One", cursive;
+}
+.promotions {
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  font-size: 1.1rem;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.event-type-1 {
+  width: 190px;
+  margin: 10px;
+  // height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--third-color);
+  box-shadow: 4px 3px 8px 0px rgb(89, 169, 133);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 11px 6px rgb(89, 169, 133);
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: #000;
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+  }
+
+  &-description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 157px;
+  }
+
+  &-name {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 20px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-info {
+    color: #fff;
+    font-weight: 200;
+    font-size: 10px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-date {
+    display: flex;
+    color: #fff;
+  }
+}
+
+.event-type-2 {
+  width: 190px;
+  margin: 10px;
+  // height: 330px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--third-color);
+  box-shadow: 4px 3px 8px 0px rgb(89, 169, 133);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 11px 6px rgb(89, 169, 133);
+    transform: translateY(-3px);
+  }
+
+  &-thumb-container {
+    background-color: #000;
+    position: relative;
+    height: 172px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+  }
+
+  &-description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 157px;
+  }
+
+  &-name {
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 20px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-info {
+    color: #fff;
+    font-weight: 200;
+    font-size: 10px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &-date {
+    display: flex;
+    color: #fff;
+  }
+}
 
 .info-wrapper-small-dashboard {
   display: grid;
@@ -333,7 +538,7 @@ button {
   }
 
   .intro-copy {
-    font-size: 15px;
+    font-size: 14px;
     padding: 30px;
     color: var(--fourth-color);
   }
@@ -365,7 +570,7 @@ button {
   }
 
   .intro-copy {
-    font-size: 15px;
+    font-size: 14px;
     padding: 15px;
     color: var(--fourth-color);
   }

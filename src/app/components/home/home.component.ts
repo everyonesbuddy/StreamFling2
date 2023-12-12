@@ -14,6 +14,10 @@ import { SoccerPropsAnalysisService } from 'src/app/services/soccer-props-analys
 })
 export class HomeComponent implements OnInit {
   data: any = [];
+  eplGames: any = [];
+  laLigaGames: any = [];
+  bundesligaGames: any = [];
+  serieAGames: any = [];
   nbaPlayerPointsProps: any = [];
   nbaPlayerAssistsProps: any = [];
   nbaPlayerReboundsProps: any = [];
@@ -40,6 +44,14 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     //get sports info
     this.getSportsInfo();
+    //get EPL Games info
+    this.getEplGamesInfo();
+    //get La Liga Games info
+    this.getLaLigaGamesInfo();
+    //get Bundasliga Games info
+    this.getBundesligaGamesInfo();
+    //get Serie A Games info
+    this.getSerieAGamesInfo();
     //get NBA PLayer Points Props
     this.getNbaPlayerPointsProps();
     //get NBA PLayer Assists Props
@@ -72,6 +84,43 @@ export class HomeComponent implements OnInit {
       this.data = response;
       console.log('data', this.data);
     });
+  }
+
+  getEplGamesInfo() {
+    this.bettingOdds.getEplGamesData().subscribe((response) => {
+      console.log('response', response);
+      this.eplGames = response;
+      console.log('eplGames', this.eplGames);
+    });
+  }
+
+  getLaLigaGamesInfo() {
+    this.bettingOdds.getLaLigaGamesData().subscribe((response) => {
+      console.log('response', response);
+      this.laLigaGames = response;
+      console.log('laLigaGames', this.laLigaGames);
+    });
+  }
+
+  getBundesligaGamesInfo() {
+    this.bettingOdds.getBundesligaGamesData().subscribe((response) => {
+      console.log('response', response);
+      this.bundesligaGames = response;
+      console.log('bundesligaGames', this.bundesligaGames);
+    });
+  }
+
+  getSerieAGamesInfo() {
+    this.bettingOdds.getSerieAGamesData().subscribe((response) => {
+      console.log('response', response);
+      this.serieAGames = response;
+      console.log('serieAGames', this.serieAGames);
+    });
+  }
+
+  getOdds(key: any, id: any) {
+    this.router.navigate([`/oddsScreen/${key}/${id}`]);
+    console.log('sport_key', key);
   }
 
   getGames(key: any) {

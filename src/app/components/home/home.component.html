@@ -6,14 +6,14 @@
 
     <div class="intro-copy">
       <p>
-        Sport media, broadcasting and bettors Source for Time-Saving Player and
-        Team Research, Data and Insights.
+        Soccer bettors, soccer broadcasters and media source for time-saving
+        player and team research, data and insights.
         <br />
         <br />
-        Are you a Sport media company or Sports Bettors seeking to enhance your
+        Are you a soccer bettor or soccer media company looking to enhance your
         operation and gain a competitive edge? Say hello to SureOdds, your
-        trusted partner for data-driven research, and insights that not only
-        saves you time but also maximizes your success in the world of sports.
+        trusted partner for data-driven research, and insights. We save you time
+        but also maximizes your success.
       </p>
     </div>
     <button
@@ -24,36 +24,40 @@
     </button>
   </div>
 
-  <!-- Odds Comparison -->
+  <!-- EPL Live and Upcoming Game Odds -->
   <div class="dash-items">
-    <p class="dash-headers">Compare Odds - Choose your sport</p>
-    <div class="cards-1">
-      <div *ngFor="let d of data">
-        <div class="card-1" (click)="getGames(d.key)">
-          <div class="card-1-description">
+    <p class="dash-headers">EPL Live and Upcoming games Odds</p>
+    <div class="cards-3">
+      <div *ngFor="let game of eplGames">
+        <div class="event-type-1">
+          <!-- <div class="card-1-description">
             <p class="card-1-name-odd-comparison">
               {{ d.title }} - {{ d.description }}
             </p>
+          </div> -->
+          <div class="event-type-1-description">
+            <p class="event-type-1-name">{{ game.away_team }}</p>
+            <p class="event-type-1-info">vs</p>
+            <p class="event-type-1-name">{{ game.home_team }}</p>
+            <p class="event-type-1-info">
+              Date & Time: {{ game.commence_time | date : "short" }}
+            </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- NFL Player Props Passing Yards -->
-  <div class="dash-items">
-    <p class="dash-headers">NFL Passing Yards</p>
-    <div class="cards-2">
-      <div *ngFor="let p of nflPlayerPassingYardsProps">
-        <div
-          class="card-2"
-          (click)="getNflPlayerPassingYardsPropDetails(p.player)"
-        >
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-            </div>
+          <div class="market-wrapper">
+            <p>
+              <a
+                class="market-detail"
+                (click)="getOdds(game.sport_key, game.id)"
+                >Game Odds</a
+              >
+            </p>
+            <!-- <p *ngIf="playerPropAvailable">
+              <a
+                class="market-detail"
+                (click)="getPlayerProps(game.sport_key, game.id)"
+                >Player Props</a
+              >
+            </p> -->
           </div>
         </div>
       </div>
@@ -71,6 +75,47 @@
             <div class="card-2-description">
               <p class="card-2-player-name">{{ p.player }}</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- La Liga Live and Upcoming Game Odds -->
+  <div class="dash-items">
+    <p class="dash-headers">La Liga Live and Upcoming games Odds</p>
+    <div class="cards-2">
+      <div *ngFor="let game of laLigaGames">
+        <div class="event-type-2">
+          <!-- <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-player-name">{{ p.player }}</p>
+            </div>
+          </div> -->
+          <div class="event-type-2-description">
+            <p class="event-type-2-name">{{ game.away_team }}</p>
+            <p class="event-type-2-info">vs</p>
+            <p class="event-type-2-name">{{ game.home_team }}</p>
+            <p class="event-type-2-info">
+              Date & Time: {{ game.commence_time | date : "short" }}
+            </p>
+          </div>
+          <div class="market-wrapper">
+            <p>
+              <a
+                class="market-detail"
+                (click)="getOdds(game.sport_key, game.id)"
+                >Game Odds</a
+              >
+            </p>
+            <!-- <p *ngIf="playerPropAvailable">
+              <a
+                class="market-detail"
+                (click)="getPlayerProps(game.sport_key, game.id)"
+                >Player Props</a
+              >
+            </p> -->
           </div>
         </div>
       </div>
@@ -135,7 +180,7 @@
   </div> -->
 
   <!-- NFL Player Props Receiving Yards -->
-  <div class="dash-items">
+  <!-- <div class="dash-items">
     <p class="dash-headers">NFL Receiving Yards</p>
     <div class="cards-1">
       <div *ngFor="let p of nflPlayerReceivingYardsProps">
@@ -152,10 +197,71 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+  <!-- Soccer Player Props Assists -->
+  <div class="dash-items">
+    <p class="dash-headers">Soccer Assists (All Comps.)</p>
+    <div class="cards-1">
+      <div *ngFor="let p of soccerPlayerAssistsProps">
+        <div
+          class="card-1"
+          (click)="getSoccerPlayerAssistsPropDetails(p.player)"
+        >
+          <div class="info-wrapper-big-dashbord">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-1-description">
+              <p class="card-1-player-name">{{ p.player }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bundesliga Live and Upcoming Game Odds -->
+  <div class="dash-items">
+    <p class="dash-headers">Bundesliga Live and Upcoming Game Odds</p>
+    <div class="cards-2">
+      <div *ngFor="let game of bundesligaGames">
+        <div class="event-type-2">
+          <!-- <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-player-name">{{ p.player }}</p>
+            </div>
+          </div> -->
+          <div class="event-type-2-description">
+            <p class="event-type-2-name">{{ game.away_team }}</p>
+            <p class="event-type-2-info">vs</p>
+            <p class="event-type-2-name">{{ game.home_team }}</p>
+            <p class="event-type-2-info">
+              Date & Time: {{ game.commence_time | date : "short" }}
+            </p>
+          </div>
+          <div class="market-wrapper">
+            <p>
+              <a
+                class="market-detail"
+                (click)="getOdds(game.sport_key, game.id)"
+                >Game Odds</a
+              >
+            </p>
+            <!-- <p *ngIf="playerPropAvailable">
+              <a
+                class="market-detail"
+                (click)="getPlayerProps(game.sport_key, game.id)"
+                >Player Props</a
+              >
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- NFL Player Props Rushing Yards -->
-  <div class="dash-items">
+  <!-- <div class="dash-items">
     <p class="dash-headers">NFL Rushing Yards</p>
     <div class="cards-2">
       <div *ngFor="let p of nflPlayerRushingYardsProps">
@@ -172,7 +278,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Soccer Player Props Shots -->
   <div class="dash-items">
@@ -210,20 +316,41 @@
     ></iframe>
   </div>
 
-  <!-- Soccer Player Props Assists -->
+  <!-- Serie A Live and Upcoming Game Odds -->
   <div class="dash-items">
-    <p class="dash-headers">Soccer Assists (All Comps.)</p>
+    <p class="dash-headers">Serie A Live and Upcoming Game Odds</p>
     <div class="cards-2">
-      <div *ngFor="let p of soccerPlayerAssistsProps">
-        <div
-          class="card-2"
-          (click)="getSoccerPlayerAssistsPropDetails(p.player)"
-        >
-          <div class="info-wrapper-big-dashbord">
+      <div *ngFor="let game of serieAGames">
+        <div class="event-type-2">
+          <!-- <div class="info-wrapper-small-dashboard">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
               <p class="card-2-player-name">{{ p.player }}</p>
             </div>
+          </div> -->
+          <div class="event-type-2-description">
+            <p class="event-type-2-name">{{ game.away_team }}</p>
+            <p class="event-type-2-info">vs</p>
+            <p class="event-type-2-name">{{ game.home_team }}</p>
+            <p class="event-type-2-info">
+              Date & Time: {{ game.commence_time | date : "short" }}
+            </p>
+          </div>
+          <div class="market-wrapper">
+            <p>
+              <a
+                class="market-detail"
+                (click)="getOdds(game.sport_key, game.id)"
+                >Game Odds</a
+              >
+            </p>
+            <!-- <p *ngIf="playerPropAvailable">
+              <a
+                class="market-detail"
+                (click)="getPlayerProps(game.sport_key, game.id)"
+                >Player Props</a
+              >
+            </p> -->
           </div>
         </div>
       </div>
@@ -231,7 +358,7 @@
   </div>
 
   <!--  NBA Player Props Assists -->
-  <div class="dash-items">
+  <!-- <div class="dash-items">
     <p class="dash-headers">NBA Player Assists</p>
     <div class="cards-2">
       <div *ngFor="let p of nbaPlayerAssistsProps">
@@ -245,10 +372,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- NBA Player Props Points -->
-  <div class="dash-items">
+  <!-- <div class="dash-items">
     <p class="dash-headers">NBA Player Points</p>
     <div class="cards-1">
       <div *ngFor="let p of nbaPlayerPointsProps">
@@ -262,10 +389,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!--  NBA Player Props Rebounds -->
-  <div class="dash-items">
+  <!-- <div class="dash-items">
     <p class="dash-headers">NBA Player Rebounds</p>
     <div class="cards-2">
       <div *ngFor="let p of nbaPlayerReboundsProps">
@@ -279,7 +406,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- promotions -->
   <!-- <div class="dash-items">

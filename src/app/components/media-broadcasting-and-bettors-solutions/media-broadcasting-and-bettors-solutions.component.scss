@@ -13,7 +13,7 @@
 }
 
 .showcase-content {
-  position: relative;
+  // position: relative;
   margin: auto;
   display: flex;
   z-index: 2;
@@ -42,7 +42,7 @@
 }
 
 .showcase-image {
-  position: relative;
+  // position: relative;
   margin: auto;
   display: flex;
   z-index: 2;
@@ -54,7 +54,6 @@
 }
 
 .header-image {
-  border: var(--first-color) solid 1px;
   border-radius: 15px;
 }
 
@@ -72,14 +71,14 @@
 }
 
 .wrapper {
-  max-width: 70%;
+  max-width: 90%;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
 }
 
 .tabs p {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 50;
   padding-top: 0.5rem;
   font-family: "Fredoka One", cursive;
