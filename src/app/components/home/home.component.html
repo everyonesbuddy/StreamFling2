@@ -64,13 +64,16 @@
     </div>
   </div>
 
-  <!--  Soccer Player Props Goals -->
+  <!-- Soccer Player Props Assists -->
   <div class="dash-items">
-    <p class="dash-headers">Soccer Goals (All Comps.)</p>
+    <p class="dash-headers">Soccer Assists (All Comps.)</p>
     <div class="cards-2">
-      <div *ngFor="let p of soccerPlayerGoalsProps">
-        <div class="card-2" (click)="getSoccerPlayerGoalsPropDetails(p.player)">
-          <div class="info-wrapper-small-dashboard">
+      <div *ngFor="let p of soccerPlayerAssistsProps">
+        <div
+          class="card-2"
+          (click)="getSoccerPlayerAssistsPropDetails(p.player)"
+        >
+          <div class="info-wrapper-big-dashbord">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
               <p class="card-2-player-name">{{ p.player }}</p>
@@ -199,16 +202,13 @@
     </div>
   </div> -->
 
-  <!-- Soccer Player Props Assists -->
+  <!--  Soccer Player Props Goals -->
   <div class="dash-items">
-    <p class="dash-headers">Soccer Assists (All Comps.)</p>
+    <p class="dash-headers">Soccer Goals (All Comps.)</p>
     <div class="cards-1">
-      <div *ngFor="let p of soccerPlayerAssistsProps">
-        <div
-          class="card-1"
-          (click)="getSoccerPlayerAssistsPropDetails(p.player)"
-        >
-          <div class="info-wrapper-big-dashbord">
+      <div *ngFor="let p of soccerPlayerGoalsProps">
+        <div class="card-1" (click)="getSoccerPlayerGoalsPropDetails(p.player)">
+          <div class="info-wrapper-small-dashboard">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-1-description">
               <p class="card-1-player-name">{{ p.player }}</p>
