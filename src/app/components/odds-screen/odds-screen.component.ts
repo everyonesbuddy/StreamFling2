@@ -106,7 +106,7 @@ export class OddsScreenComponent implements OnInit {
     this.aiService.callAi(promptValue).subscribe((response: any) => {
       this.isLoading = false;
       console.log(response);
-      this.botResponse = response.bot;
+      this.botResponse = response.bot.content;
       console.log(this.botResponse);
     });
   }
