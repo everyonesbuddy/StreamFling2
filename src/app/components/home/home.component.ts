@@ -13,8 +13,11 @@ import { SoccerPropsAnalysisService } from 'src/app/services/soccer-props-analys
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  games: any = [];
+  playerPropAvailable: boolean = false;
   data: any = [];
   eplGames: any = [];
+  nbaGames: any = [];
   laLigaGames: any = [];
   bundesligaGames: any = [];
   serieAGames: any = [];
@@ -46,6 +49,8 @@ export class HomeComponent implements OnInit {
     this.getSportsInfo();
     //get EPL Games info
     this.getEplGamesInfo();
+    //get NBA Games info
+    this.getNbaGamesInfo();
     //get La Liga Games info
     this.getLaLigaGamesInfo();
     //get Bundasliga Games info
@@ -94,6 +99,14 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  getNbaGamesInfo() {
+    this.bettingOdds.getNbaGamesData().subscribe((response) => {
+      console.log('response', response);
+      this.nbaGames = response;
+      console.log('nbaGames', this.nbaGames);
+    });
+  }
+
   getLaLigaGamesInfo() {
     this.bettingOdds.getLaLigaGamesData().subscribe((response) => {
       console.log('response', response);
@@ -120,6 +133,11 @@ export class HomeComponent implements OnInit {
 
   getOdds(key: any, id: any) {
     this.router.navigate([`/oddsScreen/${key}/${id}`]);
+    console.log('sport_key', key);
+  }
+
+  getPlayerProps(key: any, id: any) {
+    this.router.navigate([`/playerPropsPage/${key}/${id}`]);
     console.log('sport_key', key);
   }
 

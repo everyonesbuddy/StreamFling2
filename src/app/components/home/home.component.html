@@ -6,14 +6,14 @@
 
     <div class="intro-copy">
       <p>
-        Soccer bettors, and media professionals source for time-saving player
-        and team research, data and insights.
+        Soccer, NBA bettors, and media professionals source for time-saving
+        player and team research, data and insights.
         <br />
         <br />
-        Are you a soccer bettor or media company looking to enhance your
-        operation and gain a competitive edge? Say hello to SureOdds, your
-        trusted partner for data-driven research, and insights. We save you time
-        but also maximizes your success.
+        Are you a bettor or media company looking to enhance your operation and
+        gain a competitive edge? Say hello to SureOdds, your trusted partner for
+        data-driven research, and insights. We save you time but also maximizes
+        your success.
       </p>
     </div>
     <button
@@ -30,11 +30,6 @@
     <div class="cards-3">
       <div *ngFor="let game of eplGames">
         <div class="event-type-1">
-          <!-- <div class="card-1-description">
-            <p class="card-1-name-odd-comparison">
-              {{ d.title }} - {{ d.description }}
-            </p>
-          </div> -->
           <div class="event-type-1-description">
             <p class="event-type-1-name">
               {{ game.away_team }} vs {{ game.home_team }}
@@ -51,13 +46,6 @@
                 >Game Odds</a
               >
             </p>
-            <!-- <p *ngIf="playerPropAvailable">
-              <a
-                class="market-detail"
-                (click)="getPlayerProps(game.sport_key, game.id)"
-                >Player Props</a
-              >
-            </p> -->
           </div>
         </div>
       </div>
@@ -91,12 +79,6 @@
     <div class="cards-2">
       <div *ngFor="let game of laLigaGames">
         <div class="event-type-2">
-          <!-- <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-            </div>
-          </div> -->
           <div class="event-type-2-description">
             <p class="event-type-2-name">
               {{ game.away_team }} vs {{ game.home_team }}
@@ -113,95 +95,11 @@
                 >Game Odds</a
               >
             </p>
-            <!-- <p *ngIf="playerPropAvailable">
-              <a
-                class="market-detail"
-                (click)="getPlayerProps(game.sport_key, game.id)"
-                >Player Props</a
-              >
-            </p> -->
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- MLB Player Props Walks -->
-  <!-- <div class="dash-items">
-    <p class="dash-headers">MLB Walks</p>
-    <div class="cards-1">
-      <div *ngFor="let p of mlbPlayerWalksProps">
-        <div class="card-1" (click)="getMlbPlayerWalksPropDetails(p.player)">
-          <div class="info-wrapper-big-dashbord">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-1-description">
-              <p class="card-1-player-name">{{ p.player }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- MLB Player Props Strikeouts -->
-  <!-- <div class="dash-items">
-    <p class="dash-headers">MLB Strikeouts</p>
-    <div class="cards-2">
-      <div *ngFor="let p of mlbPlayerStrikeoutsProps">
-        <div
-          class="card-2"
-          (click)="getMlbPlayerStrikeoutPropDetails(p.player)"
-        >
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- MLB Player Props Hits Allowed -->
-  <!-- <div class="dash-items">
-    <p class="dash-headers">MLB Hits Allowed</p>
-    <div class="cards-2">
-      <div *ngFor="let p of mlbPlayerHitsAllowedProps">
-        <div
-          class="card-2"
-          (click)="getMlbPlayerHitsAllowedPropDetails(p.player)"
-        >
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- NFL Player Props Receiving Yards -->
-  <!-- <div class="dash-items">
-    <p class="dash-headers">NFL Receiving Yards</p>
-    <div class="cards-1">
-      <div *ngFor="let p of nflPlayerReceivingYardsProps">
-        <div
-          class="card-1"
-          (click)="getNflPlayerReceivingYardsPropDetails(p.player)"
-        >
-          <div class="info-wrapper-big-dashbord">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-1-description">
-              <p class="card-1-player-name">{{ p.player }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <!--  Soccer Player Props Goals -->
   <div class="dash-items">
@@ -227,12 +125,6 @@
     <div class="cards-2">
       <div *ngFor="let game of bundesligaGames">
         <div class="event-type-2">
-          <!-- <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-            </div>
-          </div> -->
           <div class="event-type-2-description">
             <p class="event-type-2-name">
               {{ game.away_team }} vs {{ game.home_team }}
@@ -249,38 +141,11 @@
                 >Game Odds</a
               >
             </p>
-            <!-- <p *ngIf="playerPropAvailable">
-              <a
-                class="market-detail"
-                (click)="getPlayerProps(game.sport_key, game.id)"
-                >Player Props</a
-              >
-            </p> -->
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- NFL Player Props Rushing Yards -->
-  <!-- <div class="dash-items">
-    <p class="dash-headers">NFL Rushing Yards</p>
-    <div class="cards-2">
-      <div *ngFor="let p of nflPlayerRushingYardsProps">
-        <div
-          class="card-2"
-          (click)="getNflPlayerRushingYardsPropDetails(p.player)"
-        >
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <!-- Soccer Player Props Shots -->
   <div class="dash-items">
@@ -301,7 +166,7 @@
   </div>
 
   <!-- General Newsletter -->
-  <div class="dash-items">
+  <!-- <div class="dash-items">
     <p class="dash-headers">Subscribe to Free Newsletter</p>
     <iframe
       src="https://embeds.beehiiv.com/1b72b521-3037-45c0-a284-f7dd566acee1"
@@ -317,6 +182,41 @@
         background-color: transparent;
       "
     ></iframe>
+  </div> -->
+
+  <!-- NBA Live and Upcoming Game Odds -->
+  <div class="dash-items">
+    <p class="dash-headers">NBA Live and Upcoming games Odds</p>
+    <div class="cards-3">
+      <div *ngFor="let game of nbaGames">
+        <div class="event-type-1">
+          <div class="event-type-1-description">
+            <p class="event-type-1-name">
+              {{ game.away_team }} vs {{ game.home_team }}
+            </p>
+            <p class="event-type-1-info">
+              Date & Time: {{ game.commence_time | date : "short" }}
+            </p>
+          </div>
+          <div class="market-wrapper">
+            <p>
+              <a
+                class="market-detail"
+                (click)="getOdds(game.sport_key, game.id)"
+                >Game Odds</a
+              >
+            </p>
+            <p>
+              <a
+                class="market-detail"
+                (click)="getPlayerProps(game.sport_key, game.id)"
+                >Player Props</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Serie A Live and Upcoming Game Odds -->
@@ -325,12 +225,6 @@
     <div class="cards-2">
       <div *ngFor="let game of serieAGames">
         <div class="event-type-2">
-          <!-- <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-            </div>
-          </div> -->
           <div class="event-type-2-description">
             <p class="event-type-2-name">
               {{ game.away_team }} vs {{ game.home_team }}
@@ -347,13 +241,6 @@
                 >Game Odds</a
               >
             </p>
-            <!-- <p *ngIf="playerPropAvailable">
-              <a
-                class="market-detail"
-                (click)="getPlayerProps(game.sport_key, game.id)"
-                >Player Props</a
-              >
-            </p> -->
           </div>
         </div>
       </div>
@@ -361,7 +248,7 @@
   </div>
 
   <!--  NBA Player Props Assists -->
-  <!-- <div class="dash-items">
+  <div class="dash-items">
     <p class="dash-headers">NBA Player Assists</p>
     <div class="cards-2">
       <div *ngFor="let p of nbaPlayerAssistsProps">
@@ -370,15 +257,16 @@
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
               <p class="card-2-player-name">{{ p.player }}</p>
+              <p class="card-2-player-team">{{ p.team }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <!-- NBA Player Props Points -->
-  <!-- <div class="dash-items">
+  <div class="dash-items">
     <p class="dash-headers">NBA Player Points</p>
     <div class="cards-1">
       <div *ngFor="let p of nbaPlayerPointsProps">
@@ -387,15 +275,16 @@
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-1-description">
               <p class="card-1-player-name">{{ p.player }}</p>
+              <p class="card-2-player-team">{{ p.team }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <!--  NBA Player Props Rebounds -->
-  <!-- <div class="dash-items">
+  <div class="dash-items">
     <p class="dash-headers">NBA Player Rebounds</p>
     <div class="cards-2">
       <div *ngFor="let p of nbaPlayerReboundsProps">
@@ -404,67 +293,11 @@
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
               <p class="card-2-player-name">{{ p.player }}</p>
+              <p class="card-2-player-team">{{ p.team }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div> -->
-
-  <!-- promotions -->
-  <!-- <div class="dash-items">
-    <p class="dash-headers">Promotions</p>
-    <div class="cards-3">
-      <div> -->
-  <!-- Prize Picks -->
-  <!-- <div class="card-3">
-          <div class="card-3-description">
-            <p class="card-3-header">Prize Picks</p>
-            <p class="card-3-name">100% deposit match up to $100</p>
-            <a
-              href="https://app.prizepicks.com/sign-up?invite_code=PR-SUWVT13"
-              target="_blank"
-              class="card-3-name"
-            >
-              Claim $100
-            </a>
-          </div>
-        </div>
-      </div> -->
-
-  <!-- Underdog Fantasy -->
-  <!-- <div>
-        <div class="card-3">
-          <div class="card-3-description">
-            <p class="card-3-header">Underdog Fantasy</p>
-            <p class="card-3-name">100% deposit match up to $100</p>
-            <a
-              href="https://play.underdogfantasy.com/magnusdomitor"
-              target="_blank"
-              class="card-3-name"
-            >
-              Claim $100
-            </a>
-          </div>
-        </div>
-      </div> -->
-
-  <!-- Parlay Play -->
-  <!-- <div>
-        <div class="card-3">
-          <div class="card-3-description">
-            <p class="card-3-header">Parlay Play</p>
-            <p class="card-3-name">100% deposit match up to $100</p>
-            <a
-              href="https://parlayplay.io/account/signup?coupon=joeddomitor"
-              target="_blank"
-              class="card-3-name"
-            >
-              Claim $100
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+  </div>
 </div>
