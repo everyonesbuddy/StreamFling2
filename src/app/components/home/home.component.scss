@@ -169,7 +169,7 @@ button {
 }
 
 .card-2 {
-  width: 190px;
+  width: 180px;
   margin: 10px;
   height: 60px;
   overflow: hidden;
@@ -238,7 +238,7 @@ button {
 
 .cards-3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
   align-items: center;
   justify-items: center;
   margin: auto;
@@ -246,7 +246,7 @@ button {
 }
 
 .card-3 {
-  width: 190px;
+  width: 180px;
   margin: 10px;
   height: 120px;
   overflow: hidden;
@@ -337,8 +337,9 @@ button {
 
 .market-detail {
   color: #fff;
+  font-size: 10px;
   text-decoration: underline;
-  margin: 5px;
+  margin-bottom: 0px;
   transition-duration: 0.3s;
   cursor: pointer;
 
@@ -374,9 +375,9 @@ button {
 }
 
 .event-type-1 {
-  width: 190px;
+  width: 280px;
   margin: 10px;
-  // height: 330px;
+  height: 100px;
   overflow: hidden;
   border-radius: 5px;
   background-color: var(--third-color);
@@ -407,18 +408,18 @@ button {
   }
 
   &-description {
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 157px;
+    align-items: center;
+    justify-content: center;
   }
 
   &-name {
     color: #fff;
     font-weight: 300;
-    font-size: 12px;
-    margin-bottom: 20px;
+    font-size: 10px;
+    // margin-bottom: 20px;
     white-space: wrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -427,22 +428,23 @@ button {
   &-info {
     color: #fff;
     font-weight: 200;
-    font-size: 10px;
+    font-size: 8px;
     white-space: wrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
   &-date {
+    font-size: 8px;
     display: flex;
     color: #fff;
   }
 }
 
 .event-type-2 {
-  width: 190px;
+  width: 180px;
   margin: 10px;
-  // height: 330px;
+  height: 100px;
   overflow: hidden;
   border-radius: 5px;
   background-color: var(--third-color);
@@ -473,18 +475,18 @@ button {
   }
 
   &-description {
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 157px;
+    align-items: center;
+    justify-content: center;
   }
 
   &-name {
     color: #fff;
     font-weight: 300;
-    font-size: 12px;
-    margin-bottom: 20px;
+    font-size: 10px;
+    // margin-bottom: 20px;
     white-space: wrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -493,13 +495,14 @@ button {
   &-info {
     color: #fff;
     font-weight: 200;
-    font-size: 10px;
+    font-size: 8px;
     white-space: wrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
   &-date {
+    font-size: 8px;
     display: flex;
     color: #fff;
   }
@@ -516,7 +519,7 @@ button {
 
 .info-wrapper-big-dashbord {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-items: center;
   margin: auto;
@@ -532,6 +535,14 @@ button {
 
   .dashboards {
     grid-template-columns: 1fr;
+  }
+
+  .event-type-1 {
+    width: 260px;
+  }
+
+  .event-type-2 {
+    width: 260px;
   }
 
   .card-1 {
@@ -564,6 +575,14 @@ button {
 @media (max-width: 500px) {
   .cards-1 {
     grid-template-columns: 1fr;
+  }
+
+  .event-type-1 {
+    width: 220px;
+  }
+
+  .event-type-2 {
+    width: 220px;
   }
 
   .card-1 {
