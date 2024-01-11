@@ -52,16 +52,13 @@
     </div>
   </div>
 
-  <!-- Soccer Player Props Assists -->
+  <!--  NBA Player Props Assists -->
   <div class="dash-items">
-    <p class="dash-headers">Soccer Assists (All Comps.)</p>
+    <p class="dash-headers">NBA Player Assists</p>
     <div class="cards-2">
-      <div *ngFor="let p of soccerPlayerAssistsProps">
-        <div
-          class="card-2"
-          (click)="getSoccerPlayerAssistsPropDetails(p.player)"
-        >
-          <div class="info-wrapper-big-dashbord">
+      <div *ngFor="let p of nbaPlayerAssistsProps">
+        <div class="card-2" (click)="getNbaPlayerAssistPropDetails(p.player)">
+          <div class="info-wrapper-small-dashboard">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
               <p class="card-2-player-name">{{ p.player }}</p>
@@ -119,28 +116,18 @@
     </div>
   </div>
 
-  <!-- Bundesliga Live and Upcoming Game Odds -->
+  <!--  NBA Player Props Rebounds -->
   <div class="dash-items">
-    <p class="dash-headers">Bundesliga Live and Upcoming Game Odds</p>
+    <p class="dash-headers">NBA Player Rebounds</p>
     <div class="cards-2">
-      <div *ngFor="let game of bundesligaGames">
-        <div class="event-type-2">
-          <div class="event-type-2-description">
-            <p class="event-type-2-name">
-              {{ game.away_team }} vs {{ game.home_team }}
-            </p>
-            <p class="event-type-2-info">
-              Date & Time: {{ game.commence_time | date : "short" }}
-            </p>
-          </div>
-          <div class="market-wrapper">
-            <p>
-              <a
-                class="market-detail"
-                (click)="getOdds(game.sport_key, game.id)"
-                >Game Odds</a
-              >
-            </p>
+      <div *ngFor="let p of nbaPlayerReboundsProps">
+        <div class="card-2" (click)="getNbaPlayerReboundPropDetails(p.player)">
+          <div class="info-wrapper-small-dashboard">
+            <img src="{{ p.playerImage }}" alt="Player Image" />
+            <div class="card-2-description">
+              <p class="card-2-player-name">{{ p.player }}</p>
+              <p class="card-2-player-team">{{ p.team }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -247,13 +234,16 @@
     </div>
   </div>
 
-  <!--  NBA Player Props Assists -->
+  <!-- Soccer Player Props Assists -->
   <div class="dash-items">
-    <p class="dash-headers">NBA Player Assists</p>
+    <p class="dash-headers">Soccer Assists (All Comps.)</p>
     <div class="cards-2">
-      <div *ngFor="let p of nbaPlayerAssistsProps">
-        <div class="card-2" (click)="getNbaPlayerAssistPropDetails(p.player)">
-          <div class="info-wrapper-small-dashboard">
+      <div *ngFor="let p of soccerPlayerAssistsProps">
+        <div
+          class="card-2"
+          (click)="getSoccerPlayerAssistsPropDetails(p.player)"
+        >
+          <div class="info-wrapper-big-dashbord">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-2-description">
               <p class="card-2-player-name">{{ p.player }}</p>
@@ -283,18 +273,28 @@
     </div>
   </div>
 
-  <!--  NBA Player Props Rebounds -->
+  <!-- Bundesliga Live and Upcoming Game Odds -->
   <div class="dash-items">
-    <p class="dash-headers">NBA Player Rebounds</p>
+    <p class="dash-headers">Bundesliga Live and Upcoming Game Odds</p>
     <div class="cards-2">
-      <div *ngFor="let p of nbaPlayerReboundsProps">
-        <div class="card-2" (click)="getNbaPlayerReboundPropDetails(p.player)">
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-              <p class="card-2-player-team">{{ p.team }}</p>
-            </div>
+      <div *ngFor="let game of bundesligaGames">
+        <div class="event-type-2">
+          <div class="event-type-2-description">
+            <p class="event-type-2-name">
+              {{ game.away_team }} vs {{ game.home_team }}
+            </p>
+            <p class="event-type-2-info">
+              Date & Time: {{ game.commence_time | date : "short" }}
+            </p>
+          </div>
+          <div class="market-wrapper">
+            <p>
+              <a
+                class="market-detail"
+                (click)="getOdds(game.sport_key, game.id)"
+                >Game Odds</a
+              >
+            </p>
           </div>
         </div>
       </div>
