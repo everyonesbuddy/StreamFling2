@@ -34,18 +34,15 @@ export class CompareOddsComponent implements OnInit {
         ) {
           this.playerPropAvailable = true;
         }
-        console.log('res', res);
       });
     });
   }
 
   getOdds(key: any, id: any) {
     this.router.navigate([`/oddsScreen/${key}/${id}`]);
-    console.log('sport_key', key);
   }
 
   getPlayerProps(key: any, id: any) {
     this.router.navigate([`/playerPropsPage/${key}/${id}`]);
-    console.log('sport_key', key);
   }
 }

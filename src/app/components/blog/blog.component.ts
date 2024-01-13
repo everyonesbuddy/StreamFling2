@@ -17,7 +17,6 @@ export class BlogComponent implements OnInit {
     //get all Blogs
     this.blogService.getAllBlogs().then((blogs) => {
       this.blogs = blogs;
-      console.log('blogs', this.blogs);
     });
   }
 

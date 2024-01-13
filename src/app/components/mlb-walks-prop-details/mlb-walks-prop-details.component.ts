@@ -31,7 +31,6 @@ export class MlbWalksPropDetailsComponent implements OnInit {
         .getSpecificMlbPlayerWalksProps(player)
         .subscribe((res) => {
           this.playerData = res;
-          console.log('res', res);
           this.playersWalksLastFive.push(
             res[0].walksFiveGamesAgo,
             res[0].walksFourGamesAgo,
@@ -39,7 +38,6 @@ export class MlbWalksPropDetailsComponent implements OnInit {
             res[0].walksTwoGamesAgo,
             res[0].walksLastGame
           );
-          console.log('hdfhhh', this.playersWalksLastFive);
           this.renderChart();
         });
     });

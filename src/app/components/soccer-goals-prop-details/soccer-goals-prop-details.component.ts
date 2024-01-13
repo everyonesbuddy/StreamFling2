@@ -31,7 +31,6 @@ export class SoccerGoalsPropDetailsComponent implements OnInit {
         .getSpecificSoccerPlayerGoalsProps(player)
         .subscribe((res) => {
           this.playerData = res;
-          console.log('res', res);
           this.playersGoalsLastFive.push(
             res[0].goalsFiveGamesAgo,
             res[0].goalsFourGamesAgo,
@@ -39,7 +38,6 @@ export class SoccerGoalsPropDetailsComponent implements OnInit {
             res[0].goalsTwoGamesAgo,
             res[0].goalsLastGame
           );
-          console.log('hdfhhh', this.playersGoalsLastFive);
           this.renderChart();
         });
     });

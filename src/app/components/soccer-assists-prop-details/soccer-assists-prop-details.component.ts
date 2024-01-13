@@ -31,7 +31,6 @@ export class SoccerAssistsPropDetailsComponent implements OnInit {
         .getSpecificSoccerPlayerAssistsProps(player)
         .subscribe((res) => {
           this.playerData = res;
-          console.log('res', res);
           this.playersAssistsLastFive.push(
             res[0].assistsFiveGamesAgo,
             res[0].assistsFourGamesAgo,
@@ -39,7 +38,6 @@ export class SoccerAssistsPropDetailsComponent implements OnInit {
             res[0].assistsTwoGamesAgo,
             res[0].assistsLastGame
           );
-          console.log('hdfhhh', this.playersAssistsLastFive);
           this.renderChart();
         });
     });

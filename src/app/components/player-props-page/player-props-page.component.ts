@@ -104,11 +104,9 @@ export class PlayerPropsPageComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       let key = params['key'];
-      console.log('key', key);
       let id = params['id'];
       this.eventId = id;
       this.sportKey = key;
-      console.log('id', id);
       if (key === 'basketball_nba') {
         this.propsAvailable = true;
         this.propsToDisplay = this.nbaAndNcaabAndWnbaProps;
@@ -131,23 +129,13 @@ export class PlayerPropsPageComponent implements OnInit {
         this.propsAvailable = false;
         this.propsToDisplay = [];
       }
-      console.log('propstodisplay', this.propsToDisplay);
       this.bettingOdds.getOdds(key, id).subscribe((res) => {
         this.game = res;
-        console.log('res', res);
       });
     });
   }
 
   getPlayerProps(market_key: any, eventId: any, sportKey: any) {
-    console.log(
-      'market_key',
-      market_key,
-      'eventId',
-      eventId,
-      'sportKey',
-      sportKey
-    );
     this.router.navigate([
       `/playerPropsScreen/${sportKey}/${market_key}/${eventId}`,
     ]);

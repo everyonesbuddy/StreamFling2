@@ -84,11 +84,9 @@ export class SubscriptionService {
         }
         if (accessGranted) {
           // Grant access
-          console.log('Access granted');
           this.router.navigate(['/playerProps']);
         } else {
           // Deny access
-          console.log('Access denied');
           this.router.navigate(['/subscriptions']);
         }
         // if (response.subscriptions.length === 0) {

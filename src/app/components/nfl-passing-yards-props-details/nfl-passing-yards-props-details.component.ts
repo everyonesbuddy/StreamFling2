@@ -31,7 +31,6 @@ export class NflPassingYardsPropsDetailsComponent implements OnInit {
         .getSpecificNflPlayerPassingYardsProps(player)
         .subscribe((res) => {
           this.playerData = res;
-          console.log('res', res);
           this.playersPassingYardsLastFive.push(
             res[0].passingYardsFiveGamesAgo,
             res[0].passingYardsFourGamesAgo,
@@ -39,7 +38,6 @@ export class NflPassingYardsPropsDetailsComponent implements OnInit {
             res[0].passingYardsTwoGamesAgo,
             res[0].passingYardsLastGame
           );
-          console.log('hdfhhh', this.playersPassingYardsLastFive);
           this.renderChart();
         });
     });

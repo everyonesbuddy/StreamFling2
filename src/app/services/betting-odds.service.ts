@@ -45,7 +45,6 @@ export class BettingOddsService {
   }
 
   getOdds(key: any, id: any): Observable<any> {
-    // console.log(key)
     return this.http.get(
       `https://api.the-odds-api.com/v4/sports/${key}/odds/?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=h2h,spreads,totals&oddsFormat=american&eventIds=${id}`
     );
@@ -57,6 +56,7 @@ export class BettingOddsService {
     );
   }
 
+  //get player props for a specific event(this api is being used with line comparison tool)
   getPlayerProps(
     market_key: any,
     eventId: any,
@@ -67,9 +67,29 @@ export class BettingOddsService {
     );
   }
 
+  //get fanduel Nba player props assist odds for a specific event(this api is being used with prop research tool )
+  getFanduelNbaPlayerPropsAssistsOdds(eventId: any): Observable<any> {
+    return this.http.get(
+      `https://api.the-odds-api.com/v4/sports/basketball_nba/events/${eventId}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=player_assists&oddsFormat=american&bookmakers=fanduel`
+    );
+  }
+
+  //get fanduel Nba player props Points odds for a specific event(this api is being used with prop research tool )
+  getFanduelNbaPlayerPropsPointsOdds(eventId: any): Observable<any> {
+    return this.http.get(
+      `https://api.the-odds-api.com/v4/sports/basketball_nba/events/${eventId}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=player_points&oddsFormat=american&bookmakers=fanduel`
+    );
+  }
+
+  //get fanduel Nba player props Rebounds odds for a specific event(this api is being used with prop research tool )
+  getFanduelNbaPlayerPropsReboundsOdds(eventId: any): Observable<any> {
+    return this.http.get(
+      `https://api.the-odds-api.com/v4/sports/basketball_nba/events/${eventId}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&markets=player_rebounds&oddsFormat=american&bookmakers=fanduel`
+    );
+  }
+
   //Historical odds current time
   getHistoricalOddsCurrentTime(key: any, id: any, time: any): Observable<any> {
-    // console.log(key)
     return this.http.get(
       `https://api.the-odds-api.com/v4/historical/sports/${key}/events/${id}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&date=${time}&markets=h2h&bookmakers=fanduel&oddsFormat=american`
     );
@@ -77,7 +97,6 @@ export class BettingOddsService {
 
   //Historical odds One Hour Ago
   getHistoricalOddsOneHourAgo(key: any, id: any, time: any): Observable<any> {
-    // console.log(key)
     return this.http.get(
       `https://api.the-odds-api.com/v4/historical/sports/${key}/events/${id}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&date=${time}&markets=h2h&bookmakers=fanduel&oddsFormat=american`
     );
@@ -85,7 +104,6 @@ export class BettingOddsService {
 
   //Historical odds Two Hour Ago
   getHistoricalOddsTwoHourAgo(key: any, id: any, time: any): Observable<any> {
-    // console.log(key)
     return this.http.get(
       `https://api.the-odds-api.com/v4/historical/sports/${key}/events/${id}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&date=${time}&markets=h2h&bookmakers=fanduel&oddsFormat=american`
     );
@@ -93,7 +111,6 @@ export class BettingOddsService {
 
   //Historical odds Three Hour Ago
   getHistoricalOddsThreeHourAgo(key: any, id: any, time: any): Observable<any> {
-    // console.log(key)
     return this.http.get(
       `https://api.the-odds-api.com/v4/historical/sports/${key}/events/${id}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&date=${time}&markets=h2h&bookmakers=fanduel&oddsFormat=american`
     );
@@ -101,7 +118,6 @@ export class BettingOddsService {
 
   //Historical odds One Hour Ago
   getHistoricalOddsFourHourAgo(key: any, id: any, time: any): Observable<any> {
-    // console.log(key)
     return this.http.get(
       `https://api.the-odds-api.com/v4/historical/sports/${key}/events/${id}/odds?apiKey=5e7c521ab26381b068424419c586233a&regions=us&date=${time}&markets=h2h&bookmakers=fanduel&oddsFormat=american`
     );

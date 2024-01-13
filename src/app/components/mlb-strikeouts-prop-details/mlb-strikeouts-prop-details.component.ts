@@ -31,7 +31,6 @@ export class MlbStrikeoutsPropDetailsComponent implements OnInit {
         .getSpecificMlbPlayerStrikeoutsProps(player)
         .subscribe((res) => {
           this.playerData = res;
-          console.log('res', res);
           this.playersStrikeoutsLastFive.push(
             res[0].strikeoutsFiveGamesAgo,
             res[0].strikeoutsFourGamesAgo,
@@ -39,7 +38,6 @@ export class MlbStrikeoutsPropDetailsComponent implements OnInit {
             res[0].strikeoutsTwoGamesAgo,
             res[0].strikeoutsLastGame
           );
-          console.log('hdfhhh', this.playersStrikeoutsLastFive);
           this.renderChart();
         });
     });

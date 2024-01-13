@@ -31,7 +31,6 @@ export class MlbHitsAllowedPropDetailsComponent implements OnInit {
         .getSpecificMlbPlayerHitsAllowedProps(player)
         .subscribe((res) => {
           this.playerData = res;
-          console.log('res', res);
           this.playersHitsAllowedLastFive.push(
             res[0].hitsAllowedFiveGamesAgo,
             res[0].hitsAllowedFourGamesAgo,
@@ -39,7 +38,6 @@ export class MlbHitsAllowedPropDetailsComponent implements OnInit {
             res[0].hitsAllowedTwoGamesAgo,
             res[0].hitsAllowedLastGame
           );
-          console.log('hdfhhh', this.playersHitsAllowedLastFive);
           this.renderChart();
         });
     });

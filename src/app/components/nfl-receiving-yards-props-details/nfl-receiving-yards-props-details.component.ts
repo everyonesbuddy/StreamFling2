@@ -31,7 +31,6 @@ export class NflReceivingYardsPropsDetailsComponent implements OnInit {
         .getSpecificNflPlayerReceivingYardsProps(player)
         .subscribe((res) => {
           this.playerData = res;
-          console.log('res', res);
           this.playersReceivingYardsLastFive.push(
             res[0].receivingYardsFiveGamesAgo,
             res[0].receivingYardsFourGamesAgo,
@@ -39,7 +38,6 @@ export class NflReceivingYardsPropsDetailsComponent implements OnInit {
             res[0].receivingYardsTwoGamesAgo,
             res[0].receivingYardsLastGame
           );
-          console.log('hdfhhh', this.playersReceivingYardsLastFive);
           this.renderChart();
         });
     });
