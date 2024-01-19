@@ -25,11 +25,11 @@
     </button>
   </div>
 
-  <!-- EPL Live and Upcoming Game Odds -->
+  <!-- NBA Live and Upcoming Game Odds -->
   <div class="dash-items">
-    <p class="dash-headers">EPL Live and Upcoming games Odds</p>
+    <p class="dash-headers">NBA Live and Upcoming games Odds</p>
     <div class="cards-3">
-      <div *ngFor="let game of eplGames">
+      <div *ngFor="let game of nbaGames">
         <div class="event-type-1">
           <div class="event-type-1-description">
             <p class="event-type-1-name">
@@ -45,6 +45,13 @@
                 class="market-detail"
                 (click)="getOdds(game.sport_key, game.id)"
                 >Game Odds</a
+              >
+            </p>
+            <p>
+              <a
+                class="market-detail"
+                (click)="getPlayerProps(game.sport_key, game.id)"
+                >Player Props</a
               >
             </p>
           </div>
@@ -99,17 +106,17 @@
     </div>
   </div>
 
-  <!--  Soccer Player Props Goals -->
+  <!-- NBA Player Props Points -->
   <div class="dash-items">
-    <p class="dash-headers">Soccer Goals (All Comps.)</p>
+    <p class="dash-headers">NBA Player Points</p>
     <div class="cards-1">
-      <div *ngFor="let p of soccerPlayerGoalsProps">
-        <div class="card-1" (click)="getSoccerPlayerGoalsPropDetails(p.player)">
-          <div class="info-wrapper-small-dashboard">
+      <div *ngFor="let p of nbaPlayerPointsProps">
+        <div class="card-1" (click)="getNbaPlayerPointPropDetails(p.player)">
+          <div class="info-wrapper-big-dashbord">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-1-description">
               <p class="card-1-player-name">{{ p.player }}</p>
-              <p class="card-1-player-team">{{ p.team }}</p>
+              <p class="card-2-player-team">{{ p.team }}</p>
             </div>
           </div>
         </div>
@@ -172,11 +179,11 @@
     ></iframe>
   </div> -->
 
-  <!-- NBA Live and Upcoming Game Odds -->
+  <!-- EPL Live and Upcoming Game Odds -->
   <div class="dash-items">
-    <p class="dash-headers">NBA Live and Upcoming games Odds</p>
+    <p class="dash-headers">EPL Live and Upcoming games Odds</p>
     <div class="cards-3">
-      <div *ngFor="let game of nbaGames">
+      <div *ngFor="let game of eplGames">
         <div class="event-type-1">
           <div class="event-type-1-description">
             <p class="event-type-1-name">
@@ -192,13 +199,6 @@
                 class="market-detail"
                 (click)="getOdds(game.sport_key, game.id)"
                 >Game Odds</a
-              >
-            </p>
-            <p>
-              <a
-                class="market-detail"
-                (click)="getPlayerProps(game.sport_key, game.id)"
-                >Player Props</a
               >
             </p>
           </div>
@@ -256,17 +256,17 @@
     </div>
   </div>
 
-  <!-- NBA Player Props Points -->
+  <!--  Soccer Player Props Goals -->
   <div class="dash-items">
-    <p class="dash-headers">NBA Player Points</p>
+    <p class="dash-headers">Soccer Goals (All Comps.)</p>
     <div class="cards-1">
-      <div *ngFor="let p of nbaPlayerPointsProps">
-        <div class="card-1" (click)="getNbaPlayerPointPropDetails(p.player)">
-          <div class="info-wrapper-big-dashbord">
+      <div *ngFor="let p of soccerPlayerGoalsProps">
+        <div class="card-1" (click)="getSoccerPlayerGoalsPropDetails(p.player)">
+          <div class="info-wrapper-small-dashboard">
             <img src="{{ p.playerImage }}" alt="Player Image" />
             <div class="card-1-description">
               <p class="card-1-player-name">{{ p.player }}</p>
-              <p class="card-2-player-team">{{ p.team }}</p>
+              <p class="card-1-player-team">{{ p.team }}</p>
             </div>
           </div>
         </div>
