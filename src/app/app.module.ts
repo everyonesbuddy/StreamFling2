@@ -36,9 +36,18 @@ import { NflReceivingYardsPropsDetailsComponent } from './components/nfl-receivi
 import { NflRushingYardsPropsDetailsComponent } from './components/nfl-rushing-yards-props-details/nfl-rushing-yards-props-details.component';
 import { SoccerShotsPropDetailsComponent } from './components/soccer-shots-prop-details/soccer-shots-prop-details.component';
 import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-prop-details/soccer-assists-prop-details.component';
-import { MediaBroadcastingAndBettorsSolutionsComponent } from './components/media-broadcasting-and-bettors-solutions/media-broadcasting-and-bettors-solutions.component';
+import { ProductsComponent } from './components/products/product.component';
 import { NbaReboundsPropDetailsPageComponent } from './components/nba-rebounds-prop-details-page/nba-rebounds-prop-details-page.component';
 import { NbaAssistsPropDetailsPageComponent } from './components/nba-assists-prop-details-page/nba-assists-prop-details-page.component';
+import { NbaPlayerAssistsPageComponent } from './components/nba-player-assists-page/nba-player-assists-page.component';
+import { NbaPlayerPointsPageComponent } from './components/nba-player-points-page/nba-player-points-page.component';
+import { NbaPlayerReboundsPageComponent } from './components/nba-player-rebounds-page/nba-player-rebounds-page.component';
+import { SoccerPlayerShotsPageComponent } from './components/soccer-player-shots-page/soccer-player-shots-page.component';
+import { SoccerPlayerAssistsPageComponent } from './components/soccer-player-assists-page/soccer-player-assists-page.component';
+import { SoccerPlayerGoalsPageComponent } from './components/soccer-player-goals-page/soccer-player-goals-page.component';
+import { NbaLiveAndUpcomingGamesComponent } from './components/nba-live-and-upcoming-games/nba-live-and-upcoming-games.component';
+import { EplLiveAndUpcomingGamesComponent } from './components/epl-live-and-upcoming-games/epl-live-and-upcoming-games.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -70,9 +79,18 @@ import { NbaAssistsPropDetailsPageComponent } from './components/nba-assists-pro
     NflRushingYardsPropsDetailsComponent,
     SoccerShotsPropDetailsComponent,
     SoccerAssistsPropDetailsComponent,
-    MediaBroadcastingAndBettorsSolutionsComponent,
+    ProductsComponent,
     NbaReboundsPropDetailsPageComponent,
     NbaAssistsPropDetailsPageComponent,
+    NbaPlayerAssistsPageComponent,
+    NbaPlayerPointsPageComponent,
+    NbaPlayerReboundsPageComponent,
+    SoccerPlayerShotsPageComponent,
+    SoccerPlayerAssistsPageComponent,
+    SoccerPlayerGoalsPageComponent,
+    NbaLiveAndUpcomingGamesComponent,
+    EplLiveAndUpcomingGamesComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

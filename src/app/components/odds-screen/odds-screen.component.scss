@@ -1,3 +1,84 @@
+.dashboards {
+  width: 100%;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 2rem;
+  align-items: center;
+  padding: 10px;
+}
+
+.dash-items {
+  margin: 10px;
+  height: 350px;
+  // overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--first-color);
+  color: var(--fourth-color);
+  transition-duration: 0.3s;
+  cursor: pointer;
+  max-width: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.dash-headers {
+  font-size: 10px;
+  padding: 5px;
+  color: var(--fourth-color);
+}
+
+.intro-copy {
+  font-size: 11px;
+  padding: 10px;
+  color: var(--fourth-color);
+}
+
+.best-odds-response {
+  white-space: pre-line;
+  font-size: 12px;
+}
+
+::-webkit-scrollbar {
+  width: 0.7em;
+  height: 0.7em;
+}
+
+// ::-webkit-scrollbar-track {
+//   background: #{"hsl(0, 0%, 24%, 1)"};
+//   border-radius: 100vw;
+//   margin-block: 0.2em;
+// }
+
+::-webkit-scrollbar-thumb {
+  background: #{"hsl(0, 0%, 0%, 1)"};
+  // border: 0.25em solid #{"hsl(0, 0%, 24%, 1)"};
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #{"hsl(0, 0%, 0%, 1)"};
+}
+
+.header-buttons {
+  margin: auto;
+  display: block;
+}
+
+button {
+  background-color: var(--second-color);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  border: none;
+  color: var(--fourth-color);
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+}
+
+//styling for old odds screen
+
 .showcase {
   width: 100%;
   height: 80vh;
@@ -114,9 +195,47 @@
   max-width: auto;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding-top: 30px;
 }
 
+.book-title {
+  // color: #fff;
+  font-weight: 300;
+  font-size: 10px;
+  // margin-bottom: 20px;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.book-market-key {
+  color: #fff;
+  font-weight: 300;
+  font-size: 12px;
+  // margin-bottom: 20px;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.book-outcome-name-and-price {
+  color: #fff;
+  font-weight: 300;
+  font-size: 10px;
+  // margin-bottom: 20px;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.book-outcome-point {
+  color: #fff;
+  font-weight: 300;
+  font-size: 10px;
+  // margin-bottom: 20px;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 // .table-boby {
 //   color: #fff;
 // }
@@ -175,55 +294,6 @@ canvas {
   //   box-shadow: 4px 3px 11px 6px rgb(255, 87, 34);
   //   transform: translateY(-3px);
   // }
-
-  &-thumb-container {
-    background-color: #000;
-    position: relative;
-    height: 172px;
-    color: #fff;
-    text-align: center;
-  }
-
-  &-thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 172px;
-  }
-
-  &-description {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 157px;
-  }
-
-  &-name {
-    color: #fff;
-    font-weight: 300;
-    font-size: 12px;
-    margin-bottom: 20px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  &-info {
-    color: #fff;
-    font-weight: 200;
-    font-size: 10px;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  &-date {
-    display: flex;
-    color: #fff;
-  }
 }
 
 ::-webkit-scrollbar {

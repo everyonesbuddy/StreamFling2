@@ -16,4 +16,12 @@ export class AiService {
 
     return this.http.post(url, promptData, { headers });
   }
+
+  callBestOddsAi(promptValue: string) {
+    const url = 'https://streamfling-be.herokuapp.com/best-odds';
+    const promptData = { prompt: promptValue };
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.http.post(url, promptData, { headers });
+  }
 }

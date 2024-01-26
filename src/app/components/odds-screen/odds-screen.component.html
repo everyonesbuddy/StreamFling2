@@ -39,7 +39,7 @@
 </section> -->
 
 <!-- Odds Comparison -->
-<div *ngFor="let odd of odds" class="header">
+<!-- <div *ngFor="let odd of odds" class="header">
   <h3>
     {{ odd.home_team }} vs {{ odd.away_team }} ({{
       odd.commence_time | date : "medium"
@@ -68,6 +68,57 @@
       </tr>
     </tbody>
   </table>
+</div> -->
+
+<!-- potential new odds screen -->
+<div class="dashboards">
+  <div class="dash-items">
+    <p class="dash-headers">Game Odds</p>
+
+    <div class="table-wrapper">
+      <table class="table table-sm" *ngFor="let odd of odds">
+        <tbody>
+          <tr>
+            <td *ngFor="let book of odd.bookmakers; let i = index">
+              <p class="book-title">{{ book.title }}</p>
+
+              <div
+                class="event"
+                *ngFor="let market of book.markets; let i = index"
+              >
+                <p class="book-market-key">
+                  {{ market.key }}
+                  :
+                </p>
+                <div *ngFor="let outcome of market.outcomes; let i = index">
+                  <p class="book-outcome-name-and-price">
+                    {{ outcome.name }} {{ outcome.price }}
+                  </p>
+                  <div *ngIf="outcome.point">
+                    <p class="book-outcome-point">({{ outcome.point }})</p>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="dash-items">
+    <p class="dash-headers">Best Odds Analysis</p>
+
+    <div class="best-odds-response">
+      <ng-container *ngIf="botResponse">
+        <p *ngFor="let line of botResponse.split('\n')">{{ line }}</p>
+      </ng-container>
+    </div>
+
+    <ng-container *ngIf="!botResponse">
+      <app-spinner></app-spinner>
+    </ng-container>
+  </div>
 </div>
 
 <!-- Line Movements -->

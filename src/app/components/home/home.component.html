@@ -17,288 +17,32 @@
         up for winning
       </p>
     </div>
-    <button
-      class="btn btn-lg button header-buttons"
-      routerLink="/media-broadcasting-and-bettors-solutions"
-    >
+    <button class="btn btn-lg button header-buttons" routerLink="/products">
       See Solutions
     </button>
   </div>
 
   <!-- NBA Live and Upcoming Game Odds -->
-  <div class="dash-items">
-    <p class="dash-headers">NBA Live and Upcoming games Odds</p>
-    <div class="cards-3">
-      <div *ngFor="let game of nbaGames">
-        <div class="event-type-1">
-          <div class="event-type-1-description">
-            <p class="event-type-1-name">
-              {{ game.away_team }} vs {{ game.home_team }}
-            </p>
-            <p class="event-type-1-info">
-              Date & Time: {{ game.commence_time | date : "short" }}
-            </p>
-          </div>
-          <div class="market-wrapper">
-            <p>
-              <a
-                class="market-detail"
-                (click)="getOdds(game.sport_key, game.id)"
-                >Game Odds</a
-              >
-            </p>
-            <p>
-              <a
-                class="market-detail"
-                (click)="getPlayerProps(game.sport_key, game.id)"
-                >Player Props</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-nba-live-and-upcoming-games></app-nba-live-and-upcoming-games>
 
   <!--  NBA Player Props Assists -->
-  <div class="dash-items">
-    <p class="dash-headers">NBA Player Assists</p>
-    <div class="cards-2">
-      <div *ngFor="let p of nbaPlayerAssistsProps">
-        <div class="card-2" (click)="getNbaPlayerAssistPropDetails(p.player)">
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-              <p class="card-2-player-team">{{ p.team }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- La Liga Live and Upcoming Game Odds -->
-  <div class="dash-items">
-    <p class="dash-headers">La Liga Live and Upcoming games Odds</p>
-    <div class="cards-2">
-      <div *ngFor="let game of laLigaGames">
-        <div class="event-type-2">
-          <div class="event-type-2-description">
-            <p class="event-type-2-name">
-              {{ game.away_team }} vs {{ game.home_team }}
-            </p>
-            <p class="event-type-2-info">
-              Date & Time: {{ game.commence_time | date : "short" }}
-            </p>
-          </div>
-          <div class="market-wrapper">
-            <p>
-              <a
-                class="market-detail"
-                (click)="getOdds(game.sport_key, game.id)"
-                >Game Odds</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- NBA Player Props Points -->
-  <div class="dash-items">
-    <p class="dash-headers">NBA Player Points</p>
-    <div class="cards-1">
-      <div *ngFor="let p of nbaPlayerPointsProps">
-        <div class="card-1" (click)="getNbaPlayerPointPropDetails(p.player)">
-          <div class="info-wrapper-big-dashbord">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-1-description">
-              <p class="card-1-player-name">{{ p.player }}</p>
-              <p class="card-2-player-team">{{ p.team }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-nba-player-assists-page></app-nba-player-assists-page>
 
   <!--  NBA Player Props Rebounds -->
-  <div class="dash-items">
-    <p class="dash-headers">NBA Player Rebounds</p>
-    <div class="cards-2">
-      <div *ngFor="let p of nbaPlayerReboundsProps">
-        <div class="card-2" (click)="getNbaPlayerReboundPropDetails(p.player)">
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-              <p class="card-2-player-team">{{ p.team }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-nba-player-rebounds-page></app-nba-player-rebounds-page>
 
-  <!-- Soccer Player Props Shots -->
-  <div class="dash-items">
-    <p class="dash-headers">Soccer Shots (All Comps.)</p>
-    <div class="cards-2">
-      <div *ngFor="let p of soccerPlayerShotsProps">
-        <div class="card-2" (click)="getSoccerPlayerShotsPropDetails(p.player)">
-          <div class="info-wrapper-big-dashbord">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-              <p class="card-2-player-team">{{ p.team }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- General Newsletter -->
-  <!-- <div class="dash-items">
-    <p class="dash-headers">Subscribe to Free Newsletter</p>
-    <iframe
-      src="https://embeds.beehiiv.com/1b72b521-3037-45c0-a284-f7dd566acee1"
-      data-test-id="beehiiv-embed"
-      width="100%"
-      height="320"
-      frameborder="0"
-      scrolling="no"
-      style="
-        border-radius: 4px;
-        border: 2px solid #e5e7eb;
-        margin: 0;
-        background-color: transparent;
-      "
-    ></iframe>
-  </div> -->
-
-  <!-- EPL Live and Upcoming Game Odds -->
-  <div class="dash-items">
-    <p class="dash-headers">EPL Live and Upcoming games Odds</p>
-    <div class="cards-3">
-      <div *ngFor="let game of eplGames">
-        <div class="event-type-1">
-          <div class="event-type-1-description">
-            <p class="event-type-1-name">
-              {{ game.away_team }} vs {{ game.home_team }}
-            </p>
-            <p class="event-type-1-info">
-              Date & Time: {{ game.commence_time | date : "short" }}
-            </p>
-          </div>
-          <div class="market-wrapper">
-            <p>
-              <a
-                class="market-detail"
-                (click)="getOdds(game.sport_key, game.id)"
-                >Game Odds</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Serie A Live and Upcoming Game Odds -->
-  <div class="dash-items">
-    <p class="dash-headers">Serie A Live and Upcoming Game Odds</p>
-    <div class="cards-2">
-      <div *ngFor="let game of serieAGames">
-        <div class="event-type-2">
-          <div class="event-type-2-description">
-            <p class="event-type-2-name">
-              {{ game.away_team }} vs {{ game.home_team }}
-            </p>
-            <p class="event-type-2-info">
-              Date & Time: {{ game.commence_time | date : "short" }}
-            </p>
-          </div>
-          <div class="market-wrapper">
-            <p>
-              <a
-                class="market-detail"
-                (click)="getOdds(game.sport_key, game.id)"
-                >Game Odds</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- NBA Player Props Points -->
+  <app-nba-player-points-page></app-nba-player-points-page>
 
   <!-- Soccer Player Props Assists -->
-  <div class="dash-items">
-    <p class="dash-headers">Soccer Assists (All Comps.)</p>
-    <div class="cards-2">
-      <div *ngFor="let p of soccerPlayerAssistsProps">
-        <div
-          class="card-2"
-          (click)="getSoccerPlayerAssistsPropDetails(p.player)"
-        >
-          <div class="info-wrapper-big-dashbord">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-2-description">
-              <p class="card-2-player-name">{{ p.player }}</p>
-              <p class="card-2-player-team">{{ p.team }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-soccer-player-assists-page></app-soccer-player-assists-page>
+
+  <!-- Soccer Player Props Shots -->
+  <app-soccer-player-shots-page></app-soccer-player-shots-page>
+
+  <!-- EPL Live and Upcoming Game Odds -->
+  <app-epl-live-and-upcoming-games></app-epl-live-and-upcoming-games>
 
   <!--  Soccer Player Props Goals -->
-  <div class="dash-items">
-    <p class="dash-headers">Soccer Goals (All Comps.)</p>
-    <div class="cards-1">
-      <div *ngFor="let p of soccerPlayerGoalsProps">
-        <div class="card-1" (click)="getSoccerPlayerGoalsPropDetails(p.player)">
-          <div class="info-wrapper-small-dashboard">
-            <img src="{{ p.playerImage }}" alt="Player Image" />
-            <div class="card-1-description">
-              <p class="card-1-player-name">{{ p.player }}</p>
-              <p class="card-1-player-team">{{ p.team }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bundesliga Live and Upcoming Game Odds -->
-  <div class="dash-items">
-    <p class="dash-headers">Bundesliga Live and Upcoming Game Odds</p>
-    <div class="cards-2">
-      <div *ngFor="let game of bundesligaGames">
-        <div class="event-type-2">
-          <div class="event-type-2-description">
-            <p class="event-type-2-name">
-              {{ game.away_team }} vs {{ game.home_team }}
-            </p>
-            <p class="event-type-2-info">
-              Date & Time: {{ game.commence_time | date : "short" }}
-            </p>
-          </div>
-          <div class="market-wrapper">
-            <p>
-              <a
-                class="market-detail"
-                (click)="getOdds(game.sport_key, game.id)"
-                >Game Odds</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-soccer-player-goals-page></app-soccer-player-goals-page>
 </div>

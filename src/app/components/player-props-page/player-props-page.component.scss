@@ -175,19 +175,19 @@ button {
 }
 
 .event-name {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Fredoka One", cursive;
 }
 
 .event-info {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Fredoka One", cursive;
 }
 
 .event {
   width: 280px;
   margin: 10px;
-  height: 40px;
+  height: 70px;
   overflow: hidden;
   border-radius: 5px;
   background-color: var(--third-color);
@@ -220,8 +220,8 @@ button {
   &-description {
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    // flex-direction: column;
+    justify-content: center;
   }
 
   &-name {

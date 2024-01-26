@@ -25,7 +25,7 @@ import { NflReceivingYardsPropsDetailsComponent } from './components/nfl-receivi
 import { NflRushingYardsPropsDetailsComponent } from './components/nfl-rushing-yards-props-details/nfl-rushing-yards-props-details.component';
 import { SoccerShotsPropDetailsComponent } from './components/soccer-shots-prop-details/soccer-shots-prop-details.component';
 import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-prop-details/soccer-assists-prop-details.component';
-import { MediaBroadcastingAndBettorsSolutionsComponent } from './components/media-broadcasting-and-bettors-solutions/media-broadcasting-and-bettors-solutions.component';
+import { ProductsComponent } from './components/products/product.component';
 import { NbaReboundsPropDetailsPageComponent } from './components/nba-rebounds-prop-details-page/nba-rebounds-prop-details-page.component';
 import { NbaAssistsPropDetailsPageComponent } from './components/nba-assists-prop-details-page/nba-assists-prop-details-page.component';
 
@@ -47,8 +47,8 @@ const routes: Routes = [
     component: AboutComponent,
   },
   {
-    path: 'media-broadcasting-and-bettors-solutions',
-    component: MediaBroadcastingAndBettorsSolutionsComponent,
+    path: 'products',
+    component: ProductsComponent,
   },
   {
     path: 'subscriptions',

@@ -80,8 +80,20 @@ export class OddsScreenComponent implements OnInit {
     this.activatedRoute.params.subscribe((params) => {
       let key = params['key'];
       let id = params['id'];
+
       this.bettingOdds.getOdds(key, id).subscribe((res) => {
         this.odds = res;
+        console.log('res', res);
+
+        // Convert odds array to string
+        const oddsString = JSON.stringify(this.odds);
+        console.log('oddsString', oddsString);
+
+        this.aiService.callBestOddsAi(oddsString).subscribe((response: any) => {
+          this.isLoading = false;
+          this.botResponse = response.bot.content;
+          console.log('this.botResponse', this.botResponse);
+        });
       });
     });
   }
@@ -90,15 +102,20 @@ export class OddsScreenComponent implements OnInit {
     this.isLoading = true;
     const promptValue = form.value.prompt;
 
+    // Convert odds array to string
+    const oddsString = JSON.stringify(this.odds);
+    console.log('oddsString', oddsString);
+
     if (promptValue.trim() === '') {
       this.isLoading = false;
       this.botResponse = 'Ask a sport betting question';
       return;
     }
 
-    this.aiService.callAi(promptValue).subscribe((response: any) => {
-      this.isLoading = false;
-      this.botResponse = response.bot.content;
-    });
+    // this.aiService.callBestOddsAi(oddsString).subscribe((response: any) => {
+    //   this.isLoading = false;
+    //   this.botResponse = response.bot.content;
+    //   console.log('this.botResponse', this.botResponse);
+    // });
   }
 }
