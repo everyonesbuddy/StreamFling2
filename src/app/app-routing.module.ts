@@ -25,9 +25,10 @@ import { NflReceivingYardsPropsDetailsComponent } from './components/nfl-receivi
 import { NflRushingYardsPropsDetailsComponent } from './components/nfl-rushing-yards-props-details/nfl-rushing-yards-props-details.component';
 import { SoccerShotsPropDetailsComponent } from './components/soccer-shots-prop-details/soccer-shots-prop-details.component';
 import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-prop-details/soccer-assists-prop-details.component';
-import { ProductsComponent } from './components/products/product.component';
+import { ProductsComponent } from './components/products/products.component';
 import { NbaReboundsPropDetailsPageComponent } from './components/nba-rebounds-prop-details-page/nba-rebounds-prop-details-page.component';
 import { NbaAssistsPropDetailsPageComponent } from './components/nba-assists-prop-details-page/nba-assists-prop-details-page.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
   },
   {
     path: 'subscriptions',

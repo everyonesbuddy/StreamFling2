@@ -1,128 +1,36 @@
-<!-- <section class="showcase"> -->
-<!-- Chat bot solution -->
-<!-- <section class="chat-box">
-    <h1>
-      Streamfling AI: Unlock Your Winning Edge with Our AI-Powered Odds Analyzer
-      and Comparison Tool!
-    </h1>
-    <div *ngIf="isLoading">
-      <h4>Loading...</h4>
-    </div>
-    <p *ngIf="!isLoading" id="output" class="bot-response">
-      {{ botResponse }}
-    </p>
-    <div class="bottom-section">
-      <div class="input-container">
-        <form
-          class="input-form"
-          (submit)="onInput(inputForm)"
-          #inputForm="ngForm"
-        >
-          <input
-            type="text"
-            ngModel
-            name="prompt"
-            #prompt="ngModel"
-            class="text-box"
-          />
-          <input type="submit" class="btn btn-sm button" value="Submit" />
-        </form>
-      </div>
-      <p class="hint">
-        Hint: to get better output, provide the AI with more context e.g Jayson
-        tatum points player prop line is set to 29.5 on most sport books, but on
-        fanduel it is set to 28.0. Jayson tatum this season has averaged 30.1
-        points per game. what is most likely to happen, and what is the value?
-      </p>
-    </div>
-  </section>
-</section> -->
-
 <!-- Odds Comparison -->
-<div *ngFor="let odd of odds" class="header">
-  <h3>
-    {{ odd.home_team }} vs {{ odd.away_team }} ({{
-      odd.commence_time | date : "medium"
-    }})
-  </h3>
-</div>
+<div class="data-wrapper">
+  <div *ngFor="let odd of odds" class="header">
+    <h3>
+      {{ odd.home_team }} vs {{ odd.away_team }} ({{
+        odd.commence_time | date : "medium"
+      }})
+    </h3>
+  </div>
 
-<div class="table-wrapper">
-  <table class="table table-sm" *ngFor="let odd of odds">
-    <tbody>
-      <tr>
-        <td *ngFor="let book of odd.bookmakers; let i = index">
-          {{ book.title }}
+  <div class="table-wrapper">
+    <table class="table table-sm table-bordered" *ngFor="let odd of odds">
+      <tbody>
+        <tr>
+          <td *ngFor="let book of odd.bookmakers; let i = index">
+            {{ book.title }}
 
-          <div class="event" *ngFor="let market of book.markets; let i = index">
-            <h6>
-              {{ market.key }}
-              :
-            </h6>
-            <div *ngFor="let outcome of market.outcomes; let i = index">
-              {{ outcome.name }} {{ outcome.price }}
-              <div *ngIf="outcome.point">({{ outcome.point }})</div>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- potential new odds screen -->
-<!-- <div class="dashboards">
-  <div class="dash-items">
-    <p class="dash-headers">Game Odds</p>
-
-    <div class="table-wrapper">
-      <table class="table table-sm" *ngFor="let odd of odds">
-        <tbody>
-          <tr>
-            <td *ngFor="let book of odd.bookmakers; let i = index">
-              <p class="book-title">{{ book.title }}</p>
-
-              <div
-                class="event"
-                *ngFor="let market of book.markets; let i = index"
-              >
-                <p class="book-market-key">
-                  {{ market.key }}
-                  :
-                </p>
-                <div *ngFor="let outcome of market.outcomes; let i = index">
-                  <p class="book-outcome-name-and-price">
-                    {{ outcome.name }} {{ outcome.price }}
-                  </p>
-                  <div *ngIf="outcome.point">
-                    <p class="book-outcome-point">({{ outcome.point }})</p>
-                  </div>
-                </div>
+            <div
+              class="event"
+              *ngFor="let market of book.markets; let i = index"
+            >
+              <h6>
+                {{ market.key }}
+                :
+              </h6>
+              <div *ngFor="let outcome of market.outcomes; let i = index">
+                {{ outcome.name }} {{ outcome.price }}
+                <div *ngIf="outcome.point">({{ outcome.point }})</div>
               </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-
-  <div class="dash-items">
-    <p class="dash-headers">Best Odds Analysis</p>
-
-    <div class="best-odds-response">
-      <ng-container *ngIf="botResponse">
-        <p *ngFor="let line of botResponse.split('\n')">{{ line }}</p>
-      </ng-container>
-    </div>
-
-    <ng-container *ngIf="!botResponse">
-      <app-spinner></app-spinner>
-    </ng-container>
-  </div>
-</div> -->
-
-<!-- Line Movements -->
-<!-- <div class="chart-wrapper">
-  <h3 class="header">Line Movement</h3>
-  <canvas id="canvas">{{ chart }}</canvas>
-</div> -->
+</div>

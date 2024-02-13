@@ -36,7 +36,7 @@ import { NflReceivingYardsPropsDetailsComponent } from './components/nfl-receivi
 import { NflRushingYardsPropsDetailsComponent } from './components/nfl-rushing-yards-props-details/nfl-rushing-yards-props-details.component';
 import { SoccerShotsPropDetailsComponent } from './components/soccer-shots-prop-details/soccer-shots-prop-details.component';
 import { SoccerAssistsPropDetailsComponent } from './components/soccer-assists-prop-details/soccer-assists-prop-details.component';
-import { ProductsComponent } from './components/products/product.component';
+import { ProductsComponent } from './components/products/products.component';
 import { NbaReboundsPropDetailsPageComponent } from './components/nba-rebounds-prop-details-page/nba-rebounds-prop-details-page.component';
 import { NbaAssistsPropDetailsPageComponent } from './components/nba-assists-prop-details-page/nba-assists-prop-details-page.component';
 import { NbaPlayerAssistsPageComponent } from './components/nba-player-assists-page/nba-player-assists-page.component';
@@ -48,6 +48,7 @@ import { SoccerPlayerGoalsPageComponent } from './components/soccer-player-goals
 import { NbaLiveAndUpcomingGamesComponent } from './components/nba-live-and-upcoming-games/nba-live-and-upcoming-games.component';
 import { EplLiveAndUpcomingGamesComponent } from './components/epl-live-and-upcoming-games/epl-live-and-upcoming-games.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     NbaLiveAndUpcomingGamesComponent,
     EplLiveAndUpcomingGamesComponent,
     SpinnerComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

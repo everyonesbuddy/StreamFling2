@@ -1,29 +1,31 @@
-<div class="chart-wrapper">
-  <div *ngFor="let d of playerData">
-    <h5 class="player-name">{{ d.player }} - {{ d.team }}</h5>
-    <div class="detail-and-image-wrapper">
-      <img src="{{ d.playerImage }}" alt="Player Image" />
-      <div class="detail-wrapper">
-        <div class="detail">
-          <div class="detail-description">
-            <p class="detail-name">Last Season Avg (Assists)</p>
-            <p class="detail-name">{{ d.assistsPerGameLastSeason }}</p>
+<div class="data-wrapper">
+  <div class="chart-wrapper">
+    <div *ngFor="let d of playerData">
+      <h5 class="player-name">{{ d.player }} - {{ d.team }}</h5>
+      <div class="detail-and-image-wrapper">
+        <img src="{{ d.playerImage }}" alt="Player Image" />
+        <div class="detail-wrapper">
+          <div class="detail">
+            <div class="detail-description">
+              <p class="detail-name">Last Season Avg (Assists)</p>
+              <p class="detail-name">{{ d.assistsPerGameLastSeason }}</p>
+            </div>
           </div>
-        </div>
-        <div class="detail">
-          <div class="detail-description">
-            <p class="detail-name">Current Season Avg (Assists)</p>
-            <p class="detail-name">{{ d.assistsPerGameCurrentSeason }}</p>
+          <div class="detail">
+            <div class="detail-description">
+              <p class="detail-name">Current Season Avg (Assists)</p>
+              <p class="detail-name">{{ d.assistsPerGameCurrentSeason }}</p>
+            </div>
           </div>
-        </div>
-        <div class="detail">
-          <div class="detail-description">
-            <p class="detail-name">Last 3 Avg (Assists)</p>
-            <p class="detail-name">{{ d.avergeLastThree }}</p>
+          <div class="detail">
+            <div class="detail-description">
+              <p class="detail-name">Last 3 Avg (Assists)</p>
+              <p class="detail-name">{{ d.avergeLastThree }}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <canvas id="canvas">{{ chart }}</canvas>
   </div>
-  <canvas id="canvas">{{ chart }}</canvas>
 </div>

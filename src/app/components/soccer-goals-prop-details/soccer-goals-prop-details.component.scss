@@ -1,7 +1,10 @@
+.data-wrapper {
+  background-color: var(--first-color);
+}
+
 .chart-wrapper {
   font-family: sans-serif;
   margin: auto;
-  height: 700px;
   width: 1000px;
 }
 
@@ -99,14 +102,12 @@
 
 @media (max-width: 960px) {
   .chart-wrapper {
-    height: 700px;
     width: 600px;
   }
 }
 
 @media (max-width: 500px) {
   .chart-wrapper {
-    height: 700px;
     width: 400px;
   }
 

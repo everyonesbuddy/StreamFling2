@@ -1,68 +1,30 @@
-<!-- <section class="showcase"> -->
-<!-- Chat bot solution -->
-<!-- <section class="chat-box">
-    <h1>
-      Streamfling AI: Unlock Your Winning Edge with Our AI-Powered Odds Analyzer
-      and Comparison Tool!
-    </h1>
-    <div *ngIf="isLoading">
-      <h4>Loading...</h4>
-    </div>
-    <p *ngIf="!isLoading" id="output" class="bot-response">
-      {{ botResponse }}
-    </p>
-    <div class="bottom-section">
-      <div class="input-container">
-        <form
-          class="input-form"
-          (submit)="onInput(inputForm)"
-          #inputForm="ngForm"
-        >
-          <input
-            type="text"
-            ngModel
-            name="prompt"
-            #prompt="ngModel"
-            class="text-box"
-          />
-          <input type="submit" class="btn btn-sm button" value="Submit" />
-        </form>
-      </div>
-      <p class="hint">
-        Hint: to get better output, provide the AI with more context e.g Jayson
-        tatum points player prop line is set to 29.5 on most sport books, but on
-        fanduel it is set to 28.0. Jayson tatum this season has averaged 30.1
-        points per game. what is most likely to happen, and what is the value?
-      </p>
-    </div>
-  </section>
-</section> -->
+<div class="data-wrapper">
+  <div *ngFor="let prop of props" class="header">
+    <h3>{{ prop.home_team }} vs {{ prop.away_team }} Player Props</h3>
+  </div>
 
-<div *ngFor="let prop of props" class="header">
-  <h3>{{ prop.home_team }} vs {{ prop.away_team }} Player Props</h3>
-</div>
+  <div class="table-wrapper">
+    <table class="table table-sm table-bordered" *ngFor="let prop of props">
+      <tbody>
+        <tr>
+          <td *ngFor="let book of prop.bookmakers; let i = index">
+            <h6>{{ book.title }}</h6>
 
-<div class="table-wrapper">
-  <table class="table table-sm" *ngFor="let prop of props">
-    <tbody>
-      <tr>
-        <td *ngFor="let book of prop.bookmakers; let i = index">
-          <h6>{{ book.title }}</h6>
-
-          <div *ngFor="let market of book.markets; let i = index">
-            <p>
-              {{ market.key }}
-            </p>
-            <div
-              class="event"
-              *ngFor="let outcome of market.outcomes; let i = index"
-            >
-              {{ outcome.description }} {{ outcome.name }} {{ outcome.price }}
-              <div *ngIf="outcome.point">({{ outcome.point }})</div>
+            <div *ngFor="let market of book.markets; let i = index">
+              <p>
+                {{ market.key }}
+              </p>
+              <div
+                class="event"
+                *ngFor="let outcome of market.outcomes; let i = index"
+              >
+                {{ outcome.description }} {{ outcome.name }} {{ outcome.price }}
+                <div *ngIf="outcome.point">({{ outcome.point }})</div>
+              </div>
             </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
