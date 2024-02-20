@@ -12,7 +12,7 @@
   width: 100%;
   font-family: sans-serif;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr;
   grid-gap: 2rem;
   align-items: center;
   justify-items: center;
@@ -23,7 +23,7 @@
   width: 100%;
   font-family: sans-serif;
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
   align-items: center;
   justify-items: center;
@@ -112,7 +112,7 @@
   }
 
   .detail-and-image-wrapper {
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr;
   }
 
   .detail-wrapper {
