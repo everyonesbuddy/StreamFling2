@@ -14,7 +14,7 @@ export class BlogPostComponent implements OnInit {
   constructor(
     private blogService: BlogService,
     private activatedRoute: ActivatedRoute,
-    private metaService: Meta
+    private meta: Meta
   ) {}
 
   ngOnInit(): void {
@@ -23,25 +23,18 @@ export class BlogPostComponent implements OnInit {
       this.blogService.getSingleBlogPost(id).then((blog) => {
         this.blog = blog;
 
-        // Update meta tags based on fetched blog data
-        this.metaService.updateTag({
-          property: 'og:title',
-          content: this.blog.fields.title,
-        });
-        //  this.metaService.updateTag({ property: 'og:description', content: 'Your blog description here' });
-        this.metaService.updateTag({
+        // Update meta tags dynamically
+        this.meta.updateTag({ property: 'og:title', content: this.blog.title });
+        //  this.meta.updateTag({ property: 'og:description', content: this.blog.description });
+        this.meta.updateTag({
           property: 'og:image',
           content: this.blog.fields.featuredImage.fields.file.url,
         });
-        this.metaService.updateTag({
+        this.meta.updateTag({
           property: 'og:url',
           content:
             'https://sure-odds.com/blog-post/' + this.blog.slug + this.blog.id,
         });
-
-        // Update other relevant meta tags as needed
-        //  this.metaService.updateTag({ name: 'description', content: this.blog.fields.metaDescription });
-        //  this.metaService.updateTag({ name: 'keywords', content: this.blog.fields.keywords.join(', ') });
       });
     });
   }
