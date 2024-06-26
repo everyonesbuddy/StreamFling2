@@ -25,7 +25,6 @@ export class BlogPostComponent implements OnInit {
 
         // Update meta tags dynamically
         this.meta.updateTag({ property: 'og:title', content: this.blog.title });
-        //  this.meta.updateTag({ property: 'og:description', content: this.blog.description });
         this.meta.updateTag({
           property: 'og:image',
           content: this.blog.fields.featuredImage.fields.file.url,

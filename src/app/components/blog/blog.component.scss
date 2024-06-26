@@ -17,7 +17,6 @@ button {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
   position: static;
 }
 .event-header-title {
@@ -26,12 +25,11 @@ button {
 
 .events {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
   margin: 70px auto;
   position: relative;
-  //top: -150px;
 }
 
 .event {
@@ -41,14 +39,9 @@ button {
   overflow: hidden;
   border-radius: 5px;
   background-color: var(--third-color);
-  box-shadow: 4px 3px 8px 0px rgb(89, 169, 133);
+  box-shadow: 4px 3px 8px 0px rgb(112, 89, 169);
   transition-duration: 0.3s;
   cursor: pointer;
-
-  &:hover {
-    box-shadow: 4px 3px 11px 6px rgb(89, 169, 133);
-    transform: translateY(-3px);
-  }
 
   &-thumb-container {
     background-color: #000;

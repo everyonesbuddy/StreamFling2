@@ -1,6 +1,5 @@
-<div class="blogs-wrapper">
+<div class="bg-white">
   <div class="events-container">
-    <h4 class="event-header-title">Sure Odds Blog</h4>
     <div class="events">
       <div *ngFor="let n of blogs">
         <div class="event" (click)="getBlogPost(n.fields.slug, n.sys.id)">

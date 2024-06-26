@@ -1,40 +1,50 @@
-<nav class="navbar navbar-expand-md navbar-light">
-  <div class="container">
-    <a class="navbar-brand" routerLink="/"> SureOdds </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarMain"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav ml-auto">
-        <!-- <li class="nav-item">
-          <a href="#" class="nav-link" routerLink="/dashboard">Dashboard</a>
-        </li> -->
-        <li class="nav-item">
-          <a href="#" class="nav-link" routerLink="/blog">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link" routerLink="/about">About</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a href="mailto:joseph-sure-odds@streamfling.com" target="_blank">
-            <button class="btn btn-sm discord-button">
-              Get customized bots - contact us
-            </button>
-          </a>
-        </li> -->
-        <li class="nav-item">
-          <a href="mailto:joseph-sure-odds@streamfling.com" target="_blank">
-            <button class="btn btn-sm premium-button">
-              Get customized bots - contact us
-            </button>
-          </a>
-        </li>
-      </ul>
+<header class="absolute inset-x-0 top-0 z-50">
+  <nav
+    class="flex items-center justify-between p-6 lg:px-8"
+    aria-label="Global"
+  >
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Sure Odds</span>
+        <img
+          class="h-8 w-auto"
+          src="../../../assets/Black_and_White_Modern_Vintage_Badge_Brand_Logo__2_-removebg-preview.png"
+          alt=""
+        />
+      </a>
     </div>
-  </div>
-</nav>
+
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a
+        href="https://discord.gg/PCw3T7Wx"
+        target="_blank"
+        class="text-sm font-semibold leading-6 text-gray-900"
+        >Join Discord</a
+      >
+      <a
+        href="https://discord.com/oauth2/authorize?client_id=1234332654170669116&permissions=1126984386608192&integration_type=0&scope=bot"
+        target="_blank"
+        class="text-sm font-semibold leading-6 text-gray-900"
+        >Add Bot to Discord</a
+      >
+      <a
+        href="https://discord.com/oauth2/authorize?client_id=1234332654170669116&permissions=1126984386608192&integration_type=0&scope=bot"
+        target="_blank"
+        class="text-sm font-semibold leading-6 text-gray-900"
+        >Build a custom Bot</a
+      >
+      <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900"
+        >Blogs</a
+      >
+    </div>
+
+    <div class="block lg:hidden">
+      <a
+        href="https://discord.com/oauth2/authorize?client_id=1234332654170669116&permissions=1126984386608192&integration_type=0&scope=bot"
+        target="_blank"
+        class="text-sm font-semibold leading-6 text-gray-900"
+        >Add Bot to Discord</a
+      >
+    </div>
+  </nav>
+</header>
