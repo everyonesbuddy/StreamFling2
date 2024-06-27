@@ -35,7 +35,6 @@ export class BlogPostComponent implements OnInit {
         // Handle image
         let imageUrl = `https:${this.blog.fields.featuredImage.fields.file.url}`;
         this.meta.updateTag({ property: 'og:image', content: imageUrl });
-        this.meta.updateTag({ property: 'twitter:card', content: imageUrl });
         this.meta.updateTag({ property: 'twitter:image', content: imageUrl });
 
         // Handle description
@@ -57,6 +56,7 @@ export class BlogPostComponent implements OnInit {
           property: 'twitter:description',
           content: description,
         });
+        this.meta.updateTag({ property: 'twitter:card', content: description });
       });
     });
   }
