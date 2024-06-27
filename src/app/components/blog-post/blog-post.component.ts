@@ -30,10 +30,13 @@ export class BlogPostComponent implements OnInit {
             ? this.blog.fields.title.substring(0, 87) + '...'
             : this.blog.fields.title;
         this.meta.updateTag({ property: 'og:title', content: title });
+        this.meta.updateTag({ property: 'twitter:title', content: title });
 
         // Handle image
         let imageUrl = `https:${this.blog.fields.featuredImage.fields.file.url}`;
         this.meta.updateTag({ property: 'og:image', content: imageUrl });
+        this.meta.updateTag({ property: 'twitter:card', content: imageUrl });
+        this.meta.updateTag({ property: 'twitter:image', content: imageUrl });
 
         // Handle description
         let description = this.blog.fields.description;
@@ -48,6 +51,10 @@ export class BlogPostComponent implements OnInit {
         }
         this.meta.updateTag({
           property: 'og:description',
+          content: description,
+        });
+        this.meta.updateTag({
+          property: 'twitter:description',
           content: description,
         });
       });
