@@ -18,6 +18,8 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { MarkdownModule } from 'ngx-markdown';
     DiscordBotComponent,
     BlogComponent,
     BlogPostComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+.terms-conditions {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 70px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.terms-conditions h1,
+.terms-conditions h2 {
+  color: #333;
+}
+
+.terms-conditions h3 {
+  color: #555;
+}
+
+.terms-conditions p,
+.terms-conditions a {
+  color: #666;
+}
+
+.terms-conditions a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.terms-conditions a:hover {
+  text-decoration: underline;
+}
